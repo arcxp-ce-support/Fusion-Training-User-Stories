@@ -1,0 +1,25 @@
+{
+  "name": "Fusion-Training-User-Stories",
+  "version": "1.0.0",
+  "description": "A walkthrough of core concepts to learn development in Fusion",
+  "main": "index.js",
+  "scripts": {
+    "fusion": "fusion",
+    "start": "fusion start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wapopartners/Fusion-Training-User-Stories.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wapopartners/Fusion-Training-User-Stories/issues"
+  },
+  "homepage": "https://github.com/wapopartners/Fusion-Training-User-Stories#readme",
+  "devDependencies": {
+    "@arc-fusion/cli": "^1.0.4"
+  }
+}
