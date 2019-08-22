@@ -22,4 +22,6 @@ const ColorBlock = () => {
   )
 }
 
+ColorBlock.static = true;
+
 export default ColorBlock
