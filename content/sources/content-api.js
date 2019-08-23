@@ -12,7 +12,8 @@ const params = {
 };
 
 const resolve = (key) => {
-  const requestUri = `/content/v4/stories/?website_url=${ key.website_url || key }&website=demo`;
+  const arcsite = key['arc-site'] || 'demo';
+  const requestUri = `/content/v4/stories/?website_url=${ key.website_url || key }&website=${arcsite}`;
 
   return (key.hasOwnProperty('published')) ? `${requestUri}&published=${key.published}` : requestUri
 }
