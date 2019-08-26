@@ -1,20 +1,18 @@
 # fusion-07
 
-On this branch, we have updated our `/sample/color-block` feature to offer PageBuilder users the ability to customize the feature using Custom Fields.
+On this branch, we have updated our `/global/alert-bar` feature that we created in `exercise-01` to offer PageBuilder users the ability to edit their feature inline in the admin preview pane.
 
 ## User story
-As a user, I would like to customize the appearance or functionality of my feature in the PageBuilder UI based on a set of options.
+As a user, I would like to directly customize my feature using inline editing for a streamlined experience.
 
 ## Concepts
-- Custom Fields
-- Fusion Context
+- Inline Editing
 
 ## New Files on this branch
 - None
 
 ## Changed files:
-- `/components/features/sample/color-block/default.jsx`
+- `/components/features/global/alert-bar/default.jsx`
 
 ## What's next?
-So far, we have updated our output type to modify our head and footer on the page, created a basic layout to provide semantic html to our page, and began creating and modifying features using custom fields from
-Fusion's component context. Let's practice with an exercise - creating an alert bar! Switch to `exercise-01` to see one example implementation.
+Your next task is to update your feature to dynamically pipe content by exposing a content config to the PageBuilder user. Switch to branch `fusion-08` to see the completed code for the next step.
