@@ -1,18 +1,17 @@
-# fusion-11
-On this branch, we have add our `/article/header` feature and configured it to render using global content.
+# fusion-12
+On this branch, we won't actually be making any code changes! It's just here for continuity with the other tasks and concepts.
 
 ## User story
-As a user, I would like to configure my feature to use a single global content source.
+As a user, I would like to be able to render many pieces of content via this template in the browser.
 
 ## Concepts
-- Global Gontent
-- App Context
+- Resolvers
 
 ## New Files on this branch
-- `components/features/article/header/default.jsx`
+- None
 
 ## Changed files:
-- none
+- None
 
 ## What's next?
-Now that we have a feature that renders based on the global content instead of being fixed to component level content, we want to see how we can dynamically route content using PageBuilder templates. Switch to branch `fusion-12` to learn more about this next step.
+Now that we can render complex features, it's time to add some complexity to our layouts. We'll do that by introducing a new type of component: Chains. Switch to branch `fusion-13` to see how!
