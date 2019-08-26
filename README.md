@@ -1,22 +1,18 @@
-# fusion-08
-
-On this branch, we have created our `content-api` content source using the content base added in our .env file so that we can see content making it into our feature pack using the debugger tool exposed in the PageBuilder UI.
+# fusion-09
+On this branch, we've created a new Card feature thatt can fetch content individually for each instance of the feature. This means that we can configure multiple card features per page and each one can render its own content.
 
 ## User story
-As a user, I would like to fetch content from an API into my feature pack.
+As a user, I would like to be able to pipe content into my feature so that it renders information from an API.
 
 ## Concepts
-- Content sources
-- Content Base
-- Content Schema
+- useContent
+- contentConfig custom field
 
 ## New Files on this branch
-- `/content/sources/content-api.js`
-- `/content/schemas/article.js`
-- `.env`
+- `components/features/global/card/default.jsx`
 
 ## Changed files:
 - none
 
 ## What's next?
-Now that we have access to content, it's time to update our feature to render this via PageBuilder. Switch to branch `fusion-09` to learn more about this next step.
+Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch `fusion-10` to see how!
