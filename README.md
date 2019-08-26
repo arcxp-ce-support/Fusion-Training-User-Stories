@@ -1,16 +1,16 @@
-# fusion-17
+# fusion-18
 
 ## User story
-As a user, I would like to be able to have more control of how a feature will render by explicitly check the output type
+As a user, I would like to prevent my output type from falling back onto default features and risking validation.
 
 ## Concepts
-- Using app context with multiple output types
+- fallback
 
 ## New files:
--  `components/features/global/alert-bar/amp.jsx`
+-  none
 
 ## Updated Files:
--  `components/features/article/header/default.jsx`
+-  `components/output-types/amp.jsx`
 
 ## What's next
-Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. Switch to `fusion-17` to learn more.
+Nothing! You've completed fusion training. For further exercises and information, check out the Arc Learning Center.
