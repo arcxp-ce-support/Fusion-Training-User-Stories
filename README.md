@@ -1,20 +1,23 @@
-# fusion-07
+# exercise-01
 
-On this branch, we have updated our `/sample/color-block` feature to offer PageBuilder users the ability to customize the feature using Custom Fields.
+Now that we have some basics down, let's create a new feature. The following information is an example ticket that you may come across with some acceptance criteria. If you are stuck, try looking at the ALC documentation for Fusion to get more information. This branch also contains an example implementation, but you should only look at this once you've finished this exercise.
+
+# TICKET
 
 ## User story
-As a user, I would like to customize the appearance or functionality of my feature in the PageBuilder UI based on a set of options.
+As a user, I would like to add an alert bar to notify my readers of interesting content.
 
-## Concepts
-- Custom Fields
-- Fusion Context
+## Description
+Create an alert bar feature with the following acceptance criteria. Let's also modify the layout to have a full-width section at the top called `promo` for the alert bar.
 
-## New Files on this branch
-- None
-
-## Changed files:
-- `/components/features/sample/color-block/default.jsx`
-
-## What's next?
-So far, we have updated our output type to modify our head and footer on the page, created a basic layout to provide semantic html to our page, and began creating and modifying features using custom fields from
-Fusion's component context. Let's practice with an exercise - creating an alert bar! Switch to `exercise-01` to see one example implementation.
+## Acceptance Criteria
+- There should be an additional section in the `basic` layout for the alert bar.
+- The new section should be called `promo`
+- There should be a new feature in the `global/alert-bar` directory.
+- The alert bar should have a dropdown of at least 3 options - breaking news, warning, and info.
+- The alert bar should allow the user to add text.
+    - This should be a required custom field
+    - This should have a description viewable to the user in the PageBuilder admin to give them additional context.
+- The alert bar should allow the user to add an external link.
+    - This should use PageBuilder's `url` validation option.
+- The text and link custom fields should be grouped together in the PageBuilder admin.
