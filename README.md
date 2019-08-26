@@ -1,13 +1,17 @@
-# Welcome to Fusion!
+# Fusion-02
+On this branch, we've updated the `default` output type, introducing ourselves to some core PageBuilder concepts. Without an output type, PageBuilder can't render anything!
 
-This repository contains all of the code necessary to complete each of the steps in the Arc PageBuilder Fusion training curriculum.
+## User Story
+As a user, I would like to be able to render content via a default output type, which is natively recognized by PageBuilder and allows me to customize the head and foot of my page.
 
-## How to use
-This repo contains one branch for each of the user stories in the Fusion training curriculum. Each branch represents a single step in the lessons, so that you can easily follow along and switch branches to get the latest code for a step if you fall behind.
+## Concepts
+- Output Types
 
-Each branch name corresponds to the last completed step in the code on the branch. For example, if you're beginning the Fusion-04 user story, you'll switch to branch `fusion-03`. However, if you want to see the completed files for Fusion-04, switch to branch `fusion-04`.
+## New Files
+- None
 
-It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
+## Changed Files
+- `/components/output-types/default.jsx`
 
-## What next?
-To use this repo, clone the repo to your local machine and check out a new branch (any name is fine) from `master`. This is the starting point for [user story](https://docs.google.com/document/d/18W2lXAE9Y5HmidFF_b2zSv55lNSXREIJnLFhmGy_XRY/edit?usp=sharing) Fusion-01.
+## What's next?
+An output type provides a common backbone for all of our pages, so now we'll explore how we can start adding some semantic HTML and customization. The first concept to tackle in this regard is layouts. Switch to `fusion-03` to view a completed layout.
