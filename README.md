@@ -1,18 +1,20 @@
-# fusion-14
+# fusion-15
 
-On this branch, we haveadded multisite mocks and updated our `content-api` content source to pull from multiple sites within an organization to offer PageBuilder users the ability to use the same feature pack for many sites.
+On this branch, we have are now utilizing site properties so that we can render site specific properties within an organization.
 
 ## User story
-As a user, I would like to use my feature pack for multiple sites within my organization
+As a user, I would like to configure my pages to use site-specific variables.
 
 ## Concepts
-- Multisite
+- Site Properties
 
 ## New Files on this branch
--  `/mocks/siteservice/api/v3/website`
+-  `properties/index.js `
+-  `properties/sites/demo.js`
+-  `properties/sites/the-bugle.js`
 
 ## Changed files:
-- `/content/sources/content-api.js`
+- `components/features/article/header/default.jsx`
 
 ## What's next?
-Now that we can use the same feature pack for multiple sites, we also need the ability to store site specific information. Switch to branch `fusion-15` to learn more about this next step.
+It's time to learn how to work with multiple output types. Switch to `fusion-16` to find out how.
