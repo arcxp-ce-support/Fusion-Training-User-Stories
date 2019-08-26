@@ -1,17 +1,18 @@
-# fusion-10
-On this branch, we've created a GraphQL filter and applied it to the useContent call in order to minimize the payload from the content source.
+# fusion-11
+On this branch, we have add our `/article/header` feature and configured it to render using global content.
 
 ## User story
-As a user, I would like to filter the content to only the necessary fields to reduce the payload.
+As a user, I would like to configure my feature to use a single global content source.
 
 ## Concepts
-- filtering
+- Global Gontent
+- App Context
 
 ## New Files on this branch
-- `components/features/global/card/default.jsx`
+- `components/features/article/header/default.jsx`
 
 ## Changed files:
-- `content/filters/story-card.js`
+- none
 
 ## What's next?
-So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level so that we can use it to power multiple features. Switch to branch `fusion-11` to learn more about this next step.
+Now that we have a feature that renders based on the global content instead of being fixed to component level content, we want to see how we can dynamically route content using PageBuilder templates. Switch to branch `fusion-12` to learn more about this next step.
