@@ -1,18 +1,20 @@
-# fusion-05
+# fusion-07
 
-On this branch, we have updated our `/sample/color-block` feature to render server side only.
+On this branch, we have updated our `/sample/color-block` feature to offer PageBuilder users the ability to customize the feature using Custom Fields.
 
 ## User story
-As a user, I would like to render my feature server side only to improve page performance.
+As a user, I would like to customize the appearance or functionality of my feature in the PageBuilder UI based on a set of options.
 
 ## Concepts
-- Server Side vs. Isomorphic vs. Client side rendering
+- Custom Fields
+- Fusion Context
 
 ## New Files on this branch
-- none!
+- None
 
 ## Changed files:
 - `/components/features/sample/color-block/default.jsx`
 
 ## What's next?
-One of the many features of PageBuilder is the ability to allow non-technical users to customize the appearance or functionality of their pages without requiring a developer. In the next step, we'll learn how we, as developers, can make such functionality available in the PageBuilder UI based on a set of options. Switch to branch `fusion-06` to see the completed code for this next step.
+So far, we have updated our output type to modify our head and footer on the page, created a basic layout to provide semantic html to our page, and began creating and modifying features using custom fields from
+Fusion's component context. Let's practice with an exercise - creating an alert bar! Switch to `exercise-01` to see one example implementation.
