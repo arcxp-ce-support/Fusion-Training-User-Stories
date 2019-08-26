@@ -1,8 +1,8 @@
 'use strict'
 
-import React from 'react'
+import React from 'react';
 
-export default ({
+const AmpOutputType = ({
   children,
   contextPath,
   deployment,
@@ -28,4 +28,8 @@ export default ({
       <Fusion />
     </body>
   </html>
+
+AmpOutputType.fallback = false;
+
+export default AmpOutputType;
  
