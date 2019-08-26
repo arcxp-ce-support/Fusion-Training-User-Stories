@@ -1,18 +1,17 @@
-# fusion-09
-On this branch, we've created a new Card feature thatt can fetch content individually for each instance of the feature. This means that we can configure multiple card features per page and each one can render its own content.
+# fusion-10
+On this branch, we've created a GraphQL filter and applied it to the useContent call in order to minimize the payload from the content source.
 
 ## User story
-As a user, I would like to be able to pipe content into my feature so that it renders information from an API.
+As a user, I would like to filter the content to only the necessary fields to reduce the payload.
 
 ## Concepts
-- useContent
-- contentConfig custom field
+- filtering
 
 ## New Files on this branch
 - `components/features/global/card/default.jsx`
 
 ## Changed files:
-- none
+- `content/filters/story-card.js`
 
 ## What's next?
-Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch `fusion-10` to see how!
+So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level so that we can use it to power multiple features. Switch to branch `fusion-11` to learn more about this next step.
