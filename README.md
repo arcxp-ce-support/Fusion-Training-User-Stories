@@ -1,15 +1,15 @@
-# fusion-03
+# fusion-04
 
-On this branch, we've created and customized a new layout, `basic.jsx`, which lets us add semantic markup to our pages.
+On this branch, we have developed our first feature, which we can add to a page or template in PageBuilder.
 
 ## User story
-As a user, I would like to be able to add a layout to my page, in order to give my page some structure and semantic HTML.
+As a user, I would like to be able to add a feature to my page.
 
 ## Concepts
-- Layouts
+- Features
 
 ## New Files on this branch
-- /components/layouts/basic.jsx
+- /features/sample/color-block/default.jsx
 
 ## What's next?
-Your next task is to create a new feature. Switch to branch `fusion-04` to see the completed code for the next step.
+Your next task is to update your feature to render server side only. Switch to branch `fusion-05` to see the completed code for the next step.
