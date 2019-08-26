@@ -1,20 +1,14 @@
-# fusion-15
-
-On this branch, we have are now utilizing site properties so that we can render site specific properties within an organization.
+# fusion-16
 
 ## User story
-As a user, I would like to configure my pages to use site-specific variables.
+As a user, I would like to configure my site to render different content for different outputs such as Google AMP.
 
 ## Concepts
-- Site Properties
+- Working with multiple output types
 
-## New Files on this branch
--  `properties/index.js `
--  `properties/sites/demo.js`
--  `properties/sites/the-bugle.js`
+## New files:
+- `/components/output-types/amp.jsx`
+- `/components/features/sample/color-block/amp.jsx`
 
-## Changed files:
-- `components/features/article/header/default.jsx`
-
-## What's next?
-It's time to learn how to work with multiple output types. Switch to `fusion-16` to find out how.
+## What's next
+Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. Switch to `fusion-17` to learn more.
