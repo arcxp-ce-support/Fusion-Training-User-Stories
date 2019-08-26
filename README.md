@@ -1,15 +1,18 @@
-# fusion-04
+# fusion-05
 
-On this branch, we have developed our first feature, which we can add to a page or template in PageBuilder.
+On this branch, we have updated our `/sample/color-block` feature to render server side only.
 
 ## User story
-As a user, I would like to be able to add a feature to my page.
+As a user, I would like to render my feature server side only to improve page performance.
 
 ## Concepts
-- Features
+- Server Side vs. Isomorphic vs. Client side rendering
 
 ## New Files on this branch
-- /features/sample/color-block/default.jsx
+- none!
+
+## Changed files:
+- `/components/features/sample/color-block/default.jsx`
 
 ## What's next?
-Your next task is to update your feature to render server side only. Switch to branch `fusion-05` to see the completed code for the next step.
+One of the many features of PageBuilder is the ability to allow non-technical users to customize the appearance or functionality of their pages without requiring a developer. In the next step, we'll learn how we, as developers, can make such functionality available in the PageBuilder UI based on a set of options. Switch to branch `fusion-06` to see the completed code for this next step.
