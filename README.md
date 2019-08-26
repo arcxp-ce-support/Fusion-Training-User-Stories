@@ -1,17 +1,15 @@
-# Fusion-02
-On this branch, we've updated the `default` output type, introducing ourselves to some core PageBuilder concepts. Without an output type, PageBuilder can't render anything!
+# fusion-03
 
-## User Story
-As a user, I would like to be able to render content via a default output type, which is natively recognized by PageBuilder and allows me to customize the head and foot of my page.
+On this branch, we've created and customized a new layout, `basic.jsx`, which lets us add semantic markup to our pages.
+
+## User story
+As a user, I would like to be able to add a layout to my page, in order to give my page some structure and semantic HTML.
 
 ## Concepts
-- Output Types
+- Layouts
 
-## New Files
-- None
-
-## Changed Files
-- `/components/output-types/default.jsx`
+## New Files on this branch
+- /components/layouts/basic.jsx
 
 ## What's next?
-An output type provides a common backbone for all of our pages, so now we'll explore how we can start adding some semantic HTML and customization. The first concept to tackle in this regard is layouts. Switch to `fusion-03` to view a completed layout.
+Your next task is to create a new feature. Switch to branch `fusion-04` to see the completed code for the next step.
