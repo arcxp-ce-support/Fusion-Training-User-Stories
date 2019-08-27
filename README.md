@@ -1,5 +1,5 @@
 # fusion-09
-On this branch, we've created a new Card feature thatt can fetch content individually for each instance of the feature. This means that we can configure multiple card features per page and each one can render its own content.
+On this branch, we've created a new Card feature that can fetch content individually for each instance of the feature. This means that we can configure multiple card features per page and each one can render its own content.
 
 ## User story
 As a user, I would like to be able to pipe content into my feature so that it renders information from an API.
