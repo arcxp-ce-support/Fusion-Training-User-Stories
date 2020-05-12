@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/wapopartners/Fusion-Training-User-Stories#readme",
   "devDependencies": {
-    "@arc-fusion/cli": "^1.0.4"
+    "@arc-fusion/cli": "^1.0.8"
   }
 }
