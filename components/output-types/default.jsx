@@ -1,17 +1,15 @@
-'use strict'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import React from 'react'
-
-export default ({
+const DefaultOutputType = ({
   children,
   contextPath,
   deployment,
   CssLinks,
   Fusion,
   Libs,
-  MetaTags
-}) =>
-  <html>
+  MetaTags,
+}) => <html>
     <head>
       <title>Fusion Article</title>
       <MetaTags />
@@ -25,4 +23,16 @@ export default ({
       </div>
       <Fusion />
     </body>
-  </html>
+  </html>;
+
+DefaultOutputType.propTypes = {
+  children: PropTypes.array,
+  contextPath: PropTypes.string,
+  CssLinks: PropTypes.elementType,
+  deployment: PropTypes.func,
+  Fusion: PropTypes.elementType,
+  Libs: PropTypes.elementType,
+  MetaTags: PropTypes.elementType,
+};
+
+export default DefaultOutputType;

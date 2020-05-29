@@ -1,5 +1,3 @@
-'use strict'
+import List from './generators/list.jsx';
 
-import List from './generators/list.jsx'
-
-export default List('ol')
+export default List('ol');

@@ -1,13 +1,9 @@
-'use strict'
+import React from 'react';
 
-import React from 'react'
-
-export default (ListType, ItemType = 'li') => ({ children }) =>
-  <ListType>
+export default (ListType, ItemType = 'li') => ({ children }) => <ListType>
     {
       children.map(
-        (child) =>
-          <ItemType>{child}</ItemType>
+        (child) => <ItemType key={child.key}>{child}</ItemType>,
       )
     }
-  </ListType>
+  </ListType>;

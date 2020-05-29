@@ -6,7 +6,8 @@
   "scripts": {
     "fusion": "fusion",
     "start": "fusion start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext js --ext jsx ."
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,28 @@
   },
   "homepage": "https://github.com/wapopartners/Fusion-Training-User-Stories#readme",
   "devDependencies": {
-    "@arc-fusion/cli": "^1.0.4"
+    "@arc-fusion/cli": "^1.0.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3"
+  },
+  "dependencies": {},
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "plugin:react/recommended"
+    ],
+    "settings": {
+      "react": {
+        "version": "latest"
+      },
+      "import/core-modules": [
+        "fusion:content",
+        "fusion:context",
+        "prop-types",
+        "react"
+      ]
+    }
   }
 }
