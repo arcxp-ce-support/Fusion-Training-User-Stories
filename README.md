@@ -9,13 +9,10 @@ Each branch name corresponds to the last completed step in the code on the branc
 
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
-## What next?
-To use this repo, clone the repo to your local machine and check out a new branch (any name is fine) from `master`. This is the starting point for [user story](https://docs.google.com/document/d/18W2lXAE9Y5HmidFF_b2zSv55lNSXREIJnLFhmGy_XRY/edit?usp=sharing) Fusion-01.
-
-## User Story 01 Task
+## TASK: User Story 01
 As a user, I would like to scaffold a new PageBuilder Feature Pack via command line for a brand-new project called FusionFeatureStories
 
-## User Story 01 Instructions
+## GUIDE
 1. Create a new directory for your project called FusionFeatureStories
 ```
 mkdir FusionFeatureStories
@@ -36,7 +33,7 @@ npm i @arc-fusion/cli
 npx fusion init
 ```
 
-5. Change the origin to point to the Fusion-Training-User-Stories repo
+5. Change the origin to point to the Fusion-Training-User-Stories repo (in a real scenario, `Fusion-Training-User-Stories` would be replaced by the repo name of your new project)
 ```
 git remote set-url origin git@github.com:wapopartners/Fusion-Training-User-Stories.git
 ```
