@@ -16,9 +16,9 @@ To use this repo, clone the repo to your local machine and check out a new branc
 As a user, I would like to scaffold a new PageBuilder Feature Pack via command line for a brand-new project called FusionFeatureStories
 
 ## User Story 01 Instructions
-1. Clone the [PageBuilder Fusion Features](https://github.com/wapopartners/StarterPack-PageBuilder-Fusion-Features) Starter Pack repo:
+1. Create a new directory for your project called FusionFeatureStories
 ```
-git clone git@github.com:wapopartners/StarterPack-PageBuilder-Fusion-Features.git FusionFeatureStories
+mkdir FusionFeatureStories
 ```
 
 2. Change into the directory:
@@ -26,31 +26,41 @@ git clone git@github.com:wapopartners/StarterPack-PageBuilder-Fusion-Features.gi
 cd FusionFeatureStories
 ```
 
-3. Change the origin to point to the Fusion-Training-User-Stories repo
+3. Install the Fusion CLI
+```
+npm i @arc-fusion/cli
+```
+
+4. Initialize a new Fusion feature pack
+```
+npx fusion init
+```
+
+5. Change the origin to point to the Fusion-Training-User-Stories repo
 ```
 git remote set-url origin git@github.com:wapopartners/Fusion-Training-User-Stories.git
 ```
 
-4. Check out a new branch called USERNAME-fusion-training where USERNAME is your username
+6. Check out a new branch called USERNAME-fusion-training where USERNAME is your username
 ```
 git checkout -b USERNAME-fusion-training
 ```
 
-5. Open your README.md file within your code editor and remove all the contents. Save the file
+7. Open your README.md file within your code editor and remove all the contents. Save the file
 
-6. Add your changes to git
+8. Add your changes to git
 ```
 git add .
 ```
 
-7. Commit your changes to git with a message. For example:
+9. Commit your changes to git with a message. For example:
 ```
 git commit -m "clearing out README.md file"
 ```
 
-8. Push your new branch up to the Fusion Training User Stories repo
+10. Push your new branch up to the Fusion Training User Stories repo
 ```
 git push origin USERNAME-fusion-training
 ```
 
-NOTE: This is the branch you will make all your changes to while going through this training
+NOTE: This is the branch you will make all your changes to while going through this training. An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md)
