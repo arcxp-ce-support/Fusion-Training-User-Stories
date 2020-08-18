@@ -46,6 +46,11 @@ npx fusion start
 
 
 ## TASK: User Story 02
-As a user, I would like to be able to render content via a default output type, which allows me to customize the head and foot of my page.
+As a user, I would like to be able to render content via a default output type, which allows me to customize the head of my page.
 
 ## GUIDE
+1. Open `components > output-types > default.jsx`
+2. Add a title after the body element. For example:
+```
+<h2 class="text-info">Welcome to Fusion!</h2>
+```
