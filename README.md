@@ -45,7 +45,7 @@ npx fusion start
 ```
 
 
-## TASK: User Story 02
+## NEXT TASK: User Story 02
 As a user, I would like to be able to render content via a default output type, which allows me to customize the head of my page.
 
 ## GUIDE
