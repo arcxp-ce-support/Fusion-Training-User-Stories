@@ -34,7 +34,12 @@ git checkout -b USERNAME-fusion-training
 npm install
 ```
 
-5. Start fusion
+5. To ensure you are using the latest fusion-cli, run:
+```
+npm install @arc-fusion/cli@canary
+```
+
+6. Start fusion
 ```
 npx fusion start
 ```
