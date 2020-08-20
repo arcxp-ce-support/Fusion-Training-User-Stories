@@ -24,3 +24,23 @@ If you are starting this training from the third user story (task Fusion-03), th
 As a user, I would like to add a layout to my page, in order to give my page some structure and semantic HTML.
 
 ## GUIDE
+1. All layouts are added to the `components/layouts` folder. Change directory into this folder and create a new find called `basic.jsx`
+
+2. In `basic.jsx`, create a new React component called `BasicLayout` that retrieves the following content from `props.children`:
+```
+const [header, main, aside, footer] = props.children;
+```
+
+3. Using these content variables, create the header, main, right rail (using the `aside` element) and footer for the page and display the header, main, aside and footer content in them respectively
+
+4. Define the different section of this layout outside the definition of your component, like so:
+```
+BasicLayout.sections = ['header', 'main', 'aside', 'footer']
+```
+
+5. Finally, define the propTypes of your component:
+```
+BasicLayout.propTypes = {
+  children: PropTypes.node,
+};
+```
