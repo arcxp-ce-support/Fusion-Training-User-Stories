@@ -28,8 +28,8 @@ const BasicLayout = (props) => {
 
 BasicLayout.propTypes = {
   children: PropTypes.node
-};
+}
 
-BasicLayout.sections = ['header', 'main', 'aside', 'footer'];
+BasicLayout.sections = ['header', 'main', 'aside', 'footer']
 
 export default BasicLayout
