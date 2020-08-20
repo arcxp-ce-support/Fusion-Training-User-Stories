@@ -19,27 +19,32 @@ If you are starting this training from the second user story (task Fusion-02), t
 git clone git@github.com:wapopartners/Fusion-Training-User-Stories.git
 ```
 
-2. Checkout to the fusion-01 branch (this will give you all the completed work for task Fusion-02)
+2. Change directory into Fusion-Training-User-Stories
+```
+cd Fusion-Training-User-Stories
+```
+
+3. Checkout to the fusion-01 branch (this will give you all the completed work for task Fusion-02)
 ```
 git checkout fusion-01
 ```
 
-3. Checkout to your own branch from here
+4. Checkout to your own branch from here
 ```
 git checkout -b USERNAME-fusion-training
 ```
 
-4. Install all packages/dependencies
+5. Install all packages/dependencies
 ```
 npm install
 ```
 
-5. To ensure you are using the latest fusion-cli, run:
+6. To ensure you are using the latest fusion-cli, run:
 ```
 npm install @arc-fusion/cli@canary
 ```
 
-6. Start fusion
+7. Start fusion
 ```
 npx fusion start
 ```
