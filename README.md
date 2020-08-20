@@ -10,4 +10,52 @@ Each branch name corresponds to the last completed step in the code on the branc
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
 ## What next?
-To use this repo, clone the repo to your local machine and check out a new branch (any name is fine) from `master`. This is the starting point for [user story](https://docs.google.com/document/d/18W2lXAE9Y5HmidFF_b2zSv55lNSXREIJnLFhmGy_XRY/edit?usp=sharing) Fusion-01.
+If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
+
+If you are starting this training from the second user story (task Fusion-02), then:
+
+1. Clone this repo
+```
+git clone git@github.com:wapopartners/Fusion-Training-User-Stories.git
+```
+
+2. Change directory into Fusion-Training-User-Stories
+```
+cd Fusion-Training-User-Stories
+```
+
+3. Checkout to the fusion-01 branch (this will give you all the completed work for task Fusion-02)
+```
+git checkout fusion-01
+```
+
+4. Checkout to your own branch from here
+```
+git checkout -b USERNAME-fusion-training
+```
+
+5. Install all packages/dependencies
+```
+npm install
+```
+
+6. To ensure you are using the latest fusion-cli, run:
+```
+npm install @arc-fusion/cli@canary
+```
+
+7. Start fusion
+```
+npx fusion start
+```
+
+
+## NEXT TASK: User Story 02
+As a user, I would like to be able to render content via a default output type, which allows me to customize the head of my page.
+
+## GUIDE
+1. Open `components > output-types > default.jsx`
+2. Add a title after the body element. For example:
+```
+<h2 class="text-info">Welcome to Fusion!</h2>
+```
