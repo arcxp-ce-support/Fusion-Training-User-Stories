@@ -1,6 +1,7 @@
 /*  /components/layouts/basic.jsx  */
 
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const BasicLayout = (props) => {
   const [header, main, aside, footer] = props.children;
@@ -18,13 +19,17 @@ const BasicLayout = (props) => {
         </aside>
         <footer className='col-lg-12'>
           {footer}
-          <p>Copyright &copy; 2019</p>
+          <p>Copyright &copy; 2020</p>
         </footer>
       </div>
     </div>
   )
 }
 
-BasicLayout.sections = ['header', 'main', 'aside', 'footer']
+BasicLayout.propTypes = {
+  children: PropTypes.node
+};
+
+BasicLayout.sections = ['header', 'main', 'aside', 'footer'];
 
 export default BasicLayout
