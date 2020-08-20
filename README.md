@@ -22,4 +22,26 @@ If you are starting this training from the fourth user story (task Fusion-04), t
 As a user, I would like to be able to add a feature to my page.
 
 ## Guide
-1. 
+This guide is going to demonstrate how to create a color block feature, that generates a random background color for a div. However, you can create any new feature you'd like for this task
+
+1. All features are added into the `/components/features/` folder
+
+2. Change into this directory and create a new folder called `sample` - this is where we'll store all our "sample" features
+
+3. In the `/sample/` folder, create another folder for our feature called `color-block`
+
+4. In the `/color-block/` folder, create a file called `default.jsx` - this is where we'll add all the code for our new feature
+
+5. In the `default.jsx` file, create a functional component generates a random rgb value for a div. You can use this rbg generator in your component:
+```
+  let rgb = []
+  for (var i = 0; i < 3; i++) {
+    let r = Math.floor(Math.random() * 256)
+    rgb.push(r)
+  }
+```
+
+6. Apply the rgb value for your div using the following style:
+```
+backgroundColor: `rgb(${rgb})`,
+```
