@@ -20,10 +20,10 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the third user story (task Fusion-03), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-02 instead.
 
-## NEXT TASK: User Story 03
+## New Task: User Story 03
 As a user, I would like to add a layout to my page, in order to give my page some structure and semantic HTML.
 
-## GUIDE
+## Guide
 1. All layouts are added to the `components/layouts` folder. Change directory into this folder and create a new find called `basic.jsx`
 
 2. In `basic.jsx`, create a new React component called `BasicLayout` that retrieves the following content from `props.children`:
