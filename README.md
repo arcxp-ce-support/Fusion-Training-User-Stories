@@ -44,3 +44,7 @@ BasicLayout.propTypes = {
   children: PropTypes.node,
 };
 ```
+
+6. Once Fusion rebuilds (or you manually rebuild it by running `npx fusion rebuild`), go into pagebuilder and create a new page
+
+7. On the new page you created, you should now see your `basic` layout as part of the drop down options for the Layout section
