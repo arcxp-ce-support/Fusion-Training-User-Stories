@@ -30,7 +30,7 @@ As a user, I would like to add a layout to my page, in order to give my page som
 ```
 const [header, main, aside, footer] = props.children;
 ```
-Each of these variables contains a React Component that has all the blocks the user has placed within that section of the layout in PageBuilder. To display the component, add `{header}` within an element in the render function of your layout.
+The syntax we use here is called [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring). It assigns the elements of the array to variables with names "header", "main", etc. based on their position in the array. Each of these variables contains a React Component that has all the blocks the user has placed within that section of the layout in PageBuilder. To display the component, add `{header}` within an element in the render function of your layout.
 
 Bootstrap can be used to style any component.
 
