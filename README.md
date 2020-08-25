@@ -45,3 +45,13 @@ This guide is going to demonstrate how to create a color block feature, that gen
 ```
 backgroundColor: `rgb(${rgb})`,
 ```
+
+7. After Fusion rebuilds, open the page you created in fusion-02
+
+8. Ensure that your Basic layout has been selected
+
+9. Within the main section of the layout, click "add to main" and select your `Sample color block` feature
+
+10. Save and republish your page and open up the live page
+
+11. You should see your color block feature
