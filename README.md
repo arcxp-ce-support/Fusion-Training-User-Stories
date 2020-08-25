@@ -29,4 +29,40 @@ Building from our Color Block feature, we're going to add the ability to set the
 
 1. From root, change directory into the folder of your feature (from our previous example in fusion-03, that will be `components/features/sample/color-block/`) and open the deafult.jsx file of your component
 
-2. 
+2. Add in a custom field that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the propTypes of your component to include custom fields like so:
+```
+ColorBlock.propTypes = {
+  customFields: PropTypes.shape({
+    hexCode: PropTypes.string.tag({
+      label: 'Hex Code',
+      description: 'Please enter a valid color hex value. For example, 6b5d96.'
+    }),
+  }),
+};
+```
+
+3. To access the value of this custom field, you'll need to import `useComponentContext`
+```
+import { useComponentContext } from 'fusion:context';
+```
+
+4. With the component context, you can now retrieve custom fields from fusion's component context:
+```
+const componentContext = useComponentContext();
+const { hexCode } = componentContext.customFields;
+```
+
+5. Now, lets set a fallback value for rgb if the editor does not provide one:
+```
+const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
+```
+
+6. Finally, update the CSS with the new `bgColor` we've created
+
+7. After fusion rebuild, go back into your page and open your color block feature
+
+8. You should now see the object to add a hexCode value
+
+9. Add a hexcode into the input field, save and republish your page
+
+10. Load your page and confirm that the background color of the div displayed is the same color you entered into PageBuilder
