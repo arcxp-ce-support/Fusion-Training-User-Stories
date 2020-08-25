@@ -24,12 +24,15 @@ If you are starting this training from the third user story (task Fusion-03), th
 As a user, I would like to add a layout to my page, in order to give my page some structure and semantic HTML.
 
 ## Guide
-1. All layouts are added to the `components/layouts` folder. Change directory into this folder and create a new find called `basic.jsx`
+1. All layouts are added to the `components/layouts` folder. Change directory into this folder and create a new file called `basic.jsx`
 
 2. In `basic.jsx`, create a new React component called `BasicLayout` that retrieves the following content from `props.children`:
 ```
 const [header, main, aside, footer] = props.children;
 ```
+Each of these variables contains a React Component that has all the blocks the user has placed within that section of the layout in PageBuilder. To display the component, add `{header}` within an element in the render function of your layout.
+
+Bootstrap can be used to style any component.
 
 3. Using these content variables, create the header, main, right rail (using the `aside` element) and footer for the page and display the header, main, aside and footer content in them respectively
 
@@ -43,6 +46,10 @@ BasicLayout.sections = ['header', 'main', 'aside', 'footer']
 BasicLayout.propTypes = {
   children: PropTypes.node,
 };
+```
+To use PropTypes, you'll need to import the library into your component
+```
+import PropTypes from 'fusion:prop-types';
 ```
 
 6. Once Fusion rebuilds (or you manually rebuild it by running `npx fusion rebuild`), go into pagebuilder and create a new page
