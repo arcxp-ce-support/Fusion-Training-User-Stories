@@ -25,3 +25,21 @@ If you are starting this training from the eighth user story (task Fusion-08), t
 As a user, I would like to fetch content from an API into my feature pack.
 
 ## Guide
+In order to fetch content from an API, we need to define what API we'll be fetching from and provide credentials. To do this, we'll need to:
+
+1. Create a new file called `.env` at the root of your project directory. Inside this file, you'll need to add in the content base and access token for your API
+
+2. Go to your [orgs homepage](https://redirector.arcpublishing.com/home/) or if you don't have one, use our [demo organization](https://demo.arcpublishing.com/home/)
+
+3. Click developer center and click "create read-only token"
+
+4. Enter your email address into the description field and click create. This will create your access token
+
+5. Copy the content at the bottom where it says "Copy the following into your PB .env file if setting up PageBuilder" and place it into your .env. It should be something like this:
+```
+CONTENT_BASE=https://api.sandbox.{org}.arcpublishing.com 
+ARC_ACCESS_TOKEN={token_here}
+```
+where `org` is the name of your organization
+
+6. 
