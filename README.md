@@ -29,7 +29,7 @@ Building from our Color Block feature, we're going to add the ability to set the
 
 1. From root, change directory into the folder of your feature (from our previous example in fusion-03, that will be `components/features/sample/color-block/`) and open the deafult.jsx file of your component
 
-2. Add in a custom field that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the propTypes of your component to include custom fields like so:
+2. Add in a [custom field](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md) that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the propTypes of your component to include custom fields like so:
 ```
 ColorBlock.propTypes = {
   customFields: PropTypes.shape({
