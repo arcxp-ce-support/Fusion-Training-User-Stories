@@ -1,4 +1,4 @@
-# fusion-07
+# fusion-06
 
 On this branch, we have updated our `/sample/color-block` feature to offer PageBuilder users the ability to customize the feature using Custom Fields.
 
@@ -29,7 +29,7 @@ As a user, I would like to directly customize my feature using inline editing fo
 ## Guide
 Building on the alert bar feature from `exercise-01` we provide a clearer and easier way for editors to configure custom fields through inline editing as documented [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md#inline-editing)
 
-1. Complete the user story from branch `exercise-01`. ```git checkout exercise-01```
+1. Complete the user story from branch `exercise-01`. This includes adding a new section to the layout and a new feature in the `global/alert-bar` directory. After completing the exercise, return here and we will modify it by adding inline editing to a text field in the feature.
 
 2. You should now have a working `alert-bar` feature. We will now add a way to edit the feature text inline in the admin.
 
@@ -53,6 +53,8 @@ Building on the alert bar feature from `exercise-01` we provide a clearer and ea
     {text}
 </a>
 ```
+
+The code from `exercise-01` differs slightly in that it provides separate fields for the `text` and the `linkText`. Both of these fields could handled as an `editableField` so feel free to experiment by making the `linkText` editable inline.
 
 6. After fusion rebuild, go back into the admin and click on the alert bar text. It should now be editable inline without having to find the text field in the admin UI.
 
