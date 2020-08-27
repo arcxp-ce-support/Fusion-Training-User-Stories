@@ -131,7 +131,7 @@ type Subheadlines {
 
 19. Here, you will see a drop down for "Global Content Service" - select your `content-api` and enter values for the `website_url` and `published` fields. Save and publish the page
 
-20. We're going to provide a tip - you can view Fusion data with the following JavaScript. Create a new bookmark on your browser called `View Fusion Data` and paste the JavaScript in `/helpers/view-fusion-data.js` into the URL
+20. We're going to provide a tip - you can view Fusion data with the following JavaScript. Create a new bookmark on your browser called `View Fusion Data` and paste the JavaScript in `/helpers/view-fusion-data.js` from this branch, into the URL
 
 21. Open your test page and click on your new bookmark - you should see a panel on the left-hand side of your screen appear
 
