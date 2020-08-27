@@ -69,10 +69,10 @@ const resolve = (key) => {
 }
 ```
 
-11. *(This is only for those using demo as the org)* If you are using `demo` as your org then you probably don't have any data available. As a work-around, go to fusion-08 and download the `helpers/sample-content.js` file into your `content/sources` folder. Now, we can import this sample data into our content source and return it when this content source is called like so:
+11. *(This is only for those using demo as the org)* If you are using `demo` as your org then you probably don't have any data available. As a work-around, go to fusion-08 and download the `helpers/sample-content.js` file into a `helpers` folder in the root of your project. Now, we can import this sample data into our content source and return it when this content source is called like so:
 
 ```
-import { CONTENT } from './sample-content';
+import { CONTENT } from '../../helpers/sample-content';
 // ... other functions / consts
 const fetch = (query = {}) => {
   return CONTENT;
