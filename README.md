@@ -58,3 +58,5 @@ const story = useContent({
 ```
 
 5. To see the difference in payload, `console.log(story)`
+
+6. Load your page and confirm that you are still displaying the headline and subheadline with a much smaller payload.
