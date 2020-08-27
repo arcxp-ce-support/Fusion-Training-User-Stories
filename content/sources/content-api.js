@@ -4,7 +4,7 @@
  *
  * */
 
-import { CONTENT } from './sample-content';
+import { CONTENT } from '../../helpers/sample-content';
 
 const schemaName = 'article';
 
