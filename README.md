@@ -91,7 +91,7 @@ export default {
 
 13. Since content sources usually return a lot of data, we need to define what fields we want in order to reduce the size and improve performance. This is done by creating a schema for our content source.
 
-14. From root, open the `content/schemas` folder - this is where all schemas reside
+14. From root, open the `content/schemas` folder - this is where all schemas reside. View the [schema documentation](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-graphql-schema.md) to learn more
 
 15. Create a new JS file and using the same name as the schema name you defined on step 8 `article.js` - this is the naming convention we follow for schemas
 
