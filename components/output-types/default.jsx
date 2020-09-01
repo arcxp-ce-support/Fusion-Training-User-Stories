@@ -21,7 +21,6 @@ export default ({
       <link rel='icon' type='image/x-icon' href={deployment(`${contextPath}/resources/favicon.ico`)} />
     </head>
     <body>
-      <h2 class="text-info">Welcome to Fusion!</h2>
       <div id='fusion-app'>
         {children}
       </div>
