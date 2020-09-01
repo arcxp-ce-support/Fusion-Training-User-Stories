@@ -21,6 +21,8 @@ Now that we have a feature that renders based on the global content instead of b
 As a user, I would like to be able to render many pieces of content via this template in the browser.
 
 ## GUIDE
+No code changes are required to complete this task
+
 1. Create a new template in PB called `Articles`
 
 2. Using the basic layout, add in the header feature and any other feature you'd like
