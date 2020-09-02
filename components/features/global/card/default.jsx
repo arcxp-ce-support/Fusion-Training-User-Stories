@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useContent } from 'fusion:content';
+import storyCardFilter from '../../../../content/filters/story-card';
 
 const Card = (props) => {
   /*
@@ -20,6 +21,7 @@ const Card = (props) => {
   const story = useContent({
     source: contentService,
     query: contentConfigValues,
+    filter: storyCardFilter,
   });
 
   /* prevent the story card from rendering if there is no content */
