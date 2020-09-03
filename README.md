@@ -43,12 +43,13 @@ Card.propTypes = {
   }),
 };
 ```
+Refer to the docs for more information on [dynamically configuring content](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/dynamically-configuring-content-with-hooks.md)
 
 3. Within the Card component, retrieve the `storyConfig` custom field
 
 4. This `storyConfig` custom field contains `contentService` and `contentConfigValues`. Extract them from `storyConfig` 
 
-5. Now, we need to fetch the content using Fusion's `useContent`. Import `useContent` from Fusion:
+5. Now, we need to [fetch the content](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/fetching-content-with-hooks.md) using Fusion's `useContent`. Import `useContent` from Fusion:
 ```
 import { useContent } from 'fusion:content';
 ```
