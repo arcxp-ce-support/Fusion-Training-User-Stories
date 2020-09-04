@@ -24,10 +24,11 @@ After completing `exercise-02` return here and we'll start on the next user stor
 As a user, I would like to use my feature pack for multiple sites within my organization
 
 ## Guide
+1. We will be modifying the content source to handle multiple sites. Here are some best practices for [multisite](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/how-to-prepare-for-pagebuilder-multisite/).
 
-1. We need to add multiple sites to our mock website file to approximate what we would see if there were multiple sites in site service.
+2. Since are working locally and are not using site service, we need to add multiple sites to our mock website file to approximate what we would see if there were multiple sites in site service.
 
-2. Add the following sites to `mocks/siteservice/api/v3/website`
+3. Add the following sites to `mocks/siteservice/api/v3/website`
 ```
 {
     "_id": "the-bugle",
@@ -46,21 +47,21 @@ As a user, I would like to use my feature pack for multiple sites within my orga
 }
 ```
 
-3. Now that we have multiple sites in site service, we need a way to distinguish them when we fetch content. This is done by making the content source dynamic to handle passing the current site into the content source.
+4. Now that we have multiple sites to choose from, we need a apply the current site to the content source when we fetch content. We can make the content source dynamic by passing the current site into the content source.
 
-4. First, find the current site id:
+5. First, find the current site id and if missing default to `demo`:
 
 `const arcsite = key['arc-site'] || 'demo';`
 
-5. Then pass that arcsite value into the content source:
+6. Then pass that arcsite value into the content source:
 
 `&website=${arcsite}`
 
-6. The arc-site value comes from the url that is associated with your site in site service. It is equivalent to the `_id` value in the site data that we added to the mock. To test it locally, add it as the _website query param on your url. `localhost/sample/?_website=the-planet` for example.
+7. The arc-site value comes from the url that is associated with your site in site service. It is equivalent to the `_id` value in the site data that we added to the mock. To test it locally, add or adjust the _website query param on your url. `localhost/sample/?_website=the-planet` for example will set the arc-site value to be `the-planet`.
 
-7. The above works if we are using an Arc content source, but since we are using sample data, we will need a different approach. To see different data from this site, you'll have to modify the sample data file in helpers to have the article nested in a key matching the site id. See `helpers/sample-content.js`.
+8. Modifying the content source alone works if we are using an Arc api, but since we are using sample data, we will need a different approach. To see different data from this site, you'll have to modify the sample data file in helpers to have the article nested in a key matching the site id. See `helpers/sample-content.js`.
 
-8. Then pull the content from that arc site by modifying the fetch on the sample data. This example only applies to the sample data.
+9. To pull the content from that arc site added to the sample data, modify the fetch on that sample data to choose the current site data, and default to `demo`.
 
 ```const fetch = (query = {}) => {
     if (query["arc-site"]) {
@@ -68,3 +69,5 @@ As a user, I would like to use my feature pack for multiple sites within my orga
     }
     return CONTENT["demo"];
 };```
+
+10. Visit your test page and you should see the data for the site you have designated in the url showing on the page.
