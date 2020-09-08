@@ -31,7 +31,7 @@ No code changes are required to complete this task
 
 2. Using the basic layout, add in the header feature and any other feature you'd like
 
-3. Under "Developer Tools" > "Resolvers", create a new resolver. Learn more about resolvers [here](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/pagebuilder-editor-30-resolvers/)
+3. Under "Developer Tools" > "Resolvers", create a new resolver. Learn more about resolvers [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/pagebuilder-editor-30-resolvers/)
 
 4. Fill in the details of your resolver as follows:
 - Resolver Name: give your resolver a name
