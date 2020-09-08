@@ -4,6 +4,8 @@
  *
  * */
 
+import { CONTENT } from '../../helpers/sample-content';
+
 const schemaName = 'article';
 
 const params = {
@@ -18,8 +20,16 @@ const resolve = (key) => {
   return (key.hasOwnProperty('published')) ? `${requestUri}&published=${key.published}` : requestUri
 }
 
+const fetch = (query = {}) => {
+    if (query["arc-site"]) {
+        return CONTENT[query["arc-site"]];
+    }
+    return CONTENT["demo"];
+};
+
 export default {
   resolve,
+  fetch,
   params,
   schemaName,
 }
