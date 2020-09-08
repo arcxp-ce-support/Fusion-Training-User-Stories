@@ -54,4 +54,8 @@ desktopCols: PropTypes.oneOf([
 
 5. Iterate through the `children` props and each item in a div with the desktopCols, tabletCols and mobileCols values provided by the editor (using bootstrap)
 
-6. After Fusion rebuilds, 
+6. After Fusion rebuilds, open page builder and add in a new feature.
+
+7. Open up the chains accordion and select the chain type you want displayed. Add in any configurations needed
+
+8. Open the page in the browser and confirm it displays as expected
