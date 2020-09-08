@@ -17,13 +17,17 @@ As a user, I would like to use my feature pack for multiple sites within my orga
 ## What's next?
 Now that we can use the same feature pack for multiple sites, we also need the ability to store site specific information. Switch to branch `fusion-15` to learn more about this next step.
 
+If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
+
+If you are starting this training from the fifteenth user story (task Fusion-15), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-14 instead.
+
 ## New User Story
 
 As a user, I would like to configure my pages to use site-specific variables.
 
 ## Guide
 
-1. Site properties allow for presenting values particular to the site (https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-site-properties.md)
+1. Site properties allow for presenting values particular to the site which is helpful in a multisite scenario  (https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-site-properties.md)
 
 2. Get site properties from the appContext.
 
