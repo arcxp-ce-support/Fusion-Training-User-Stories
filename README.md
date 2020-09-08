@@ -27,7 +27,7 @@ No code changes are required to complete this task
 
 2. Using the basic layout, add in the header feature and any other feature you'd like
 
-3. Under "Developer Tools" > "Resolvers", create a new resolver
+3. Under "Developer Tools" > "Resolvers", create a new resolver. Learn more about resolvers [here](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/pagebuilder-editor-30-resolvers/)
 
 4. Fill in the details of your resolver as follows:
 - Resolver Name: give your resolver a name
@@ -36,5 +36,7 @@ No code changes are required to complete this task
 - Default Template: set the default template to render for all url patterns that matches what is definied for this resolver. In our case, this wil be our `Articles` template
 - Content Source: set the content source the resolver should use to fetch the articles content. For our example, it will be `content-api`
 - website_url & published: set the website url and published value - you can use any value here for our example and save our resolver
+
+NOTE: static values are values you want displayed within this field but patterns are used to get a value from the regex added in the pattern field above
 
 5. Open our site with any url and you should see the header with our demo data e.g. http://localhost/sample
