@@ -19,7 +19,7 @@ Now that we can render multiple instances of a feature, we want to filter the co
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
-If you are starting this training from the sixth user story (task Fusion-06), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-09 instead.
+If you are starting this training from the tenth user story (task Fusion-10), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-09 instead.
 
 
 ## New Task: User Story 10
@@ -28,7 +28,7 @@ As a user, I would like to filter the content to only the necessary fields to re
 ## Guide
 Building on our existing content source, we will apply a filter to the payload to retrieve only the necessary fields. You can add or remove fields that you would like to preview
 
-1. Add a `filters` directory in the `content` folder if it doesn't already existd.
+1. Add a `filters` directory in the `content` folder if it doesn't already exist.
 
 2. Add a new file named `story-card.js` that exports a filter following the expected [query format](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/content-filtering.md)
 
