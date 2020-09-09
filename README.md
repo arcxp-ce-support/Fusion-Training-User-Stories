@@ -21,7 +21,7 @@ If you are starting this training from the eighteenth user story (task Fusion-18
 
 ## New User Story
 
-As a user, I would like to be able to have more control of how a feature will render by explicitly checking the output type.
+As a user, I would like to prevent my output type from falling back onto default features and risking validation.
 
 ## Guide
 
