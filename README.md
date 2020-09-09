@@ -18,7 +18,7 @@ So far, our feature has only been able to render content from a single source pr
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
-If you are starting this training from the tenth user story (task Fusion-10), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-10 instead.
+If you are starting this training from the eleventh user story (task Fusion-11), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-10 instead.
 
 ## New Task: User Story 11
 
