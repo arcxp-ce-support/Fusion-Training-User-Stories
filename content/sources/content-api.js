@@ -5,8 +5,6 @@
  * */
 import { CONTENT } from '../../helpers/sample-content';
 
-import { CONTENT } from '../../helpers/sample-content';
-
 const schemaName = 'article';
 
 const params = {

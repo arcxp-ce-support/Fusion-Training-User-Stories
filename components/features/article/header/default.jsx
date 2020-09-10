@@ -2,12 +2,11 @@
 
 import React from 'react';
 import { useAppContext } from 'fusion:context';
-import getProperties from 'fusion:properties'
 
 const Header = () => {
   /* retrieve global content from fusion's app context */
   const appContext = useAppContext();
-  const { globalContent, siteProperties } = appContext;
+  const { globalContent } = appContext;
 
   return (
     <header className="container-fluid">
