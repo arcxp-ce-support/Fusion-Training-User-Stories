@@ -5,7 +5,7 @@ On this branch, we have add our `/article/header` feature and configured it to r
 As a user, I would like to configure my feature to use a single global content source.
 
 ## Concepts
-- Global Gontent
+- Global Content
 - App Context
 
 ## New Files on this branch
