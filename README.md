@@ -30,7 +30,7 @@ NOTE: All chains are places in the `components/chains` directory
 
 1. Create a new file called default.jsx in the `components/chains` directory
 
-2. In this file, create a functional component that all children within the props like so:
+2. In this file, create a functional component that renders all children within the props like so:
 ```
 {props.children}
 ```
@@ -52,7 +52,7 @@ desktopCols: PropTypes.oneOf([
 }),
 ```
 
-5. Iterate through the `children` props and each item in a div with the desktopCols, tabletCols and mobileCols values provided by the editor (using bootstrap)
+5. Iterate through the `children` props and place each item in a div with the desktopCols, tabletCols and mobileCols values provided by the editor (using bootstrap)
 
 6. After Fusion rebuilds, open page builder and add in a new feature.
 
