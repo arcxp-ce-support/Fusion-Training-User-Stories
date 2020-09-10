@@ -19,17 +19,6 @@ const resolve = (key) => {
 };
 
 const fetch = (query = {}) => {
-  return CONTENT;
-};
-
-const fetch = (query = {}) => {
-    if (query["arc-site"]) {
-        return CONTENT[query["arc-site"]];
-    }
-    return CONTENT["demo"];
-};
-
-const fetch = (query = {}) => {
     if (query["arc-site"]) {
         return CONTENT[query["arc-site"]];
     }
