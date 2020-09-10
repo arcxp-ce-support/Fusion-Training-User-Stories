@@ -46,7 +46,7 @@ where `org` is the name of your organization
 
 7. Open the `content/sources` folder and create a new file called `content-api.js`
 
-8. Give you content source a schema name. For example:
+8. Give your content source a schema name. For example:
 ```
 const schemaName = 'article';
 ```
