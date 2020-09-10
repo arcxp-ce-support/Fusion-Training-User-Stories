@@ -16,7 +16,11 @@ const resolve = (key) => {
   const arcsite = key["arc-site"] || 'demo';
   const requestUri = `/content/v4/?website_url=${ key.website_url || key }&website=${arcsite}`;
   return (key.hasOwnProperty('published')) ? `${requestUri}&published=${key.published}` : requestUri
-}
+};
+
+const fetch = (query = {}) => {
+  return CONTENT;
+};
 
 const fetch = (query = {}) => {
     if (query["arc-site"]) {
