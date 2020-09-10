@@ -26,7 +26,7 @@ As a user, I would like to use my feature pack for multiple sites within my orga
 ## Guide
 1. We will be modifying the content source to handle multiple sites. Here are some best practices for [multisite](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/how-to-prepare-for-pagebuilder-multisite/).
 
-2. Since are working locally and are not using site service, we need to add multiple sites to our mock website file to approximate what we would see if there were multiple sites in site service.
+2. Since we are working locally and are not using site service, we need to add multiple sites to our mock website file to approximate what we would see if there were multiple sites in site service.
 
 3. Add the following sites to `mocks/siteservice/api/v3/website`
 ```
