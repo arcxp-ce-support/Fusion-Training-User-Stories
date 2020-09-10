@@ -32,7 +32,7 @@ This guide is going to demonstrate how to create a color block feature, that gen
 
 4. In the `/color-block/` folder, create a file called `default.jsx` - this is where we'll add all the code for our new feature
 
-5. In the `default.jsx` file, create a functional component generates a random rgb value for a div. You can use this rbg generator in your component:
+5. In the `default.jsx` file, create a functional component that generates a random rgb value for a div. You can use this rbg generator in your component:
 ```
   let rgb = []
   for (var i = 0; i < 3; i++) {
