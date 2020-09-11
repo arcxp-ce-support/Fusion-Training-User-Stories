@@ -16,7 +16,7 @@ Pre-requisites:
 git clone git@github.com:wapopartners/outboundfeeds-skeleton.git
 ```
 
-2. Modify the `.npmrc` to use your github access token.
+2. Create a `.npmrc` in the projects root directory with your github access token. This file is in the .gitignore file and should never be checked into github.
 
 ```
 @wpmedia:registry=https://npm.pkg.github.com
@@ -30,7 +30,7 @@ npm install
 ```
 
 4. Create .env
-   copy env.example to .env and edit the file. Update the CONTENT_BASE with the correct org. Update ARC_ACCESS_TOKEN with your developer token. Update resizerKey with the correct resizerKey for your org.
+   copy env.example to .env and edit the file. Update the CONTENT_BASE with the correct org. Update ARC_ACCESS_TOKEN with your developer token. Update resizerKey with the correct resizerKey for your org. The .env file is in .gitignore and should never be checked into github.
 
 Run Fusion locally see [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/running-fusion-locally.md) for more details:
 
