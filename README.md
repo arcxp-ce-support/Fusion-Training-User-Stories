@@ -30,7 +30,14 @@ npm install
 ```
 
 4. Create .env
-   copy env.example to .env and edit the file. Update the CONTENT_BASE with the correct org. Update ARC_ACCESS_TOKEN with your developer token. Update resizerKey with the correct resizerKey for your org. The .env file is in .gitignore and should never be checked into github.
+
+   Copy env.example to .env and edit the file to replace the placeholders with your correct values.
+
+   - CONTENT_BASE - Set your org in CONTENT_BASE
+   - ARC_ACCESS_TOKEN - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/?product=)
+   - resizerKey - your orgs resizerKey. If you don’t have it, please contact your Technical Delivery Manager (TDM)
+
+   The .env file is in .gitignore and should never be checked into github.
 
 Run Fusion locally see [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/running-fusion-locally.md) for more details:
 
