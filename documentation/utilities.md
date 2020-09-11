@@ -25,7 +25,7 @@ const body = rssBuildContent.parse(
 
 The parse function determines how much of each article to include and maps each content_element type to the correct parser. By putting each parser into it's own function you can easily change how any content_element type is processed. If we want to change how headers are created we can create a new rssBuildContent function and redefine just the header function like.
 
-````javascript
+```javascript
 import { BuildContent } from '@wpmedia/feeds-content-elements'
 
 function rssBuildContent() {
@@ -36,16 +36,15 @@ function rssBuildContent() {
       h1: {
         '@class': 'headline',
         '#': element.content,
-      }
+      },
     }
   }
-
 }
-
+```
 
 ## feeds-find-video-stream
 
-ANS Video''s can have multiple video encodings.  These can be different video types (mp4, m3u8) and different video bit rates (300, 600, 1200, 2400, 5400).  The number type and sizes are configurable in VideoCenter and might be different for each client.  All of a videos encoding are stored in the streams array of the video object.  This utility will search for a video encoding based on the fields and values you pass in.
+ANS Video can have multiple video encodings. These can be different video types (mp4, m3u8) and bit rates (300, 600, 1200, 2400, 5400). The types and sizes are configurable in VideoCenter and might be different for each client. Each video has a streams array to hold the encodings. This utility will search for a single video encoding based on the fields and values you pass in.
 
 ```javascript
 import { findVideo } from '@wpmedia/feeds-find-video-stream'
@@ -56,11 +55,11 @@ const selectVideo = {
 }
 
 const videoStream = findVideo(video.streams, selectVideo)
-````
+```
 
 ## feeds-prop-types
 
-Most feeds can be broken down into sitemaps and rss feeds. Each type share a set of customFields. This utility is a convenient way to add some or all of the shared customFields to a feed. The function generatePropsForFeed( feedType, PropTypes, omit )
+Most feeds can be broken down into sitemaps and rss feeds. Each type shares a common set of customFields. This utility is a convenient way to add some or all of the shared customFields to a feed. The function `generatePropsForFeed( feedType, PropTypes, omit )`
 
 - feedType - either sitemap or rss
 - PropType - the fusion:prop-types
@@ -107,9 +106,11 @@ rss.propTypes = {
 }
 ```
 
+If you want to add your own customFields, add them after the generatePropsForFeed call.
+
 ## feeds-resizer
 
-All image urls must be generated using the resizer. This ensures the lowest latency and reduces any potential impacts on your system. This also offers the opportunity to change the images width and or height if desired. The resizer function depends on a cryptographic key `resizerKey` that should be stored in `/environment/index.js` as an encrypted value. The width and height are optional. If omitted the resizer will return the image's original size. Call the resizer like:
+All image urls must be generated using the resizer. This ensures the lowest latency and reduces any potential impacts on your system. This also offers the opportunity to change the images width and or height if desired. The resizer function depends on a cryptographic key `resizerKey` that should be stored in `environment/index.js` as an encrypted value. The width and height are optional. If omitted the resizer will return the image's original size. Call the resizer like:
 
 ```javascript
 import { resizerKey } from 'fusion:environment'
@@ -126,4 +127,4 @@ const resizedURL = buildResizerURL(
 
 ## feeds-xml-output
 
-By default PageBuilder generates html output. To generate xml output an new outputType must be created. The outputType expects an object and uses the xmlbuilder2 module to convert it to xml. In the skeleton repo the feeds-xml-output package has been added as a dependency. In components/output-types/xml.js the module is exported. Create your feed features as xml.js to have them use the xml output type.
+By default PageBuilder generates html output. To generate xml output an new outputType must be created. The outputType expects an object and uses the xmlbuilder2 module to convert it to xml. In the skeleton repo the feeds-xml-output package has already been [added](./output-types.md).
