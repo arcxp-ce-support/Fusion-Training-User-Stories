@@ -12,34 +12,39 @@ As a user, I would like to configure my site to render different content for dif
 
 ## What's next
 Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. Switch to `fusion-17` to learn more.
-## What's next?
-It's time to learn how to work with multiple output types. Switch to `fusion-16` to find out how.
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
-If you are starting this training from the sixteenth user story (task Fusion-16), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-15 instead.
+If you are starting this training from the seventeeth user story (task Fusion-17), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-16 instead.
 
-## New Task: User Story 16
-As a user, I would like to configure my site to render different content for different outputs such as Google AMP.
+## New Task: User Story 17
+As a user, I would like to be able to have more control of how a feature will render by explicitly checking the output type.
 
 ## Guide
-1. In the `components/output-types` directory, create an amp.jsx file
+1. Now that we have set an output type of `amp` we can access it in our templates to optionally render depending on output type.
 
-2. Within the react component return the entire page content (from the html tag to the body tag), while rendering the children from props
-
-3. There are other attributes in props we can use to render content. For example, the favicon can be displayed by:
+2. Access `outputType` from `appContext` in the `article/header` feature:
 
 ```
-<link rel='icon' type='image/x-icon' href={deployment(`${contextPath}/resources/favicon.ico`)} />
+const {
+    globalContent,
+    outputType,
+    siteProperties,
+  } = appContext;
 ```
-where `deployment` and `contextPath` are extracted from props
 
-4. `CssLinks`, `MetaTags` and `Libs` components can be extracted from the props and rendered in the head tag. e.g. `<CssLinks />`
+3. Now you can test your output type to conditionally render based on which output type is active. For example `outputType !== 'amp'` will test if the output type is not `amp` and will only render in that scenario.
 
-5. Similarily, `Fusion` components should be extracted from props and rendered in the body - `<Fusion />`
+4. Try it out in the `article/header` feature by conditionally rendering the title when the output type is not `amp`.
 
-6. Now lets render an AMP version of our colorblock component. In the colorblock directory, create an amp.jsx file
+5. We can also conditionally render an entire feature by adding an `amp.jsx` version and returning `null`. For the `alert-bar` feature, add `amp.jsx` in the same folder as the `default.jsx` file. Then instead of returning feature code, return `null` like so:
 
-7. In this case, we only need to return the elements of the feature we want to render from the component (i.e. no head/body tags are needed here)
+```
+const AlertBar = () => {
+  return null;
+}
+```
 
-8. After fusion rebuild, load your amp page by adding the following query at the end of your test page url `?outputType=amp` and confirm you can see your AMP page
+6. Now, alert bar will only render when the output type is not `amp`
+
+7. `npx fusion rebuild` and check your results on the default output type and by adding the query param to review the `amp` output type `?outputType=amp`.
