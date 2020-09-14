@@ -47,7 +47,7 @@ As a user, I would like to use my feature pack for multiple sites within my orga
 }
 ```
 
-4. Now that we have multiple sites to choose from, we need a apply the current site to the content source when we fetch content. We can make the content source dynamic by passing the current site into the content source.
+4. Now that we have multiple sites to choose from, we need to apply the current site to the content source when we fetch content. We can make the content source dynamic by passing the current site into the content source.
 
 5. First, find the current site id and if missing default to `demo`:
 
@@ -68,6 +68,7 @@ As a user, I would like to use my feature pack for multiple sites within my orga
         return CONTENT[query["arc-site"]];
     }
     return CONTENT["demo"];
-};```
+};
+```
 
 10. Visit your test page and you should see the data for the site you have designated in the url showing on the page.
