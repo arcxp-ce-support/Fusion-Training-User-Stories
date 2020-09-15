@@ -10,10 +10,10 @@ Pre-requisites:
 - github personal access token with `read:packages` access and sso enabled for WPMedia
 - docker
 
-1. Clone this repo:
+1. Create a template of this repo. Go to https://github.com/wapopartners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the prod branch. Once the new repo is created clone it to your local machine.
 
 ```
-git clone git@github.com:wapopartners/outboundfeeds-skeleton.git
+git clone git@github.com:wapopartners/ORG-outboundfeeds.git
 ```
 
 2. Create a `.npmrc` in the projects root directory with your github access token. This file is in the .gitignore file and should never be checked into github.
@@ -45,7 +45,7 @@ Run Fusion locally see [here](https://redirector.arcpublishing.com/alc/arc-produ
 npx fusion start
 ```
 
-Once fusion has finished starting you should be able to to get to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates)
+Once fusion has finished starting you should be able to to get to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally.
 
 Run tests with:
 
@@ -57,6 +57,12 @@ Run the linter with:
 
 ```
 npm run lint
+```
+
+Once you are ready to [deploy](https://staging.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/deploying-feature-pack.md) a bundle run the zip command.
+
+```
+npx fusion zip
 ```
 
 For more information on developing outbound feeds:
