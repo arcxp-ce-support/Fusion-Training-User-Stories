@@ -110,7 +110,7 @@ If you want to add your own customFields, add them after the generatePropsForFee
 
 ## feeds-resizer
 
-All image urls must be generated using the resizer. This ensures the lowest latency and reduces any potential impacts on your system. This also offers the opportunity to change the images width and or height if desired. The resizer function depends on a cryptographic key `resizerKey` that should be stored in `environment/index.js` as an encrypted value. The width and height are optional. If omitted the resizer will return the image's original size. Call the resizer like:
+All image urls must be generated using the resizer. This ensures the lowest latency and reduces potential impacts on your system. This also offers the opportunity to change the images width and or height if desired. The resizer function depends on a cryptographic key `resizerKey` that should be stored in `environment/index.js` as an encrypted value. The width and height are optional. If omitted the resizer will return the image's original size. Call the resizer like:
 
 ```javascript
 import { resizerKey } from 'fusion:environment'
@@ -127,4 +127,4 @@ const resizedURL = buildResizerURL(
 
 ## feeds-xml-output
 
-By default PageBuilder generates html output. To generate xml output an new outputType must be created. The outputType expects an object and uses the xmlbuilder2 module to convert it to xml. In the skeleton repo the feeds-xml-output package has already been [added](./output-types.md).
+By default PageBuilder generates html output. To generate xml output a new outputType must be created. The outputType expects an object and uses the xmlbuilder2 module to convert it to xml. In the skeleton repo the feeds-xml-output package has already been [added](./output-types.md) and the output-type configured. By including the parameter `?outputType=xml` in all feeds requests tells fusion to use the xml output-type.

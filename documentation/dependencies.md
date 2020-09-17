@@ -32,7 +32,7 @@ If you need to add attributes to a tag use an `@` in front of the tag name. If y
 It will be converted to:
 `<link href="http://www.example.com" type="application/rss">tag text goes here</link>`
 
-### Multiple tags using Arrays
+### Multiple tags using a key
 
 You can use an object to group items. The previous example can be rewritten using an object like:
 
@@ -51,7 +51,7 @@ You can use an object to group items. The previous example can be rewritten usin
 It will be converted to:
 `<link href="http://www.example.com" type="application/rss">tag text goes here</link>`
 
-This can be use anywhere you need to include duplicate tags. Image that you want to use a `<p>` to wrap each paragraph of an article:
+This can be use anywhere you need to include duplicate tags. Image that you want to use a `<p>` to wrap each paragraph of an article. If you add two `p` keys to the same object the second one would overwrite the first.:
 
 ```javascript
 {

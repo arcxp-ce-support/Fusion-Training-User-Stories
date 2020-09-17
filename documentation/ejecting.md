@@ -6,7 +6,7 @@ If you want to start with an existing feed block you need to download it and add
 
 ## download the block
 
-Although blocks are just npm packages, they are not installed in the typical way a npm package would be. They are only loaded at run time by the @arc-fusion/cli. You can confirm this by doing an `npm list` to your local repo.
+Although blocks are just npm packages, they are not installed in the typical way a npm package would be. They are only loaded at run time by the @arc-fusion/cli. You can confirm this by doing an `npm list` in your local repo.
 
 To get a block locally, get the block name from [blocks.json](./blocks.json.md) and use npm to install the package. For this example we will use "@wpmedia/rss-feature-block"
 `npm install @wpmedia/rss-feature-block`
@@ -30,7 +30,7 @@ index.js
 package.json
 ```
 
-The `rss` directory is what we are interested in. It needs to be copied to the components/features directory. You should rename it to distinguish it from the Feed Block you copied it from. Your components directory should look like:
+The `rss` directory needs to be copied to the components/features directory. You should rename it to distinguish it from the Feed Block you copied it from. Your components directory should look like:
 
 ```
 components
