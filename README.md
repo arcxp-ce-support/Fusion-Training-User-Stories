@@ -23,7 +23,7 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the seventh user story (task Fusion-07), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-06 instead.
 
-## New Task: User Story 07
+## Task: User Story 06
 As a user, I would like to directly customize my feature using inline editing for a streamlined experience.
 
 ## Guide
@@ -59,3 +59,8 @@ The code from `exercise-01` differs slightly in that it provides separate fields
 6. After fusion rebuild, go back into the admin and click on the alert bar text. It should now be editable inline without having to find the text field in the admin UI.
 
 7. Save and republish as normal and load the page and confirm that the text you edited inline is displayed.
+
+## Solution Files: User Story 06
+- [/components/features/global/alert-bar/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-07/components/features/global/alert-bar/default.jsx)
+
+### [Continue to Next Task: User Story 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-07)
