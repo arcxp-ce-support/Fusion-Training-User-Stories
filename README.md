@@ -18,9 +18,9 @@ An output type provides a common backbone for all of our pages, so now we'll exp
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
-If you are starting this training from the third user story (task Fusion-03), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-02 instead.
+If you are starting this training from the third user story (task Fusion-02), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-02 instead.
 
-## New Task: User Story 03
+## Task: User Story 02
 As a user, I would like to add a layout to my page, in order to give my page some structure and semantic HTML.
 
 ## Guide
@@ -55,3 +55,9 @@ import PropTypes from 'fusion:prop-types';
 6. Once Fusion rebuilds (or you manually rebuild it by running `npx fusion rebuild`), go into pagebuilder and create a new page
 
 7. On the new page you created, you should now see your `basic` layout as part of the drop down options for the Layout section
+
+## Solution Files: User Story 02
+- [/components/layouts/basic.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-03/components/layouts/basic.jsx)
+
+
+### [Continue to Next Task: User Story 03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-03)
