@@ -25,7 +25,7 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the ninth user story (task Fusion-09), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-08 instead.
 
-## New Task: User Story 09
+## Task: User Story 08
 As a user, I would like to be able to pipe content into my feature so that it renders information from an API.
 
 ## Guide
@@ -71,3 +71,9 @@ const story = useContent({
 10. Within the Story URL custom fields, select `article` and your `content-api` (feel free to add in values for `website_url` and `published`)
 
 11. Save and publish your page. When you open up the page within your browser, you should see the data of your content source display
+
+## Solution Files: User Story 08
+
+- [components/features/global/card/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-09/components/features/global/card/default.jsx)
+
+### [Continue to Next Task: User Story 09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-09)
