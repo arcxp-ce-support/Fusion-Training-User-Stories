@@ -15,13 +15,13 @@ As a user, I would like to configure my feature to use a single global content s
 - none
 
 ## What's next?
-Now that we have a feature that renders based on the global content instead of being fixed to component level content, we want to see how we can dynamically route content using PageBuilder templates. Switch to branch `fusion-12` to learn more about this next step.
+Now that we have a feature that renders based on the global content instead of being fixed to component level content, we want to see how we can dynamically route content using PageBuilder templates. Switch to branch `fusion-12` to learn more about this branch's user story.
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
 If you are starting this training from the twelfth user story (task Fusion-12), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-11 instead.
 
-## New Task: User Story 12
+## Task: User Story 11
 As a user, I would like to be able to render many pieces of content via this template in the browser.
 
 ## GUIDE
@@ -44,3 +44,8 @@ No code changes are required to complete this task
 NOTE: static values are values you want displayed within this field but patterns are used to get a value from the regex added in the pattern field above
 
 5. Open our site with any url and you should see the header with our demo data e.g. http://localhost/sample
+
+## Solution Files: User Story 11
+- none
+
+### [Continue to Next Task: User Story 12](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-12)
