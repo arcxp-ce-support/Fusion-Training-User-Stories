@@ -18,9 +18,9 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the twelfth user story (task Fusion-12), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-12 instead.
 
-After completing `exercise-02` return here and we'll start on the next user story.
+After completing `exercise-02` return here and we'll start on this branch's user story.
 
-## New User Story
+## Task: User Story 13
 As a user, I would like to use my feature pack for multiple sites within my organization
 
 ## Guide
@@ -68,6 +68,13 @@ As a user, I would like to use my feature pack for multiple sites within my orga
         return CONTENT[query["arc-site"]];
     }
     return CONTENT["demo"];
-};```
+};
+```
 
 10. Visit your test page and you should see the data for the site you have designated in the url showing on the page.
+
+## Solution Files: User Story 13
+- [/mocks/siteservice/api/v3/website](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-14/mocks/siteservice/api/v3/website)
+- [/content/sources/content-api.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-14/content/sources/content-api.js)
+
+### [Continue to Next Task: User Story 14](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-14)
