@@ -14,13 +14,13 @@ As a user, I would like to filter the content to only the necessary fields to re
 - `content/filters/story-card.js`
 
 ## What's next?
-So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level so that we can use it to power multiple features. Switch to branch `fusion-11` to learn more about this next step.
+So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level so that we can use it to power multiple features. Switch to branch `fusion-11` to learn more about this branch's user story.
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
 If you are starting this training from the eleventh user story (task Fusion-11), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-10 instead.
 
-## New Task: User Story 11
+## Task: User Story 10
 
 As a user, I would like to configure my feature to use a single global content source.
 
@@ -43,3 +43,8 @@ As a user, I would like to configure my feature to use a single global content s
 08. Here, you will see a drop down for "Global Content Service" - select your content-api and enter values for the website_url and published fields.
 
 09. Add the `article/header` feature to your page and you should see it populate with the headline and subheadline from the global content. Save and publish the page.
+
+## Solution Files: User Story 10
+- [components/features/article/header/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-11/components/features/article/header/default.jsx)
+
+### [Continue to Next Task: User Story 11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-11)
