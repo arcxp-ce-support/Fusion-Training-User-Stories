@@ -1,6 +1,6 @@
 # fusion-18
 
-## User story
+## Final Task: User story 18 
 As a user, I would like to prevent my output type from falling back onto default features and risking validation.
 
 ## Concepts
