@@ -17,7 +17,7 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the seventeeth user story (task Fusion-17), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-16 instead.
 
-## New Task: User Story 17
+## Task: User Story 16
 As a user, I would like to be able to have more control of how a feature will render by explicitly checking the output type.
 
 ## Guide
@@ -48,3 +48,9 @@ const AlertBar = () => {
 6. Now, alert bar will only render when the output type is not `amp`
 
 7. `npx fusion rebuild` and check your results on the default output type and by adding the query param to review the `amp` output type `?outputType=amp`.
+
+## Solution Files: User Story 16
+- [components/features/global/alert-bar/amp.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-17/components/features/global/alert-bar/amp.jsx)
+- [components/features/article/header/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-17/components/features/article/header/default.jsx)
+
+### [Continue to Next Task: User Story 17](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-17)
