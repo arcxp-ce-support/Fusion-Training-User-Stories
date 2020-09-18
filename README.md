@@ -15,14 +15,14 @@ As a user, I would like to be able to pipe content into my feature so that it re
 - none
 
 ## What's next?
-Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch fusion-10 to see the completed code for this next step.
+Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch fusion-10 to see the completed code for this branch's user story.
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
 If you are starting this training from the tenth user story (task Fusion-10), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-09 instead.
 
 
-## New Task: User Story 10
+## New Task: User Story 09
 As a user, I would like to filter the content to only the necessary fields to reduce the payload.
 
 ## Guide
@@ -60,3 +60,9 @@ const story = useContent({
 5. To see the difference in payload, `console.log(story)`
 
 6. Load your page and confirm that you are still displaying the headline and subheadline with a much smaller payload.
+
+## Solution Files: User Story 09
+- [components/features/global/card/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-10/components/features/global/card/default.jsx)
+- [content/filters/story-card.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-10/content/filters/story-card.js)
+
+### [Continue to Next Task: User Story 10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-10)
