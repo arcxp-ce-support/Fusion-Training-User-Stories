@@ -20,7 +20,7 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the thirteenth user story (task Fusion-13), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-12 instead.
 
-## New Task: User Story 13
+## Task: User Story 12
 As a user, I would like to group features together to create more complex layouts.
 
 ## Guide
@@ -59,3 +59,10 @@ desktopCols: PropTypes.oneOf([
 7. Open up the chains accordion and select the chain type you want displayed. Add in any configurations needed
 
 8. Open the page in the browser and confirm it displays as expected
+
+## Solution Files: User Story 12
+
+- [/components/chains/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-13/components/chains/default.jsx)
+- [/components/chains/grid.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-13/components/chains/grid.jsx)
+
+### [Continue to Next Task: User Story 13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-13)
