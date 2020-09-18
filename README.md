@@ -19,7 +19,7 @@ If you are continuing this training from the last user story, then keep working 
 
 If you are starting this training from the eighteenth user story (task Fusion-18), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-17 instead.
 
-## New User Story
+## Task: User Story 17
 
 As a user, I would like to prevent my output type from falling back onto default features and risking validation.
 
@@ -33,3 +33,8 @@ AmpOutputType.fallback = false
 ```
 
 3. `npx fusion rebuild` and features without an amp output type should no longer render.
+
+## Solution Files: User Story 17
+- [components/output-types/amp.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-18/components/output-types/amp.jsx)
+
+### [Continue to Next Task: User Story 18](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-18)
