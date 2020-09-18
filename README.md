@@ -68,6 +68,6 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 10. Load your page and confirm that the background color of the div displayed is the same color you entered into PageBuilder
 
 ## Solution Files: User Story 05
-- [/components/features/sample/color-block/default.jsx]https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-06/components/features/sample/color-block/default.jsx)
+- [/components/features/sample/color-block/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-06/components/features/sample/color-block/default.jsx)
 
 ### [Continue to Next Task: User Story 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-06)
