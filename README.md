@@ -15,13 +15,13 @@ As a user, I would like to directly customize my feature using inline editing fo
 - `/components/features/global/alert-bar/default.jsx`
 
 ## What's next?
-Your next task is to update your feature to dynamically pipe content by exposing a content config to the PageBuilder user. Switch to branch `fusion-08` to see the completed code for the next step.
+Your next task is to update your feature to dynamically pipe content by exposing a content config to the PageBuilder user. Switch to branch `fusion-08` to see the completed code for this branch's user story.
 
 If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
 If you are starting this training from the eighth user story (task Fusion-08), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-07 instead.
 
-## New Task: User Story 08
+## Task: User Story 07
 As a user, I would like to fetch content from an API into my feature pack.
 
 ## Guide
@@ -136,3 +136,10 @@ type Subheadlines {
 21. Open your test page and click on your new bookmark - you should see a panel on the left-hand side of your screen appear
 
 22. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
+
+## Solution Files: User Story 07
+- [/content/sources/content-api.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-08/content/sources/content-api.js)
+- [/content/schemas/article.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-08/content/schemas/article.js)
+- .env
+
+### [Continue to Next Task: User Story 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-08)
