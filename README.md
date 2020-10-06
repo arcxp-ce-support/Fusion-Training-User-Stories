@@ -1,6 +1,6 @@
 # The Washington Post's Arc Outbound Feeds skeleton
 
-This is a fusion themes based repository and is intended to be used as the starting point for enabling _out of the box and custom Arc Outboundfeeds_.
+This is a fusion themes based repository and is intended to be used as the starting point for using _Arc Outboundfeeds_. It doesn't matter if a client is currently using themes or not.  This repo will be used to run Outbound feeds in its own dedicated environment.
 
 ## Setup
 
@@ -10,7 +10,7 @@ Pre-requisites:
 - github personal access token with `read:packages` access and sso enabled for WPMedia
 - docker
 
-1. Create a template of this repo. Go to https://github.com/wapopartners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the prod branch. Once the new repo is created clone it to your local machine.
+1. Create a template of this repo. Go to https://github.com/wapopartners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the prod branch. Once the new repo has been created, clone it to your local machine.
 
 ```
 git clone git@github.com:wapopartners/ORG-outboundfeeds.git
@@ -36,6 +36,7 @@ npm install
    - CONTENT_BASE - Set your org in CONTENT_BASE
    - ARC_ACCESS_TOKEN - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/?product=)
    - resizerKey - your orgs resizerKey. If you don’t have it, please contact your Technical Delivery Manager (TDM)
+   - BLOCK_DIST_TAG - To use production blocks, set this to 'stable', to use the most recent release use 'beta'
 
    The .env file is in .gitignore and should never be checked into github.
 
@@ -46,6 +47,7 @@ npx fusion start
 ```
 
 Once fusion has finished starting you should be able to to get to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally.
+
 
 Run tests with:
 
