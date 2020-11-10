@@ -1,6 +1,6 @@
-# The Washington Post's Arc Outbound Feeds skeleton
+# Setup a new Outbound Feeds repo
 
-This is a fusion themes based repository and is intended to be used as the starting point for using _Arc Outboundfeeds_. It doesn't matter if a client is currently using themes or not.  This repo will be used to run Outbound feeds in its own dedicated environment.
+This is a fusion themes based repository and is intended to be used as the starting point for using _Arc Outboundfeeds_. It doesn't matter if a client is currently using themes or not. This repo will be used to run Outbound feeds in its own dedicated environment.
 
 ## Setup
 
@@ -33,7 +33,7 @@ npm install
 
    Copy env.example to .env and edit the file to replace the placeholders with your correct values.
 
-   - CONTENT_BASE - Set your org in CONTENT_BASE
+   - CONTENT_BASE - Set your org in CONTENT_BASE [ALC](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md#configuring-content_base-and-arc_access_token-for-local-development)
    - ARC_ACCESS_TOKEN - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/?product=)
    - resizerKey - your orgs resizerKey. If you don’t have it, please contact your Technical Delivery Manager (TDM)
    - BLOCK_DIST_TAG - To use production blocks, set this to 'stable', to use the most recent release use 'beta'
@@ -48,7 +48,6 @@ npx fusion start
 
 Once fusion has finished starting you should be able to to get to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally.
 
-
 Run tests with:
 
 ```
@@ -61,8 +60,7 @@ Run the linter with:
 npm run lint
 ```
 
-5. Once you are ready to deploy the bundle you will need to setup environment variables in the `environment/org-outboundfeeds.js` and or `environment/org-outboundfeeds-sandbox.js` files.  The files should be renamed to replace the clients org name with the `org` in the current names.  Any values that should not be made public need to be [encrypted](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md).
-
+5. Once you are ready to deploy the bundle you will need to setup environment variables in the `environment/org-outboundfeeds.js` and or `environment/org-outboundfeeds-sandbox.js` files. Use the values from your local .env to set the `CONTENT_BASE` and `resizerKey`. Rename the files, replacing the clients org name with the `org` in the current names. Any values that should not be made public need to be [encrypted](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md).
 
 Once you are ready to [deploy](https://staging.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/deploying-feature-pack.md) a bundle run the zip command.
 
