@@ -89,7 +89,8 @@ It will be converted to:
 
 ### index error
 
-Using the xml output-type to convert the object to xml keeps the code dry. But it can make debugging harder. If the xml conversion fails it will generate an index error in the output-type and not in the feeds code. xmlbuilder2 will give an error if you try to convert a null or an empty array.
+Using the xml output-type to convert the object to xml keeps the code dry. But it can make debugging harder. If the xml conversion fails it will generate an index error in the output-type and not in the feeds code. xmlbuilder2 will give an error if you try to convert a null. If you are getting an index
+error, console.log the object that is returned by the feed and look for nulls.
 
 ## jmespath
 

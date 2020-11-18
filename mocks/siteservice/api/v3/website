@@ -1,12 +1,7 @@
 [
   {
-    "_id": "chosun",
-    "display_name": "Chosun",
+    "_id": "localhost",
+    "display_name": "localhost",
     "is_default_website": true
-  },
-  {
-    "_id": "chosunbiz",
-    "display_name": "Chosun Biz",
-    "is_default_website": false
   }
 ]
