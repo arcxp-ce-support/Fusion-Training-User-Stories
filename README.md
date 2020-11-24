@@ -7,7 +7,6 @@ This is a fusion themes based repository and is intended to be used as the start
 Pre-requisites:
 
 - node / npm installed (node version > 10).
-- github personal access token with `read:packages` access and sso enabled for WPMedia
 - docker
 
 1. Create a template of this repo. Go to https://github.com/wapopartners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the prod branch. Once the new repo has been created, clone it to your local machine.
@@ -16,11 +15,13 @@ Pre-requisites:
 git clone git@github.com:wapopartners/ORG-outboundfeeds.git
 ```
 
-2. Create a `.npmrc` in the projects root directory with your github access token. This file is in the .gitignore file and should never be checked into github.
+2. Create a read-only personal access token in github
+
+To be able to deploy outbound feeds you need to create a read-only token in [github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). This token needs to be added to your .npmrc file and will allow you to view and install outboundfeeds blocks. The .npmrc file must never be added to the repo and checked in. Please use the following format when setting up your .npmrc:
 
 ```
-@wpmedia:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken={ YOUR AUTH TOKEN HERE }
+@wpmedia:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=<your personal access token>
 ```
 
 3. Install the packages
@@ -33,10 +34,10 @@ npm install
 
    Copy env.example to .env and edit the file to replace the placeholders with your correct values.
 
-   - CONTENT_BASE - Set your org in CONTENT_BASE [ALC](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md#configuring-content_base-and-arc_access_token-for-local-development)
-   - ARC_ACCESS_TOKEN - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/?product=)
+   - `CONTENT_BASE` - Set your org in `https://api.${ORG}.arcpublishing.com` [ALC](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md#configuring-content_base-and-arc_access_token-for-local-development)
+   - `ARC_ACCESS_TOKEN` - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/?product=)
    - resizerKey - your orgs resizerKey. If you don’t have it, please contact your Technical Delivery Manager (TDM)
-   - BLOCK_DIST_TAG - To use production blocks, set this to 'stable', to use the most recent release use 'beta'
+   - `BLOCK_DIST_TAG` - To use production blocks, set this to 'stable', to use development blocks use 'beta'. Fusion defaults to stable if not set.
 
    The .env file is in .gitignore and should never be checked into github.
 
