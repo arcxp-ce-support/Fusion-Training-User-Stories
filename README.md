@@ -1,53 +1,12 @@
-# Welcome to Fusion!
+## Lab 01
+As a user, I would like to be able to render content via a default output type, which allows me to customize the head of my page. Without an output type, PageBuilder can't render anything! For more details on output types, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-using-output-types.md?version=2.6).
 
-This repository contains all of the code necessary to complete each of the steps in the Arc PageBuilder Fusion training curriculum.
+1. Open `components > output-types > default.jsx`
+2. Update the title metadata tag in the `<head>` of the page
+3. Once you save your file, fusion should automatically pick up the changes.
+4. Visit `http://localhost/pagebuilder/pages
+5. Click on `Create Page` and give it a name and path like `firstpage`
+6. Click on the globe icon on the left, and click on `Share & Publish`
+7. Then you can visit `http://localhost/pf/firstpage/?_website=demo` and you should see your new page published. You will not see any content display, but you should see your updated page title display in the browser tab.
 
-## How to use
-This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to `lab-05` branch since thats where lab 5 starts off.
-
-It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
-
-## Lab 00
-Running Fusion locally.
-
-1. Clone this repo
-```
-git clone git@github.com:wapopartners/Fusion-Training-User-Stories.git
-```
-
-2. Change directory into Fusion-Training-User-Stories
-```
-cd Fusion-Training-User-Stories
-```
-
-3. Checkout the `lab-00` branch
-```
-git checkout lab-00
-```
-
-4. Checkout to your own branch from here
-```
-git checkout -b USERNAME-fusion-training
-```
-
-5. Install all packages/dependencies
-```
-npm install
-```
-
-6. To ensure you are using the latest fusion-cli, run:
-```
-npm install @arc-fusion/cli@canary
-```
-
-7. Start fusion
-```
-npx fusion start
-```
-
-8. Load the following link once fusion has finished loading (it might take a few minutes)
-```
-http://localhost/pagebuilder/pages
-```
-
-## Next up: Lab 01
+## Next up: Lab 02
