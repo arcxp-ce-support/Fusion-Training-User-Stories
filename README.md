@@ -8,7 +8,7 @@ This repo contains one branch for each of the labs in the Fusion training curric
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
 ## Lab 00
-As a user, I would like to be able to render content via a default output type, which allows me to customize the head of my page.
+Running Fusion locally.
 
 1. Clone this repo
 ```
