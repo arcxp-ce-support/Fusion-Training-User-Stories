@@ -33,7 +33,7 @@ To use PropTypes, you'll need to import the library into your component
 import PropTypes from 'fusion:prop-types';
 ```
 
-7. Once Fusion rebuilds (or you manually rebuild it by running `npx fusion rebuild`), go into pagebuilder and open the page you had created in `lab-01`
+7. Since we added a new file here, we have to restart or rebuild fusion to recognize it. You can manually restart or manually rebuild with `npx fusion rebuild`. Once fusion is back up, go into pagebuilder and open the page you had created in `lab-01`
 
 8. Click on the `Setup` icon on the left and select your new layout. Then click on the `Curate` icon on the left and you should see all the new sections of your layout show up (header, main, aside, footer).
 
