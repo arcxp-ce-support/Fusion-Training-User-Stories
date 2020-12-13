@@ -1,35 +1,14 @@
-# fusion-05
+# Lab 05
 
 On this branch, we have updated our `/sample/color-block` feature to render server side only.
 
-## User story
-As a user, I would like to render my feature server side only to improve page performance.
+One of the many features of PageBuilder is the ability to allow non-technical users to customize the appearance or functionality of their pages without requiring a developer. In the next step, we'll learn how we, as developers, can make such functionality available in the PageBuilder UI based on a set of options. Switch to branch `lab-06` to see the completed code for this branch's user story.
 
-## Concepts
-- Server Side vs. Isomorphic vs. Client side rendering
+Building from our Color Block feature, we're going to add the ability to set the background color of our `div` in PageBuilder. This is made possible by Custom Fields in PageBuilder. For more details, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md).
 
-## New Files on this branch
-- none!
+1. Open the feature we created previously at `components/features/sample/color-block/default.jsx`.
 
-## Changed files:
-- `/components/features/sample/color-block/default.jsx`
-
-## What's next?
-One of the many features of PageBuilder is the ability to allow non-technical users to customize the appearance or functionality of their pages without requiring a developer. In the next step, we'll learn how we, as developers, can make such functionality available in the PageBuilder UI based on a set of options. Switch to branch `fusion-06` to see the completed code for this branch's user story.
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the sixth user story (task Fusion-06), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-05 instead.
-
-## Task: User Story 05
-As a user, I would like to customize my feature in the PageBuilder UI based on a set of options.
-
-## Guide
-Building from our Color Block feature, we're going to add the ability to set the background color of our div in PageBuilder. However, you can add any customization you'd like
-
-1. From root, change directory into the folder of your feature (from our previous example in fusion-03, that will be `components/features/sample/color-block/`) and open the deafult.jsx file of your component
-
-2. Add in a [custom field](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md) that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the propTypes of your component to include custom fields like so:
+2. Add in a Custom Field that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the propTypes of your component to include custom fields like below.
 ```
 ColorBlock.propTypes = {
   customFields: PropTypes.shape({
@@ -67,7 +46,6 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 
 10. Load your page and confirm that the background color of the div displayed is the same color you entered into PageBuilder
 
-## Solution Files: User Story 05
-- [/components/features/sample/color-block/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-06/components/features/sample/color-block/default.jsx)
+There are many more types of Custom Fields in addition to `text`. [Click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md?version=2.6) to see all of them.
 
-### [Continue to Next Task: User Story 06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-06)
+## Next up: Lab 06
