@@ -1,39 +1,18 @@
-# fusion-07
+# Lab 07
 
 On this branch, we have updated our `/global/alert-bar` feature that we created in `exercise-01` to offer PageBuilder users the ability to edit their feature inline in the admin preview pane.
 
-## User story
-As a user, I would like to directly customize my feature using inline editing for a streamlined experience.
-
-## Concepts
-- Inline Editing
-
-## New Files on this branch
-- None
-
-## Changed files:
-- `/components/features/global/alert-bar/default.jsx`
-
-## What's next?
 Your next task is to update your feature to dynamically pipe content by exposing a content config to the PageBuilder user. Switch to branch `fusion-08` to see the completed code for this branch's user story.
 
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the eighth user story (task Fusion-08), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-07 instead.
-
-## Task: User Story 07
-As a user, I would like to fetch content from an API into my feature pack.
-
-## Guide
 In order to fetch content from an API, we need to define what API we'll be fetching from and provide credentials. To do this, we'll need to:
 
 1. Create a new file called `.env` at the root of your project directory. Inside this file, you'll need to add in the content base and access token for your API
 
-2. Go to your [orgs homepage](https://redirector.arcpublishing.com/home/) or if you don't have one, use our [demo organization](https://demo.arcpublishing.com/home/)
+2. Go to your [orgs homepage](https://redirector.arcpublishing.com/home/) and switch to the sandbox environment
 
-3. Click developer center and click "create read-only token"
+3. Click on Developer Center and click "create read-only token"
 
-4. Enter your email address into the description field and click create. This will create your access token
+4. Fill in the fields and click create. This will create your access token
 
 5. Copy the content at the bottom where it says "Copy the following into your PB .env file if setting up PageBuilder" and place it into your .env. It should be something like this:
 ```
@@ -60,7 +39,7 @@ const params = {
 ```
 In our example above, this content source is expecting a `website_url` and `published` date
 
-10. We need to define the URI which the content source will call. Create a resolve function which takes in a `key` holding the params defined above and returns the URI
+10. We need to define the URI which the content source will call. Create a fusion `resolve` function which takes in a `key` holding the params defined above and returns the URI. For more details on content source, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-content-source.md?version=2.6)
 ```
 const resolve = (key) => {
   const requestUri = `/content/v4/stories/?website_url=${ key.website_url || key }&website={org}`;
@@ -69,11 +48,10 @@ const resolve = (key) => {
 }
 ```
 
-11. *(This is only for those using demo as the org)* If you are using `demo` as your org then you probably don't have any data available. As a work-around, go to fusion-08 and download the `helpers/sample-content.js` file into a `helpers` folder in the root of your project. Now, we can import this sample data into our content source and return it when this content source is called like so:
+11. *(This if you do not have access to your Arc organization)* As a work-around, go to lab-08 and download the `helpers/sample-content.js` file into a `helpers` folder in the root of your project. Now, we can import this sample data into our content source and return it when this content source is called like below. You do not need the `resolve` function.
 
 ```
 import { CONTENT } from '../../helpers/sample-content';
-// ... other functions / consts
 const fetch = (query = {}) => {
   return CONTENT;
 };
@@ -137,9 +115,4 @@ type Subheadlines {
 
 22. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
 
-## Solution Files: User Story 07
-- [/content/sources/content-api.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-08/content/sources/content-api.js)
-- [/content/schemas/article.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-08/content/schemas/article.js)
-- .env
-
-### [Continue to Next Task: User Story 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-08)
+## Next up: Lab 08
