@@ -5,7 +5,7 @@ It's time to learn how to work with multiple output types. As we have learned, o
 
 1. In the `components/output-types` directory, create an amp.jsx file
 
-2. Within the react component return the entire page content (from the html tag to the body tag), while rendering the children from props
+2. Within the react component return the entire page content (from the html tag to the body tag), while rendering the children from props. Remember to add in any AMP support tags needed. Refer to the [AMP documentation](https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/) for further details.
 
 3. There are other attributes in props we can use to render content. For example, the favicon can be displayed by:
 
