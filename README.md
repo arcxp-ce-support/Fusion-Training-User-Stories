@@ -1,34 +1,11 @@
-# fusion-09
+# Lab 09
 On this branch, we've created a new Card feature that can fetch content individually for each instance of the feature. This means that we can configure multiple card features per page and each one can render its own content.
 
-## User story
-As a user, I would like to be able to pipe content into my feature so that it renders information from an API.
+Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch `lab-10` to see the completed code for this branch's user story.
 
-## Concepts
-- useContent
-- contentConfig custom field
-
-## New Files on this branch
-- `components/features/global/card/default.jsx`
-
-## Changed files:
-- none
-
-## What's next?
-Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch fusion-10 to see the completed code for this branch's user story.
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the tenth user story (task Fusion-10), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-09 instead.
-
-
-## New Task: User Story 09
-As a user, I would like to filter the content to only the necessary fields to reduce the payload.
-
-## Guide
 Building on our existing content source, we will apply a filter to the payload to retrieve only the necessary fields. You can add or remove fields that you would like to preview
 
-1. Add a `filters` directory in the `content` folder if it doesn't already exist.
+1. Add a `filters` directory in the `/content` folder if it doesn't already exist.
 
 2. Add a new file named `story-card.js` that exports a filter following the expected [query format](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/content-filtering.md)
 
@@ -57,12 +34,8 @@ const story = useContent({
 });
 ```
 
-5. To see the difference in payload, `console.log(story)`
+5. To see the difference in payload, `console.log(story)` in the `card` feature
 
 6. Load your page and confirm that you are still displaying the headline and subheadline with a much smaller payload.
 
-## Solution Files: User Story 09
-- [components/features/global/card/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-10/components/features/global/card/default.jsx)
-- [content/filters/story-card.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-10/content/filters/story-card.js)
-
-### [Continue to Next Task: User Story 10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-10)
+## Next up: Lab 10
