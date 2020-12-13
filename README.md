@@ -1,28 +1,9 @@
-# fusion-03
+# Lab 03
+Your next task is to create a new feature. Switch to branch `lab-04` to see the completed code for the this branch's user story.
 
-On this branch, we've created and customized a new layout, `basic.jsx`, which lets us add semantic markup to our pages.
+Remeber, if you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
 
-## User story
-As a user, I would like to be able to add a layout to my page, in order to give my page some structure and semantic HTML.
-
-## Concepts
-- Layouts
-
-## New Files on this branch
-- /components/layouts/basic.jsx
-
-## What's next?
-Your next task is to create a new feature. Switch to branch `fusion-04` to see the completed code for the this branch's user story.
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the fourth user story (task Fusion-04), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-03 instead.
-
-## Task: User Story 03
-As a user, I would like to be able to add a feature to my page.
-
-## Guide
-This guide is going to demonstrate how to create a color block feature, that generates a random background color for a div. However, you can create any new feature you'd like for this task
+These steps will guide you through creating a color block feature, that generates a random background color for a div. However, you can create any new feature you'd like for this task. For more details on features, [click here](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-feature-component.md?version=2.6).
 
 1. All features are added into the `/components/features/` folder
 
@@ -46,18 +27,15 @@ This guide is going to demonstrate how to create a color block feature, that gen
 backgroundColor: `rgb(${rgb})`,
 ```
 
-7. After Fusion rebuilds, open the page you created in fusion-02
+7. After Fusion rebuilds (since we created a new file, you will need to manually rebuild fusion), open the page you created in `lab-02`
 
 8. Ensure that your Basic layout has been selected
 
-9. Within the main section of the layout, click "add to main" and select your `Sample color block` feature
+9. In the `Cureate` tab, click on `Add Feature` in any of the layout sections and select your `Sample color block` feature
 
 10. Save and republish your page and open up the live page
 
 11. You should see your color block feature
 
-## Solution Files: User Story 03
-- [/features/sample/color-block/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-04/components/features/sample/color-block/default.jsx)
-
-### [Continue to Next Task: User Story 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-04)
+## Next up: Lab 04
 
