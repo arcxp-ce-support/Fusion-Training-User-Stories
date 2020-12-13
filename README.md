@@ -1,34 +1,13 @@
-# fusion-13
+# Lab 13
+This branch gives us the major components for creating a manually curated page (albeit a simple one) within PageBuilder. Let's do another exercise to practice what we've learned so far! Switch to `exercise-02` for examples. After completing `exercise-02` return here and we'll start on this branch's user story.
 
-## User story
-As a user, I would like to group features together to create more complex layouts.
+In this lab, lets use the feature pack we have for multiple sites within my organization
 
-## Concepts
-- Chains
-- Multiple features
-
-## New files:
-- `/components/chains/default.jsx`
-- `/components/chains/grid.jsx`
-
-## What's next
-This branch gives us the major components for creating a manually curated page (albeit a simple one) within PageBuilder. Let's do another exercise to practice what we've learned so far! Switch to `exercise-02` for examples.
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the twelfth user story (task Fusion-12), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-12 instead.
-
-After completing `exercise-02` return here and we'll start on this branch's user story.
-
-## Task: User Story 13
-As a user, I would like to use my feature pack for multiple sites within my organization
-
-## Guide
 1. We will be modifying the content source to handle multiple sites. Here are some best practices for [multisite](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/how-to-prepare-for-pagebuilder-multisite/).
 
 2. Since we are working locally and are not using site service, we need to add multiple sites to our mock website file to approximate what we would see if there were multiple sites in site service.
 
-3. Add the following sites to `mocks/siteservice/api/v3/website`
+3. Add the following sites to `mocks/siteservice/api/v3/website`. This is only used locally, as in sandbox/prod environments this data comes from what is configured in `Sites`
 ```
 {
     "_id": "the-bugle",
@@ -57,9 +36,9 @@ As a user, I would like to use my feature pack for multiple sites within my orga
 
 `&website=${arcsite}`
 
-7. The arc-site value comes from the url that is associated with your site in site service. It is equivalent to the `_id` value in the site data that we added to the mock. To test it locally, add or adjust the _website query param on your url. `localhost/sample/?_website=the-planet` for example will set the arc-site value to be `the-planet`.
+7. The arc-site value comes from the url that is associated with your site in site service. It is equivalent to the `_id` value in the site data that we added to the mock. To test it locally, add or adjust the _website query param on your url. `localhost/pf/sample/?_website=the-planet` for example will set the arc-site value to be `the-planet`.
 
-8. Modifying the content source alone works if we are using an Arc api, but since we are using sample data, we will need a different approach. To see different data from this site, you'll have to modify the sample data file in helpers to have the article nested in a key matching the site id. See `helpers/sample-content.js`.
+8. Modifying the content source alone works if we are using an Arc api, but since we are using sample data, we will need a different approach. To see different data from this site, you'll have to modify the sample data file in helpers to have the article nested in a key matching the site id in `helpers/sample-content.js`.
 
 9. To pull the content from that arc site added to the sample data, modify the fetch on that sample data to choose the current site data, and default to `demo`.
 
@@ -73,8 +52,4 @@ As a user, I would like to use my feature pack for multiple sites within my orga
 
 10. Visit your test page and you should see the data for the site you have designated in the url showing on the page.
 
-## Solution Files: User Story 13
-- [/mocks/siteservice/api/v3/website](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-14/mocks/siteservice/api/v3/website)
-- [/content/sources/content-api.js](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-14/content/sources/content-api.js)
-
-### [Continue to Next Task: User Story 14](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-14)
+## Next up: Lab 14
