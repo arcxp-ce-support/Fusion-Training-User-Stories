@@ -1,32 +1,8 @@
-# fusion-15
-
+# Lab 15
 On this branch, we have are now utilizing site properties so that we can render site specific properties within an organization.
 
-## User story
-As a user, I would like to configure my pages to use site-specific variables.
+It's time to learn how to work with multiple output types. As we have learned, output types allow fusion to render content in different formats and for different purposes (AMP, JSON, XML, etc).
 
-## Concepts
-- Site Properties
-
-## New Files on this branch
--  `properties/index.js `
--  `properties/sites/demo.js`
--  `properties/sites/the-bugle.js`
-
-## Changed files:
-- `components/features/article/header/default.jsx`
-
-## What's next?
-It's time to learn how to work with multiple output types. Switch to `fusion-16` to find out how.
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the sixteenth user story (task Fusion-16), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-15 instead.
-
-## Task: User Story 15
-As a user, I would like to configure my site to render different content for different outputs such as Google AMP.
-
-## Guide
 1. In the `components/output-types` directory, create an amp.jsx file
 
 2. Within the react component return the entire page content (from the html tag to the body tag), while rendering the children from props
@@ -42,15 +18,10 @@ where `deployment` and `contextPath` are extracted from props
 
 5. Similarily, `Fusion` components should be extracted from props and rendered in the body - `<Fusion />`
 
-6. Now lets render an AMP version of our colorblock component. In the colorblock directory, create an amp.jsx file
+6. Now lets render an AMP version of our color-block component. In the color-block directory, create an amp.jsx file. When the AMP output type loads, it automatiacally looks for the `amp.jsx` version of all the features isntead of the `default.jsx`.
 
-7. In this case, we only need to return the elements of the feature we want to render from the component (i.e. no head/body tags are needed here)
+7. In this case, we only need to return the elements of the feature we want to render from the component. Add a React component here that renders the color the way you want it to on AMP pages.
 
-8. After fusion rebuild, load your amp page by adding the following query at the end of your test page url `?outputType=amp` and confirm you can see your AMP page
+8. After fusion rebuild, load your amp page by adding the following query at the end of your test page url `?outputType=amp` and confirm you can see your AMP page.
 
-## Solution Files: User Story 15
-
-- [/components/output-types/amp.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-16/components/output-types/amp.jsx)
-- [/components/features/sample/color-block/amp.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-16/components/features/sample/color-block/amp.jsx)
-
-### [Continue to Next Task: User Story 16](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-16)
+## Next up: Lab 16
