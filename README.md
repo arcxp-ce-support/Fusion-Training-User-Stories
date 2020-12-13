@@ -1,29 +1,6 @@
-# fusion-12
-On this branch, we won't actually be making any code changes! It's just here for continuity with the other tasks and concepts.
+## Lab 12
+Now that we can render complex features, it's time to add some complexity to our layouts. We'll do that by introducing a new type of component: Chains. Switch to branch `lab-13` to see how! For more details on chains, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-chain-component.md?version=2.6)
 
-## User story
-As a user, I would like to be able to render many pieces of content via this template in the browser.
-
-## Concepts
-- Resolvers
-
-## New Files on this branch
-- None
-
-## Changed files:
-- None
-
-## What's next?
-Now that we can render complex features, it's time to add some complexity to our layouts. We'll do that by introducing a new type of component: Chains. Switch to branch `fusion-13` to see how!
-
-If you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
-
-If you are starting this training from the thirteenth user story (task Fusion-13), then follow the steps under "What's next?" on the README file in the (https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-01/README.md)[fusion-01] branch - but checkout from fusion-12 instead.
-
-## Task: User Story 12
-As a user, I would like to group features together to create more complex layouts.
-
-## Guide
 To group features together, we need to create a chain. A [chain](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/pagebuilder-editor-adding-features-and-chains/) is a collection of features organized in a predetermined structure. In this task, we will create two chains - a default chain and a grid chain.
 
 NOTE: All chains are places in the `components/chains` directory
@@ -52,17 +29,12 @@ desktopCols: PropTypes.oneOf([
 }),
 ```
 
-5. Iterate through the `children` props and place each item in a div with the desktopCols, tabletCols and mobileCols values provided by the editor (using bootstrap)
+5. Iterate through the `children` props and place each item in a div with the desktopCols, tabletCols and mobileCols values provided by the editor (using bootstrap). Each item in the `children` array is a feature that is dragged into the chain. It can be placed using simple JSX syntax like `{props.children[0]}`
 
-6. After Fusion rebuilds, open page builder and add in a new feature.
+6. After Fusion rebuilds, open page builder and click on `Add Feature` in any section
 
-7. Open up the chains accordion and select the chain type you want displayed. Add in any configurations needed
+7. Click on `Chains` and select the new chain you created. Modify any custom fields you would like
 
-8. Open the page in the browser and confirm it displays as expected
+8. Click on `Add Feature` again and drag in any feature into the chain to see how it renders
 
-## Solution Files: User Story 12
-
-- [/components/chains/default.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-13/components/chains/default.jsx)
-- [/components/chains/grid.jsx](https://github.com/wapopartners/Fusion-Training-User-Stories/blob/fusion-13/components/chains/grid.jsx)
-
-### [Continue to Next Task: User Story 13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/fusion-13)
+## Next up: Lab 13
