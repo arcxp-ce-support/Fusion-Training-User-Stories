@@ -11,4 +11,4 @@ ColorBlock.static = true;
 
 That's it! There is another way to render part of the component server side. For more information, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/static.md?version=2.6).
 
-### Next up: Lab 05
+### [Next up: Lab 05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-05)
