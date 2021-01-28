@@ -50,4 +50,6 @@ npx fusion start
 http://localhost/pagebuilder/pages
 ```
 
+9. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.
+
 ## Next up: Lab 01
