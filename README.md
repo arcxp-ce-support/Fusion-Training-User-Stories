@@ -6,7 +6,7 @@ As a user, I would like to add a layout to my page, in order to give my page som
 ## Guide
 1. All layouts are added to the `components/layouts` folder. Change directory into this folder and create a new file called `basic.jsx`
 
-2. In `basic.jsx`, create a new React component called `BasicLayout` and make that the default export.
+2. In `basic.jsx`, create a new functional React component called `BasicLayout` and make that the default export. (Functional components are preferable, but class-based components are also supported.)
 
 3. Lets define the following sections for this layout outside the definition of your component, like so:
 ```
