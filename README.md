@@ -24,4 +24,4 @@ NOTE: static values are values you want displayed within this field but patterns
 
 5. To test this out, you need some stories created and published in Composer sandbox (unless you are using mock data). Once you have the mock data or published stories. Visit the story in localhost at `http://localhost/pf/${website_url}/?_website=demo`
 
-## Next up: Lab 12
+## [Next up: Lab 12](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-12)
