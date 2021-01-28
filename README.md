@@ -115,4 +115,4 @@ type Subheadlines {
 
 22. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
 
-## Next up: Lab 08
+## [Next up: Lab 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-08)
