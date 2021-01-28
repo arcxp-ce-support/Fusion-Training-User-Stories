@@ -46,7 +46,7 @@ export default {
 
 ```
 import { useFusionContext } from 'fusion:context';
-const { siteProperties } = useFusionContext()`;
+const { siteProperties } = useFusionContext();
 
 return (
     <span className="text-info">{`News from ${siteProperties.defaultSiteTitle}!`}</span>
