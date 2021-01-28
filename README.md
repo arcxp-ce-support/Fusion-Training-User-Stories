@@ -37,4 +37,4 @@ The code from `exercise-01` differs slightly in that it provides separate fields
 
 7. Save and republish as normal and load the page and confirm that the text you edited inline is displayed.
 
-## Next up: Lab 07
+## [Next up: Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07)
