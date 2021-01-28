@@ -39,4 +39,4 @@ import PropTypes from 'fusion:prop-types';
 
 Remember, if you would like to see the solution, you can always switch to the next lab branch.
 
-## Next up: Lab 03
+## [Next up: Lab 03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-03)
