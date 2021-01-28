@@ -48,4 +48,4 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 
 There are many more types of Custom Fields in addition to `text`. [Click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md?version=2.6) to see all of them.
 
-## Next up: Lab 06
+## [Next up: Lab 06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-06)
