@@ -23,4 +23,4 @@ So far, our feature has only been able to render content from a single source pr
 
 09. Add the `article/header` feature to your page and you should see it populate with the headline and subheadline from the global content. Save and publish the page.
 
-## Next up: Lab 11
+## [Next up: Lab 11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-11)
