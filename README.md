@@ -38,7 +38,7 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 
 6. Finally, update the CSS with the new `bgColor` we've created
 
-7. Go back into your page and open your color block feature
+7. Go back into your page in PageBuilder, refresh the browser and open your color block feature (a browser refresh is needed for any changes to the PageBuilder UI)
 
 8. You should now see the object to add a hexCode value
 
