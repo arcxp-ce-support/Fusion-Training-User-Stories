@@ -34,8 +34,8 @@ const story = useContent({
 });
 ```
 
-5. To see the difference in payload, `console.log(story)` in the `card` feature
+5. To see the difference in payload, `console.log(JSON.stringify(story))` in the `card` feature
 
 6. Load your page and confirm that you are still displaying the headline and subheadline with a much smaller payload.
 
-## Next up: Lab 10
+## [Next up: Lab 10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-10)
