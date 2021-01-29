@@ -45,4 +45,4 @@ const story = useContent({
 
 11. Save and publish your page. When you open up the page within your browser, you should see the data of your content source display
 
-## Next up: Lab 09
+## [Next up: Lab 09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-09)
