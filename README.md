@@ -46,7 +46,7 @@ export default {
 
 ```
 import { useFusionContext } from 'fusion:context';
-const { siteProperties } = useFusionContext()`;
+const { siteProperties } = useFusionContext();
 
 return (
     <span className="text-info">{`News from ${siteProperties.defaultSiteTitle}!`}</span>
@@ -56,4 +56,4 @@ return (
 5. Now that we have the site properties established, that feature should reflect `The Bugle` as the `defaultSiteTitle`. Check it by going to your test page with the `_website` set to `the-bugle`. `http://localhost/pf/${page_url}/?_website=the-bugle`
 
 
-### Next up: Lab 15
+### [Next up: Lab 15](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-15)
