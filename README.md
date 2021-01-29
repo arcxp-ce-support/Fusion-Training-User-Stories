@@ -4,33 +4,18 @@ On this branch, we have updated our `/global/alert-bar` feature that we created 
 
 Your next task is to update your feature to dynamically pipe content by exposing a content config to the PageBuilder user. Switch to branch `fusion-08` to see the completed code for this branch's user story.
 
-In order to fetch content from an API, we need to define what API we'll be fetching from and provide credentials. To do this, we'll need to:
+In order to fetch content from an API, we need to define what API we'll be fetching from and provide credentials. That's why we defined our CONTENT_BASE and ARC_ACCESS_TOKEN in `.env` during setup. 
 
-1. Create a new file called `.env` at the root of your project directory. Inside this file, you'll need to add in the content base and access token for your API
+1. We have access to our orgs API, but now we need to create a content source to retrieve the API data. All content sources goes into the `content/sources` folder
 
-2. Go to your [orgs homepage](https://redirector.arcpublishing.com/home/) and switch to the sandbox environment
+2. Open the `content/sources` folder and create a new file called `content-api.js`
 
-3. Click on Developer Center and click "create read-only token"
-
-4. Fill in the fields and click create. This will create your access token
-
-5. Copy the content at the bottom where it says "Copy the following into your PB .env file if setting up PageBuilder" and place it into your .env. It should be something like this:
-```
-CONTENT_BASE=https://api.sandbox.{org}.arcpublishing.com 
-ARC_ACCESS_TOKEN={token_here}
-```
-where `org` is the name of your organization
-
-6. Now that we have access to our orgs API, we need to create a content source to retrieve the API data. All content sources goes into the `content/sources` folder
-
-7. Open the `content/sources` folder and create a new file called `content-api.js`
-
-8. Give your content source a schema name. For example:
+3. Give your content source a schema name. For example:
 ```
 const schemaName = 'article';
 ```
 
-9. Are there params that need to be provided to use this content source? Then add them in:
+4. Are there params that need to be provided to use this content source? Then add them in:
 ```
 const params = {
   website_url : 'text',
@@ -39,7 +24,7 @@ const params = {
 ```
 In our example above, this content source is expecting a `website_url` and `published` date
 
-10. We need to define the URI which the content source will call. Create a fusion `resolve` function which takes in a `key` holding the params defined above and returns the URI. For more details on content source, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-content-source.md?version=2.6)
+5. We need to define the URI which the content source will call. Create a fusion `resolve` function which takes in a `key` holding the params defined above and returns the URI. For more details on content source, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-content-source.md?version=2.6)
 ```
 const resolve = (key) => {
   const requestUri = `/content/v4/stories/?website_url=${ key.website_url || key }&website={org}`;
@@ -48,7 +33,7 @@ const resolve = (key) => {
 }
 ```
 
-11. *(This if you do not have access to your Arc organization)* As a work-around, go to lab-08 and download the `helpers/sample-content.js` file into a `helpers` folder in the root of your project. Now, we can import this sample data into our content source and return it when this content source is called like below. You do not need the `resolve` function.
+6. *(This if you do not have access to your Arc organization)* As a work-around, go to lab-08 and download the `helpers/sample-content.js` file into a `helpers` folder in the root of your project. Now, we can import this sample data into our content source and return it when this content source is called like below. You do not need the `resolve` function.
 
 ```
 import { CONTENT } from '../../helpers/sample-content';
@@ -57,7 +42,7 @@ const fetch = (query = {}) => {
 };
 ```
 
-12. Finally, export your content source:
+7. Finally, export your content source:
 ```
 export default {
   resolve,
@@ -67,13 +52,13 @@ export default {
 }
 ```
 
-13. Since content sources usually return a lot of data, we need to define what fields we want in order to reduce the size and improve performance. This is done by creating a schema for our content source.
+8. Since content sources usually return a lot of data, we need to define what fields we want in order to reduce the size and improve performance. This is done by creating a schema for our content source.
 
-14. From root, open the `content/schemas` folder - this is where all schemas reside. View the [schema documentation](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-graphql-schema.md) to learn more
+9. From root, open the `content/schemas` folder - this is where all schemas reside. View the [schema documentation](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-graphql-schema.md) to learn more
 
-15. Create a new JS file called `article.js` (the schemaName we defined in step 8). 
+10. Create a new JS file called `article.js` (the schemaName we defined in step 8). 
 
-16. Here, we are going to define the fields we want from the content source. Fields important to us are:
+11. Here, we are going to define the fields we want from the content source. Fields important to us are:
 ```
 type Query {
   type: String!
@@ -85,7 +70,7 @@ type Query {
 }
 ```
 
-17. Notice how `description, headlines, promo_items and subheadlines` are referencing other types - this is because they hold objetcs. So we need to define those as well:
+12. Notice how `description, headlines, promo_items and subheadlines` are referencing other types - this is because they hold objetcs. So we need to define those as well:
 ```
 type BasicPromoItems {
   type: String
@@ -105,14 +90,14 @@ type Subheadlines {
 }
 ```
 
-18. Now that we have our content source and schema defined, we can test it out! After fusion rebuilds, open your test page from previous tasks and scroll to the "Page Content" section
+13. Now that we have our content source and schema defined, we can test it out! After fusion rebuilds, open your test page from previous tasks and scroll to the "Page Content" section
 
-19. Here, you will see a drop down for "Global Content Service" - select your `content-api` and enter values for the `website_url` and `published` fields. Save and publish the page
+14. Here, you will see a drop down for "Global Content Service" - select your `content-api` and enter values for the `website_url` and `published` fields. Save and publish the page
 
-20. We're going to provide a tip - you can view Fusion data with the following JavaScript. Create a new bookmark on your browser called `View Fusion Data` and paste the JavaScript in `/helpers/view-fusion-data.js` from this branch, into the URL
+15. We're going to provide a tip - you can view Fusion data with the following JavaScript. Create a new bookmark on your browser called `View Fusion Data` and paste the JavaScript in `/helpers/view-fusion-data.js` from this branch, into the URL
 
-21. Open your test page and click on your new bookmark - you should see a panel on the left-hand side of your screen appear
+16. Open your test page and click on your new bookmark - you should see a panel on the left-hand side of your screen appear
 
-22. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
+17. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
 
 ## [Next up: Lab 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-08)
