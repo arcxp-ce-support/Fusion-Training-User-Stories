@@ -32,7 +32,8 @@ npx fusion init
 
 5. Change the origin to point to the Fusion-Training-User-Stories repo (in a real scenario, `Fusion-Training-User-Stories` would be replaced by the repo name of your new project)
 ```
-git remote set-url origin git@github.com:wapopartners/Fusion-Training-User-Stories.git
+git init
+git remote add origin https://github.com/wapopartners/Fusion-Training-User-Stories.git
 ```
 
 6. Check out a new branch called USERNAME-fusion-training where USERNAME is your username. 
