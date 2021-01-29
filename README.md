@@ -71,7 +71,7 @@ export default {
 
 14. From root, open the `content/schemas` folder - this is where all schemas reside. View the [schema documentation](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-graphql-schema.md) to learn more
 
-15. Create a new JS file and using the same name as the schema name you defined on step 8 `article.js` - this is the naming convention we follow for schemas
+15. Create a new JS file called `article.js` (the schemaName we defined in step 8). 
 
 16. Here, we are going to define the fields we want from the content source. Fields important to us are:
 ```
@@ -115,4 +115,4 @@ type Subheadlines {
 
 22. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
 
-## Next up: Lab 08
+## [Next up: Lab 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-08)
