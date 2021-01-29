@@ -113,4 +113,4 @@ Done!
 
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
-## [Next up: Lab 00](https://github.com/wapopartners/ Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
