@@ -19,5 +19,5 @@ Create an alert bar feature with the following acceptance criteria. Let's also m
     - This should be a required custom field
     - This should have a description viewable to the user in the PageBuilder admin to give them additional context.
 - The alert bar should allow the user to add an external link.
-    - This field should be a `PropTypes.url` which validates the url in PageBuilder. [See ALC docs for more on custom fields.](https://shawmedia.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md)
+    - This field should be a `PropTypes.url` which validates the url in PageBuilder. [See ALC docs for more on custom fields.](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md)
 - The text and link custom fields should be grouped together in the PageBuilder admin.
