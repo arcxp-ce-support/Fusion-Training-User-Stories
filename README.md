@@ -37,4 +37,4 @@ desktopCols: PropTypes.oneOf([
 
 8. Click on `Add Feature` again and drag in any feature into the chain to see how it renders
 
-## Next up: Lab 13
+## [Next up: Lab 13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-13)
