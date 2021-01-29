@@ -37,9 +37,9 @@ http://localhost/pagebuilder/pages
 
 6. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.'
 
-7. Add the folders **mocks**, **components**, **content**, **environment**, and **properties**.
+7. Add the folders `mocks`, `components`, `content`, `environment`, and `properties`.
 
-8. In **mocks**, add the file **/user** with the following content:
+8. In `mocks`, add the file `/user` with the following content:
 
 ```
 {
@@ -59,7 +59,7 @@ http://localhost/pagebuilder/pages
  } 
 ```
 
-and the file **/siteservice/api/v3/website** with the following content:
+and the file `/siteservice/api/v3/website` with the following content:
 
 ```
 [
@@ -71,13 +71,13 @@ and the file **/siteservice/api/v3/website** with the following content:
 ]
 ```
 
-9. In **components**, add the folders **output-types**, **layouts**, **chains**, and **features**
+9. In `components`, add the folders `output-types`, `layouts`, `chains`, and `features`
 
-10. In **content**, add the folders **schemas** and **sources** 
+10. In `content`, add the folders `schemas` and `sources`
 
-11. In **properties**, add the folder **sites**
+11. In `properties`, add the folder `sites`
 
-12. In the root director, add the file **.dockerignore** with the following content: 
+12. In the root director, add the file `.dockerignore` with the following content: 
 
 ```
 .git*
@@ -87,7 +87,7 @@ dist/
 node_modules/
 ```
 
-and the file **.gitignore** with the following content: 
+and the file `.gitignore` with the following content: 
 
 ```
 **/.DS_Store
@@ -105,5 +105,25 @@ and the file **.gitignore** with the following content:
 
 /dist
 ```
+
+13. Create a new file called `.env` at the root of your project directory. Inside this file, you'll need to add in the content base and access token for your API
+
+Go to your orgs homepage and switch to the sandbox environment
+
+Click on Developer Center and click "create read-only token"
+
+Fill in the fields and click create. This will create your access token
+
+Copy the content at the bottom where it says "Copy the following into your PB .env file if setting up PageBuilder" and place it into your .env. It should be something like this:
+
+```
+CONTENT_BASE=https://api.sandbox.{org}.arcpublishing.com 
+ARC_ACCESS_TOKEN={token_here}
+```
+
+where org is the name of your organization
+
+This will come into play in a later lab, but it's best to get it set up initially. 
+
 
 ## [Next up: Lab 01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-01)
