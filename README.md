@@ -38,7 +38,7 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 
 6. Finally, update the CSS with the new `bgColor` we've created
 
-7. After fusion rebuild, go back into your page and open your color block feature
+7. Go back into your page in PageBuilder, refresh the browser and open your color block feature (a browser refresh is needed for any changes to the PageBuilder UI)
 
 8. You should now see the object to add a hexCode value
 
@@ -48,4 +48,4 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 
 There are many more types of Custom Fields in addition to `text`. [Click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md?version=2.6) to see all of them.
 
-## Next up: Lab 06
+## [Next up: Lab 06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-06)
