@@ -37,5 +37,4 @@ backgroundColor: `rgb(${rgb})`,
 
 11. You should see your color block feature
 
-## Next up: Lab 04
-
+## [Next up: Lab 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-04)
