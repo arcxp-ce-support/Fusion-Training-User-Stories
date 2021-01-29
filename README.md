@@ -50,4 +50,6 @@ npx fusion start
 http://localhost/pagebuilder/pages
 ```
 
-## Next up: Lab 01
+9. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.
+
+## [Next up: Lab 01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-01)
