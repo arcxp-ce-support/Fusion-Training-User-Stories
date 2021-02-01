@@ -10,36 +10,23 @@ It's important to note that the code in this repo may differ from the code writt
 ## Lab 00
 Running Fusion locally.
 
-1. Checkout your own branch
-```
-git checkout USERNAME-fusion-training
-```
+1. Make sure you're on the branch `USERNAME-fusion-training` you created from `master` in the previous step.
 
-2. Install all packages/dependencies
-```
-npm install
-```
-
-3. To ensure you are using the latest fusion-cli, run:
-```
-npm install @arc-fusion/cli@canary
-```
-
-4. Start fusion
+2. Start fusion
 ```
 npx fusion start
 ```
 
-5. Load the following link once fusion has finished loading (it might take a few minutes)
+3. Load the following link once fusion has finished loading (it might take a few minutes)
 ```
 http://localhost/pagebuilder/pages
 ```
 
-6. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.'
+4. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.'
 
-7. Add the folders `mocks`, `components`, `content`, `environment`, and `properties`.
+5. Add the folders `mocks`, `components`, `content`, `environment`, and `properties`.
 
-8. In `mocks`, add the file `/user` with the following content:
+6. In `mocks`, add the file `/user` with the following content:
 
 ```
 {
@@ -71,42 +58,13 @@ and the file `/siteservice/api/v3/website` with the following content:
 ]
 ```
 
-9. In `components`, add the folders `output-types`, `layouts`, `chains`, and `features`
+7. In `components`, add the folders `output-types`, `layouts`, `chains`, and `features`
 
-10. In `content`, add the folders `schemas` and `sources`
+8. In `content`, add the folders `schemas` and `sources`
 
-11. In `properties`, add the folder `sites`
+9. In `properties`, add the folder `sites`
 
-12. In the root director, add the file `.dockerignore` with the following content: 
-
-```
-.git*
-.fusion/
-data/
-dist/
-node_modules/
-```
-
-and the file `.gitignore` with the following content: 
-
-```
-**/.DS_Store
-**/.env
-**/.npmrc
-**/node_modules
-
-/.fusion
-
-/data/db/
-/data/dumps/**
-!/data/dumps/.gitkeep
-/data/restore/**
-!/data/restore/.gitkeep
-
-/dist
-```
-
-13. Create a new file called `.env` at the root of your project directory. Inside this file, you'll need to add in the content base and access token for your API
+10. Open the file called `.env` from the root of your project directory. Remove the `#` so that the lines are no longer commented out. Leave `CONTENT_PATH` and `FUSION_RELEASE` as they are; you'll need to update the content base and add an access token for your API.
 
 Go to your orgs homepage and switch to the sandbox environment
 
