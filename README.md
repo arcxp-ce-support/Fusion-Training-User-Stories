@@ -46,8 +46,8 @@ NOTE: This is the branch you will make all your changes to while going through t
 
 ## Curriculum Overview 
 
-| branch   | topic       | 
-| :------: | :---------- |
+| branch   | topic covered | 
+| :------: | :----------   |
 | [lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Running fusion & PageBuilder editor locally |
 | [lab-01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-01) | Rendering content via a default output type and customizing the page head. |
 | [lab-02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-02) | Adding a custom layout to give a page structure and semantic HTML. |
