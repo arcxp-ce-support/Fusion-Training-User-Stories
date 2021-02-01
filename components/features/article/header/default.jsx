@@ -14,12 +14,9 @@ const Header = () => {
 
   return (
     <header className="container-fluid">
-      {
-        outputType !== 'amp' &&
-        <span className="text-info">{`News from ${siteProperties.defaultSiteTitle}!`}</span>
-      }
-      <h2 className="card-title">{globalContent.headlines.basic}</h2>
-      <h5 className="card-text">{globalContent.subheadlines.basic}</h5>
+      <span className="text-info">News from Demo!</span>
+      <h2 className="card-title">{globalContent.headlines && globalContent.headlines.basic}</h2>
+      <h5 className="card-text">{globalContent.subheadlines && globalContent.subheadlines.basic}</h5>
     </header>
   );
 }
