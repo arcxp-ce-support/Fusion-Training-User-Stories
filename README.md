@@ -1,4 +1,4 @@
-## Lab 16
+# Lab 16
 
 Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. Lets add some control of how a feature will render by explicitly checking the output type.
 
