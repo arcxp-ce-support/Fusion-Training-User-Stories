@@ -16,7 +16,7 @@ const AlertBar = () => {
 
   return (
     <section className={`alert alert-${alertType} w-100`} role='alert'>
-      {text}
+      <span>{text}</span>
       {
         linkText
         &&

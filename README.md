@@ -47,19 +47,18 @@ Now we will allow the user to directly customize my feature using inline editing
 5. The object we receive from executing the `editableField` function with type 'text' are spread as props on the `a` tag. We will also add a flag to prevent a warning from appearing regarding the editable field. The `a` tag will now look like this:
 
 ```
-<a
-    {...editableField('text')}
+<a 
+    ...editableField('linkText')}
     suppressContentEditableWarning
-    href={link}
-    className='alert-link'
->
-    {text}
+    href={link} 
+    className='alert-link'>
+    {linkText}
 </a>
 ```
 
-The code from `exercise-01` differs slightly in that it provides separate fields for the `text` and the `linkText`. Both of these fields could handled as an `editableField` so feel free to experiment by making the `linkText` editable inline.
+Both the `linkText` (Call to Action) field and the `text` (Main Alert Text) field could handled as an `editableField` so feel free to experiment by making the `text` span editable inline as well.
 
-6. After fusion rebuild, go back into the admin and click on the alert bar text. It should now be editable inline without having to find the text field in the admin UI.
+6. Go back into the admin and click on the alert bar text. It should now be editable inline without having to find the text field in the admin UI.
 
 7. Save and republish as normal and load the page and confirm that the text you edited inline is displayed.
 
