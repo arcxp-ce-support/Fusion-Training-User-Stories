@@ -64,10 +64,7 @@ NOTE: This is the branch you will make all your changes to while going through t
 | [lab-13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-13) | Using the feature pack for multiple sites within an organization |
 | [lab-14](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-14) | Configuring pages to use site-specific variables. |
 | [lab-15](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-15) | Configuring a site to render different content for different outputs such as Google AMP. |
-| [lab-16](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-16) | Controlling how a feature will render by explicitly checking the output type. |
-| [lab-17](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-17) | Preventing an output type from falling back onto default features and risking validation. |
-| [lab-18](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-18) | Done! |
-
+| [lab-16](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-16) | Controlling how a feature will render by explicitly checking the output type, preventing an output type from falling back onto default features and risking validation. |
 
 ## Exercises
 
