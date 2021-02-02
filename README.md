@@ -66,14 +66,5 @@ NOTE: This is the branch you will make all your changes to while going through t
 | [lab-15](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-15) | Configuring a site to render different content for different outputs such as Google AMP. |
 | [lab-16](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-16) | Controlling how a feature will render by explicitly checking the output type, preventing an output type from falling back onto default features and risking validation. |
 
-## Exercises
-
-#### [Exercise 01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/exercise-01)
-
-#### [Exercise 02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/exercise-02)
-
-
-
-It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
 ## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
