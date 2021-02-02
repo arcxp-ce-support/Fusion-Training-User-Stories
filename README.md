@@ -42,3 +42,9 @@ AmpOutputType.fallback = false
 
 ## What's next
 Nothing! You've completed fusion training. For further exercises and information, check out the [Arc Learning Center](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.6).
+
+[Go back to the Master branch to see an overview of the labs.](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/master)
+
+Try these exercises for practice: 
+[Exercise 01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/exercise-01)
+[Exercise 02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/exercise-02)
