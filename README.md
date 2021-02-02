@@ -1,8 +1,6 @@
 # Lab 13
 
-# exercise-02
-
-Here are some following tickets you should be able to pick up now that you are a master of content sources, chains, and features!
+Here are some example tickets you should be able to pick up now that you are a master of content sources, chains, and features!
 
 # TICKET - 01
 
@@ -45,7 +43,6 @@ Create a new content source called `site-menu`. This content source should fetch
 - `/news`
 
 
-
 # TICKET - 03
 
 ## User story
@@ -63,7 +60,9 @@ Create a new `global` feature called `nav bar`. This feature should allow the Pa
 - The feature should display a list of links from any site service hierarchy.
 
 
-This branch gives us the major components for creating a manually curated page (albeit a simple one) within PageBuilder. Let's do another exercise to practice what we've learned so far! Switch to `exercise-02` for examples. After completing `exercise-02` return here and we'll start on this branch's user story.
+# Manual curation
+
+This branch gives us the major components for creating a manually curated page (albeit a simple one) within PageBuilder. Let's do another exercise to practice what we've learned so far! 
 
 In this lab, lets use the feature pack we have for multiple sites within my organization
 
