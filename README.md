@@ -10,20 +10,13 @@ Now that you are a master of content sources, chains, and features, we're going 
 
 4. Now let's fetch content from site service to use in the feature pack. First create a new content source called `site-menu`. 
 
-5. This content source should fetch content from the `/site/v3/navigation/demo/?hierarchy=<hierarchy-name>&_id=$<section-id>` 
+5. This content source should fetch content from the `/site/v3/navigation/demo/?hierarchy=${hierarchyName}&_id=${sectionId}` 
 
 6. The content source should take in a `hierarchy` and an `id` parameter. The hierarchy param should use `default` as a default if it is undefined. The id param should use `/` as a default if it is undefined.
 
-7. Check the content PageBuilder debugger. From `http://localhost/pagebuilder/pages` click on `Developer Tools`, `Debugger`, select `Content Debugger`, select `site-menu`, and add test parameters.
+7. Run `npx fusion rebuild`. Then check the content PageBuilder debugger. From `http://localhost/pagebuilder/pages` click on `Developer Tools`, `Debugger`, select `Content Debugger`, select `site-menu`, and add test parameters.
 
-## Example Hierarchies from Demo
-- `footer`
-- `main-site-navigation`
-
-## Example Sections from Demo
-- `/food`
-- `/news/arts-and-entertainment`
-- `/news`
+If you get an empty response, check [site service](https://redirector.arcpublishing.com/siteservice/#/) and confirm hierarchies have been set up. 
 
 Once you've confirmed the source can pull in content, create a schema. (See [Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07) for a refresher on how to create a schema. Also note the script for viewing Fusion data and bookmark it if you haven't yet.)
 
@@ -41,7 +34,7 @@ This branch gives us the major components for creating a manually curated page (
 
 In this lab, lets use the feature pack we have for multiple sites within my organization
 
-11. We will be modifying the content source to handle multiple sites. Here are some best practices for [multisite](https://cmg.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/how-to-prepare-for-pagebuilder-multisite/).
+11. We will be modifying the content source to handle multiple sites. Here are some best practices for [multisite](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/how-to-prepare-for-pagebuilder-multisite/).
 
 12. Since we are working locally and are not using site service, we need to add multiple sites to our mock website file to approximate what we would see if there were multiple sites in site service.
 
