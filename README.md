@@ -73,11 +73,12 @@ In this lab, lets use the feature pack we have for multiple sites within my orga
 
 19. To pull the content from that arc site added to the sample data, modify the fetch on that sample data to choose the current site data, and default to `demo`.
 
-```const fetch = (query = {}) => {
+```
+const fetch = (query = {}) => {
     if (query["arc-site"]) {
         return CONTENT[query["arc-site"]];
     }
-    return CONTENT["demo"];
+return CONTENT["demo"];
 };
 ```
 
