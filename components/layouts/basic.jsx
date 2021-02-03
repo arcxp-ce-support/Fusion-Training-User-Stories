@@ -20,7 +20,7 @@ const BasicLayout = (props) => {
           </aside>
           <footer className='col-lg-12'>
             {footer}
-            <p>Copyright &copy; 2019</p>
+            <p>Copyright &copy; 2020</p>
           </footer>
         </div>
       </div>
