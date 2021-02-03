@@ -1,9 +1,8 @@
 /*  /components/features/article/alert-bar/default.jsx  */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { useComponentContext } from 'fusion:context';
-import { useEditableContent } from 'fusion:content';
 
 const AlertBar = () => {
   /* retrieve custom fields from fusion's component context */
@@ -11,22 +10,18 @@ const AlertBar = () => {
   const {
     alertType,
     link,
+    linkText,
     text,
   } = componentContext.customFields;
 
-  /* get inline editing function from fusion's content */
-  const { editableField } = useEditableContent();
-
   return (
-    <section className={`alert alert-${alertType} w-100`} role='alert' >
-      <a
-        {...editableField('text')}
-        suppressContentEditableWarning
-        href={link}
-        className='alert-link'
-      >
-        {text}
-      </a>
+    <section className={`alert alert-${alertType} w-100`} role='alert'>
+      <span>{text}</span>
+      {
+        linkText
+        &&
+        <Fragment>: <a href={link} className='alert-link'>{linkText}</a></Fragment>
+      }
     </section>
   );
 }
@@ -47,14 +42,17 @@ AlertBar.propTypes = {
       name: 'Alert Type',
     }),
     text: PropTypes.string.tag({
+      name: 'Main Alert Text'
+    }).isRequired,
+    linkText: PropTypes.string.tag({
       group: 'Call to Action',
       name: 'Text',
       description: 'Text to prompt the users to click the link',
-    }).isRequired,
+    }),
     link: PropTypes.url.tag({
       group: 'Call to Action',
       name: 'Url',
-    }).isRequired,
+    }),
   }),
 };
 
