@@ -10,38 +10,38 @@ Now that we have some basics down, let's create a new feature.
 
 ```
 alertType: PropTypes.oneOf([
-      'danger', 'warning', 'info',
+        'danger', 'warning', 'info',
     ]).tag({
       defaultValue: 'danger',
       labels: {
         danger: 'breaking',
         warning: 'warning',
         info: 'info',
-      },
-      name: 'Alert Type',
-    })
+    },
+    name: 'Alert Type',
+})
 ```
 
 4. Create a **required** custom field that allows the user to add text. Give this custom field a description that will be visible to the user in the PageBuilder admin.  
 
 ```
 text: PropTypes.string.tag({
-      name: 'Main Alert Text'
-    }).isRequired
+    name: 'Main Alert Text'
+}).isRequired
 ```
 
 5. Create two custom fields to allow the user to add an external link. One field should be for the link text; the other for the url. This second one should be `PropTypes.url`, which validates the url in PageBuilder. Put these two in one **group** in the admin. 
 
 ```
 linkText: PropTypes.string.tag({
-      group: 'Call to Action',
-      name: 'Text',
-      description: 'Text to prompt the users to click the link',
-    }),
-    link: PropTypes.url.tag({
-      group: 'Call to Action',
-      name: 'Url',
-    })
+    group: 'Call to Action',
+    name: 'Text',
+    description: 'Text to prompt the users to click the link',
+}),
+link: PropTypes.url.tag({
+    group: 'Call to Action',
+    name: 'Url',
+})
 ```
 
 ## Inline editing
@@ -53,7 +53,7 @@ So far, we have updated our output type to modify our head and footer on the pag
 
 Now we will allow the user to directly customize my feature using inline editing for a streamlined experience. Building on the alert bar feature we just created, we provide a clearer and easier way for editors to configure custom fields through inline editing as documented [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md#inline-editing)
 
-6. Make sure the above ticket is completed. This includes adding a new section to the layout and a new feature in the `global/alert-bar` directory. Now we will modify it by adding inline editing to a text field in the feature. You can also complete the steps below on the custom field we added to the color block.
+6. Make sure we have the new `promo` section in the layout and the new `global/alert-bar` feature. Now we will modify it by adding inline editing to a text field in the feature. You can also complete the steps below on the custom field we added to the color block.
 
 7. You should now have a working `alert-bar` feature. We will now add a way to edit the feature text inline in the admin.
 
