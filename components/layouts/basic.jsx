@@ -30,6 +30,6 @@ BasicLayout.propTypes = {
   children: PropTypes.node
 }
 
-BasicLayout.sections = ['promo', 'header', 'main', 'aside', 'footer']
+BasicLayout.sections = ['header', 'main', 'aside', 'footer']
 
 export default BasicLayout
