@@ -1,12 +1,12 @@
 /*  /components/layouts/basic.jsx  */
 
-import React, { Fragment } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types';
 
 const BasicLayout = (props) => {
-  const [promo, header, main, aside, footer] = props.children;
+  const [header, main, aside, footer] = props.children;
   return (
-    <Fragment>
-      {promo}
+    <div>
       <div className="container">
         <div className="row">
           <header className='col-lg-12'>
@@ -24,8 +24,12 @@ const BasicLayout = (props) => {
           </footer>
         </div>
       </div>
-    </Fragment>
+    </div>
   )
+}
+
+BasicLayout.propTypes = {
+  children: PropTypes.node
 }
 
 BasicLayout.sections = ['promo', 'header', 'main', 'aside', 'footer']
