@@ -18,14 +18,14 @@ Now that you are a master of content sources, chains, and features, we're going 
 
 If you get an empty response, check [site service](https://redirector.arcpublishing.com/siteservice/#/) and confirm hierarchies have been set up. 
 
-Once you've confirmed the source can pull in content, create a schema. (See [Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07) for a refresher on how to create a schema. Also note the script for viewing Fusion data and bookmark it if you haven't yet.)
+Once you've confirmed the source can pull in content, create a schema. (See [Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07) for a refresher on how to create a schema.)
 
 
 8. Now let's use content from site service to create a navigation bar. Create a new `global` feature called `nav-bar`. 
 
 9. This feature should allow the PageBuilder user to configure the content source so that it takes in the new `site-menu` content source. You'll need a custom field of type `PropTypes.contentConfig('site-menu')`.
 
-10. This featurer should then display the links from site service hierarchy. Use the bookmarked script from Lab 07 to view the data you'll be using.
+10. This featurer should then display the links from site service hierarchy. Use the PageBuilder content debugger to view the data you'll be using.
 
 
 # Manual curation
