@@ -1,7 +1,7 @@
 # Lab 10
 On this branch, we've created a GraphQL filter and applied it to the useContent call in order to minimize the payload from the content source.
 
-So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level (what fusion refers to as `global content`) so that we can use it to power multiple features. Switch to branch `lab-11` to learn more about this branch's user story.
+So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level (what fusion refers to as `globalContent`) so that we can use it to power multiple features. Switch to branch `lab-11` to see this in action.
 
 ## Guide
 
@@ -9,7 +9,12 @@ So far, our feature has only been able to render content from a single source pr
 
 02. Import `useAppContext` from the `fusion:context` package as documented [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/context.md).
 
-03. Now that you've imported the useAppContext hook, use it to retrieve and populate the `global content` available from it. For a refresher on `global content` refer back to lab 08, step 19.
+03. Now that you've imported the useAppContext hook, use it to retrieve and populate the `globalContent` available from it. (For a refresher on Global Content, refer back to [lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07).)
+
+```
+const appContext = useAppContext();
+const { globalContent } = appContext;
+```
 
 04. Render the headline and subheadline from global content in the header feature.
 
