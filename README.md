@@ -22,6 +22,6 @@ No code changes are required to complete this task
 
 NOTE: static values are values you want displayed within this field but patterns are used to get a value from the regex added in the pattern field above
 
-5. To test this out, you need some stories created and published in Composer sandbox (unless you are using mock data). Once you have the mock data or published stories. Visit the story in localhost at `http://localhost/pf/${website_url}/?_website=demo`
+5. To test this out, you need some stories created and published in Composer sandbox (unless you are using mock data). Once you have the mock data or published stories. Visit the story in localhost at `http://localhost/pf/${website_url}/?_website=demo` You can also use the PageBuilder debugger to test resolvers: click on Developer Tools and then Debugger. Select a site, then choose "Resolver Debugger" from the other dropdown. This debugger will let you input a test URI like `/homepage/` and help debug any issues with the resolver.  
 
 ## [Next up: Lab 12](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-12)
