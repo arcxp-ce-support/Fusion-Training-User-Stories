@@ -22,6 +22,6 @@ No code changes are required to complete this task
 
 NOTE: static values are values you want displayed within this field but patterns are used to get a value from the regex added in the pattern field above
 
-5. To test this out, you need some stories created and published in Composer sandbox (unless you are using mock data). Once you have the mock data or published stories. Visit the story in localhost at `http://localhost/pf/${website_url}/?_website=demo`
+5. To test this out, you need some stories created and published in Composer sandbox (unless you are using mock data). Once you have the mock data or published stories. Visit the story in localhost at `http://localhost/pf/${website_url}/?_website=demo` You can also use the PageBuilder debugger to test resolvers: click on Developer Tools and then Debugger. Select a site, then choose "Resolver Debugger" from the other dropdown. This debugger will let you input a test URI like `/article/2021/15/01/my-first-article/`. Once the URL matches with a regex, it then checks if the content source call is successful. If it is, it navigates to the template specified in the resolver. If not, it will navigate to a 404 page. It is possible for the URL to match with the regex of another resolver, and depending on priority it may use a resolver other than the one you intended. The resolver debugger is useful in catching issues like this.
 
 ## [Next up: Lab 12](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-12)
