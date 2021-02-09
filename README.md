@@ -51,7 +51,7 @@ On this branch, we have updated our `/sample/color-block` feature to offer PageB
 
 So far, we have updated our output type to modify our head and footer on the page, created a basic layout to provide semantic html to our page, and began creating and modifying features using custom fields from Fusion's component context. 
 
-Now we will allow the user to directly customize my feature using inline editing for a streamlined experience. Building on the alert bar feature we just created, we provide a clearer and easier way for editors to configure custom fields through inline editing as documented [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md#inline-editing)
+Now we will allow the user to directly customize my feature using inline editing for a streamlined experience. Building on the alert bar feature we just created, we provide a clearer and easier way for editors to configure custom fields through inline editing. [Read through the ALC docs on inline editing](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/adding-custom-fields.md#inline-editing#inline-editing) before proceeding.
 
 6. Make sure we have the new `promo` section in the layout and the new `global/alert-bar` feature. Now we will modify it by adding inline editing to a text field in the feature. You can also complete the steps below on the custom field we added to the color block.
 
