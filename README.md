@@ -16,7 +16,7 @@ where `deployment` and `contextPath` are extracted from props
 
 4. `CssLinks`, `MetaTags` and `Libs` components can be extracted from the props and rendered in the head tag. e.g. `<CssLinks />`
 
-5. Similarily, `Fusion` components should be extracted from props and rendered in the body - `<Fusion />`
+5. Similarily, `Fusion` components should be extracted from props and rendered in the body - `<Fusion />`. This [bootstraps data from the server that will hydrate our React components](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-using-output-types.md).
 
 6. Now lets render an AMP version of our color-block component. In the color-block directory, create an amp.jsx file. When the AMP output type loads, it automatiacally looks for the `amp.jsx` version of all the features isntead of the `default.jsx`.
 
