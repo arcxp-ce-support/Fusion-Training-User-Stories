@@ -69,7 +69,7 @@ Now we will allow the user to directly customize my feature using inline editing
 
 ```
 <a 
-    ...editableField('linkText')}
+    {...editableField('linkText')}
     suppressContentEditableWarning
     href={link} 
     className='alert-link'>
