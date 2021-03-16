@@ -3,6 +3,8 @@
   "useLocal": false,
   "blocks": [
     "@wpmedia/feeds-source-content-api-block",
+    "@wpmedia/feeds-source-collections-block",
+    "@wpmedia/site-hierarchy-content-block",
     "@wpmedia/mrss-feature-block",
     "@wpmedia/rss-feature-block",
     "@wpmedia/rss-fbia-feature-block",
@@ -13,6 +15,7 @@
     "@wpmedia/sitemap-video-feature-block",
     "@wpmedia/sitemap-feature-block",
     "@wpmedia/sitemap-index-feature-block",
+    "@wpmedia/sitemap-section-index-feature-block",
     "@wpmedia/text-output-block",
     "@wpmedia/textfile-block"
   ],
