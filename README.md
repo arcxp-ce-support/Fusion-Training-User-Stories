@@ -8,7 +8,7 @@ Now that you are a master of content sources, chains, and features, we're going 
 
 3. The user should also be able to decide the number of features that should exist in the left column. This field should be **required** for display. (use `isRequired`)
 
-4. Now let's fetch content from site service to use in the feature pack. First create a new content source called `site-menu`. 
+4. Now let's fetch content from site service to use in the feature pack. First, in `content/sources` create a new content source called `site-menu`. 
 
 5. This content source should fetch content from the `/site/v3/navigation/demo/?hierarchy=${hierarchyName}&_id=${sectionId}` 
 
