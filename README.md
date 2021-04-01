@@ -5,8 +5,6 @@ This repository contains all of the code necessary to complete each of the steps
 ## How to use
 This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to `lab-05` branch since thats where lab 5 starts off.
 
-It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
-
 ## Lab 00
 Running Fusion locally.
 
@@ -22,11 +20,11 @@ npx fusion start
 http://localhost/pagebuilder/pages
 ```
 
-4. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.'
+Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.
 
-5. Add the folders `mocks`, `components`, `content`, `environment`, and `properties`.
+4. Add the folder `mocks`.
 
-6. In `mocks`, add the file `/user` with the following content:
+5. In `mocks`, add the file `/user` with the following content:
 
 ```
 {
@@ -58,13 +56,13 @@ and the file `/siteservice/api/v3/website` with the following content:
 ]
 ```
 
-7. In `components`, add the folders `output-types`, `layouts`, `chains`, and `features`
+6. In `components`, add the folders `output-types`, `layouts`, `chains`, and `features`
 
-8. In `content`, add the folders `schemas` and `sources`
+7. In `content`, add the folders `schemas` and `sources`
 
-9. In `properties`, add the folder `sites`
+8. In `properties`, add the folder `sites`
 
-10. Open the file called `.env` from the root of your project directory. Remove the `#` so that the lines are no longer commented out. Leave `CONTENT_PATH` and `FUSION_RELEASE` as they are; you'll need to update the content base and add an access token for your API.
+9. Open the file called `.env` from the root of your project directory. Remove the `#` so that the lines are no longer commented out. Leave `CONTENT_PATH` and `FUSION_RELEASE` as they are; you'll need to update the content base and add an access token for your API.
 
 Go to your orgs homepage and switch to the sandbox environment
 
