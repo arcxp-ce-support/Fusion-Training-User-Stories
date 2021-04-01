@@ -41,7 +41,21 @@ git remote add origin https://github.com/wapopartners/Fusion-Training-User-Stori
 git checkout -b USERNAME-fusion-training
 ```
 
-NOTE: This is the branch you will make all your changes to while going through this training. An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.6)
+NOTE: This is the branch you will make all your changes to while going through this training.
+
+## Useful Commands 
+
+```
+npx fusion rebuild
+```
+- This forces a webpack rebuild of a running cluster. [Documentation](https://www.npmjs.com/package/@arc-fusion/cli#rebuild)
+- Use this command if enviornment variables are not picked up by rebuild or if you need to restart the webpack container.
+
+## Documentation 
+
+An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.6)
+
+Fusion recipes can be found [here](http://redirector.arcpublishing.com/alc/alc/arc-products/pagebuilder/fusion/2.7)
 
 
 ## Curriculum Overview 
