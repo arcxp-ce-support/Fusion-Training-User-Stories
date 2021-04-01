@@ -4,7 +4,7 @@ On this branch, we have created our `content-api` content source using the conte
 
 We are going to create a new `Card` component, which will render the headline and subheadline from our content source.
 
-1. Create a new *global* feature called `Card` (i.e. the `deafult.jsx` should be placed in `components/features/global/card` folder)
+1. Create a new *global* feature called `Card` (i.e. the `default.jsx` should be placed in `components/features/global/card` folder)
 
 2. Add a PageBuilder custom field that enables the user to select our article content source:
 ```
