@@ -29,7 +29,7 @@ const AlertBar = () => {
         linkText
         &&
         <Fragment>
-          :<a 
+          <a 
             {...editableField('linkText')}
             suppressContentEditableWarning
             href={link} 
