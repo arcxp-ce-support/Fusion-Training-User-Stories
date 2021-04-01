@@ -1,11 +1,11 @@
 # Lab 10
-On this branch, we've created a GraphQL filter and applied it to the useContent call in order to minimize the payload from the content source.
+On this branch, we use a subset of [GraphQL's query format](https://graphql.org/learn/queries/) to pass in a filter field to the useContent call. This helps to minimize the payload from the content source.
 
 So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level (what fusion refers to as `globalContent`) so that we can use it to power multiple features. Switch to branch `lab-11` to see this in action.
 
 ## Guide
 
-01. Create a new feature in the features folder by creating an article/header directory with a `default.jsx` file.
+01. Create a new feature in the features folder by creating an `article/header` directory with a `default.jsx` file.
 
 02. Import `useAppContext` from the `fusion:context` package as documented [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/context.md).
 
