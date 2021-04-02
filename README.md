@@ -9,7 +9,7 @@ Pre-requisites:
 - node / npm installed (node version > 10).
 - docker
 
-1. Create a template of this repo. Go to https://github.com/arc-partners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the prod branch. Once the new repo has been created, clone it to your local machine.
+1. Create a template of this repo. Go to https://github.com/arc-partners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the main branch. Once the new repo has been created, clone it to your local machine.
 
 ```
 git clone git@github.com:arc-partners/ORG-outboundfeeds.git
@@ -17,7 +17,7 @@ git clone git@github.com:arc-partners/ORG-outboundfeeds.git
 
 2. Create a read-only personal access token in github
 
-To be able to run locally or deploy outbound feeds you need to create a read-only token in [github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). This token needs to be added to your .npmrc file and will allow you to view and install outboundfeeds blocks. The .npmrc file must never be added to the repo and checked in. Please use the following format when setting up your .npmrc:
+To be able to run locally or deploy outboundfeed bundles you need to create a read-only token in [github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). This token needs to be added to your .npmrc file and will allow you to view and install outboundfeeds blocks. The .npmrc file must never be added to the repo or checked in. Please use the following format when setting up your .npmrc:
 
 ```
 @wpmedia:registry=https://npm.pkg.github.com/
@@ -76,18 +76,20 @@ npm test
 
 6. Once you are ready to deploy the bundle you will need to setup environment variables in the `environment/org-outboundfeeds.js` and or `environment/org-outboundfeeds-sandbox.js` files. Use the values from your local .env to set the `BLOCK_DIST_TAG` and `resizerKey`. Rename the files, replacing the clients org name with the `org` in the current names. Any values that should not be made public (resizerKey) need to be [encrypted](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md).
 
-Copy of your .npmrc to .npmrc-encrypted. Using the [secrets](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md) tab in the editor encrypt your github access token.
+Copy your .npmrc to .npmrc-encrypted. Using the [secrets](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md) tab in the editor encrypt your github access token using the corresponding OBF environment.
 
 ```
 @wpmedia:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:_authToken=%{ your encrypted personal access token }
 ```
 
-Once you are ready to [deploy](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/deploying-feature-pack.md) a bundle, run the zip command.
+Once you are ready to [deploy](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/deploying-feature-pack.md) a bundle, run the zip command. You will see some errors about missing @wpmedia packages.  But the bundle doesn't contain any npm modules so you can safely ignore those.
 
 ```
 npx fusion zip
 ```
+
+Upload the new bundle that was created in the dist folder using the deployer screen and promote it to Live to run your new bundle.
 
 For more information on developing outbound feeds:
 
