@@ -33,7 +33,11 @@ backgroundColor: `rgb(${rgb})`,
 
 9. In the `Curate` tab, click on `Add Feature` in any of the layout sections and select your `Sample color block` feature
 
+<img width="500" alt="Screen Shot 2021-04-04 at 2 14 19 PM" src="https://user-images.githubusercontent.com/39777478/113517780-2116d980-9550-11eb-8251-07ea25f86475.png">
+
 10. Save and republish your page and open up the live page
+
+<img width="500" alt="Screen Shot 2021-04-04 at 2 13 56 PM" src="https://user-images.githubusercontent.com/39777478/113517788-296f1480-9550-11eb-8006-c68f5c3c17d7.png">
 
 11. You should see your color block feature
 
