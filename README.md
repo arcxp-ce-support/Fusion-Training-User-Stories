@@ -37,6 +37,9 @@ import PropTypes from 'fusion:prop-types';
 
 8. Click on the `Setup` icon on the left and select your new layout. Then click on the `Curate` icon on the left and you should see all the new sections of your layout show up (header, main, aside, footer).
 
+<img width="500" alt="Screen Shot 2021-04-04 at 2 04 10 PM" src="https://user-images.githubusercontent.com/39777478/113517575-b7e29680-954e-11eb-8ccc-82d9a61b806a.png">
+
+
 Remember, if you would like to see the solution, you can always switch to the next lab branch.
 
 ## [Next up: Lab 03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-03)
