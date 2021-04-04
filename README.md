@@ -21,6 +21,9 @@ npx fusion start
 ```
 http://localhost/pagebuilder/pages
 ```
+You should see this page
+
+<img src="https://user-images.githubusercontent.com/39777478/113511765-92926000-952f-11eb-9a89-d1a42ef15d96.jpeg" width="400" height="400">
 
 4. Note: you may see an alert warning of an error with content sources. Disregard this; we will address content sources later on.'
 
