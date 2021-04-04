@@ -9,5 +9,7 @@ As a user, I would like to be able to render content via a default output type, 
 5. Click on `Create Page` and give it a name and path like `firstpage`
 6. Click on the globe icon on the left, and click on `Share & Publish`
 7. Then you can visit `http://localhost/pf/firstpage/?_website=demo` and you should see your new page published with your `<h2>` text rendered.
+<img width="500" alt="Screen Shot 2021-04-02 at 11 47 40 AM" src="https://user-images.githubusercontent.com/39777478/113511978-82c74b80-9530-11eb-8b6e-88ea238aec32.png">
+
 
 ## [Next up: Lab 02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-02)
