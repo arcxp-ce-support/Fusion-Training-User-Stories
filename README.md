@@ -31,7 +31,7 @@ backgroundColor: `rgb(${rgb})`,
 
 8. Ensure that your Basic layout has been selected
 
-9. In the `Cureate` tab, click on `Add Feature` in any of the layout sections and select your `Sample color block` feature
+9. In the `Curate` tab, click on `Add Feature` in any of the layout sections and select your `Sample color block` feature
 
 10. Save and republish your page and open up the live page
 
