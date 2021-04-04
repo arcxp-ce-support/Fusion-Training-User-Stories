@@ -44,6 +44,8 @@ const bgColor = hexCode ? `#${hexCode}` : `rgb(${rgb})`;
 
 9. Add a hexcode into the input field, save and republish your page
 
+<img width="500" alt="Screen Shot 2021-04-04 at 2 21 54 PM" src="https://user-images.githubusercontent.com/39777478/113517981-42c49080-9551-11eb-8bed-1a4eab7b2dd7.png">
+
 10. Load your page and confirm that the background color of the div displayed is the same color you entered into PageBuilder
 
 There are many more types of Custom Fields in addition to `text`. [Click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md?version=2.6) to see all of them.
