@@ -13,12 +13,14 @@ No code changes are required to complete this task
 
 4. Fill in the details of your resolver as follows:
 - Resolver Name: give your resolver a name
-- Pattern: set a URL pattern for this resolver to target (for our demo example, you can simply put `(.*)` for all urls)
 - Priority: set the priority for your resolver relative to other resolvers you might have (you can set it to `1`)
-- Default Template: set the default template to render for all url patterns that matches what is definied for this resolver. In our case, this wil be our `Articles` template
+- Pattern: set a URL pattern for this resolver to target (for our demo example, you can simply put `(.*)` for all urls)
 - Content Source: set the content source the resolver should use to fetch the articles content. For our example, it will be `content-api`
 - To send data in the URL visited to the content source, for `website_url` select, `Pattern` and type in `1`. Setting it to `1` means it will read the first set of parenthesis in the resolver regex pattern and pass that value to the content source.
 - For `published` you can select static and set it to `true` or `false`
+- Default Template: set the default template to render for all url patterns that matches what is definied for this resolver. In our case, this wil be our `Articles` template
+
+<img width="400" alt="Screen Shot 2021-04-05 at 9 34 28 AM" src="https://user-images.githubusercontent.com/39777478/113579318-20cf1a80-95f2-11eb-9f9f-ab425a8557e5.png">
 
 NOTE: static values are values you want displayed within this field but patterns are used to get a value from the regex added in the pattern field above
 
