@@ -1,4 +1,5 @@
 # Lab 13
+In this lab we will create another chain and learn how to use the same feature pack for multiple sites within an organization.
 
 Now that you are a master of content sources, chains, and features, we're going to add a new chain to display features in a more interesting way.
 
