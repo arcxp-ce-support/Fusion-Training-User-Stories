@@ -1,5 +1,5 @@
 # Fusion 11
-On this branch, we have add our `/article/header` feature and configured it to render using global content.
+On this branch, we have added our `/article/header` feature and configured it to render using global content.
 
 Now that we have a feature that renders based on the global content instead of being fixed to component level content, we want to see how we can dynamically route content using PageBuilder templates.
 
