@@ -1,4 +1,6 @@
 # Fusion 11
+This lab will focus on how to create and utilize templates to render content in the browser. We will also configure a resolver – a tool/system to pair templates and content. To learn more about templates and resolvers, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/user-docs/pagebuilder-editor-30-resolvers/).
+
 On this branch, we have added our `/article/header` feature and configured it to render using global content.
 
 Now that we have a feature that renders based on the global content instead of being fixed to component level content, we want to see how we can dynamically route content using PageBuilder templates.
