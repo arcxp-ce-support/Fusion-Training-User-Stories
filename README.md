@@ -1,4 +1,6 @@
 # Lab 16
+In this lab we will focus on controlling how a feature will render in relation to the output type. For a refresher on output types in Fusion, [click here](https:/redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-using-output-types.md?version=2.7). 
+
 
 Just like that, our site now supports AMP! Let's learn a little bit more about how output types work together. Lets add some control of how a feature will render by explicitly checking the output type.
 
