@@ -1,5 +1,7 @@
 # Lab 08
 
+This lab focuses on piping content from a content source into a feature. For information on fetching content, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/fetching-content-with-hooks.md?version=2.7). For information on dynamically fetching content, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/dynamically-configuring-content-with-hooks.md). 
+
 On this branch, we have created our `content-api` content source using the content base added in our .env file so that we can see content making it into our feature pack using the debugger tool exposed in the PageBuilder UI.
 
 We are going to create a new `Card` component, which will render the headline and subheadline from our content source.
