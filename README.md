@@ -47,4 +47,7 @@ const story = useContent({
 
 10. Save and publish your page. When you open up the page within your browser, you should see the data of your content source display
 
+<img width="500" alt="Screen Shot 2021-04-05 at 8 57 00 AM" src="https://user-images.githubusercontent.com/39777478/113576128-fb8bdd80-95ec-11eb-9ccf-35751cd4bde0.png">
+
+
 ## [Next up: Lab 09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-09)
