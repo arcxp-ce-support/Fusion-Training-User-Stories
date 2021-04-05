@@ -1,6 +1,8 @@
 Nice work completing `lab-01`. If you are continuing this training from the last lab, then keep working on your current branch USERNAME-fusion-training. If you are starting this training from this branch, you will need to clone and set up this repository as described in `lab-00`.
 
 ## Lab 02
+This lab focuses on layouts. You will create, implement, and add a layout to your page in PageBuilder Editor.
+
 As a user, I would like to add a layout to my page, in order to give my page some structure and semantic HTML. To learn more about layouts, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-layout-component.md?version=2.6).
 
 ## Guide
