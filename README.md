@@ -8,7 +8,7 @@ This repo contains one branch for each of the labs in the Fusion training curric
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
 ## Lab 00
-Running Fusion locally.
+In this lab you will setup your repository to run Fusion and PageBuilder editor locally.
 
 1. Make sure you're on the branch `USERNAME-fusion-training` you created from `master` in the previous step.
 
