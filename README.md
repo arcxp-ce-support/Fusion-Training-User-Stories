@@ -1,4 +1,5 @@
 # Lab 13
+In this lab we will create another chain.
 
 Now that you are a master of content sources, chains, and features, we're going to add a new chain to display features in a more interesting way.
 
