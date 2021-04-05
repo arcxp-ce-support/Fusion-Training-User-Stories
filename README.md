@@ -28,4 +28,7 @@ const { globalContent } = appContext;
 
 09. Add the `article/header` feature to your page and you should see it populate with the headline and subheadline from the global content. Save and publish the page.
 
+<img width="500" alt="Screen Shot 2021-04-05 at 9 05 25 AM" src="https://user-images.githubusercontent.com/39777478/113576727-1874e080-95ee-11eb-9290-02faface2fd4.png">
+
+
 ## [Next up: Lab 11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-11)
