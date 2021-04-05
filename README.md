@@ -1,4 +1,5 @@
 # Lab 05
+This lab focuses on making a feature more dynamic by adding custom fields and walking through the steps of configuring the fields in PageBuilder Editor.
 
 On this branch, we have updated our `/sample/color-block` feature to render server side only.
 
