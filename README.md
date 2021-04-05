@@ -1,5 +1,7 @@
 # Lab 04
 
+This lab focuses on rendering a feature server-side.
+
 On this branch, we have developed our first feature, which we can add to a page or template in PageBuilder. Your next task is to update your feature to render server side only. Rendering elements server side only increases performance but since it doesn't run client side, you cannot access client side data in these features. Switch to branch `lab-05` to see the completed code for the this branch's task.
 
 1. From root, open the feature we created at `components/features/sample/color-block/default.jsx`.
