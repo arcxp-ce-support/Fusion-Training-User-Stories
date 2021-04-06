@@ -1,4 +1,6 @@
 # Lab 14
+This lab will focus on creating and storing site specific variables.
+
 
 On this branch, we have added multisite mocks and updated our `content-api` content source to pull from multiple sites within an organization to offer PageBuilder users the ability to use the same feature pack for many sites.
 
