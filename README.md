@@ -1,4 +1,6 @@
 # Lab 15
+This lab focuses on configuring a site to render different output types such as Google AMP. For more information on Fusion output types, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-using-output-types.md?version=2.7). 
+
 On this branch, we have are now utilizing site properties so that we can render site specific properties within an organization.
 
 It's time to learn how to work with multiple output types. As we have learned, output types allow fusion to render content in different formats and for different purposes (AMP, JSON, XML, etc).
