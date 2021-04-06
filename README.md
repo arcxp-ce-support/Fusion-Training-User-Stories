@@ -1,4 +1,7 @@
 # Lab 10
+
+In this lab we will configure a feature to fetch content at the page level; this is synonymous to what we call globalContent. This content will thereafter be used to power multiples features on the same page. For a refresher on fetching content with Fusion, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/fetching-content.md?version=2.7).
+
 On this branch, we use a subset of [GraphQL's query format](https://graphql.org/learn/queries/) to pass in a filter field to the useContent call. This helps to minimize the payload from the content source.
 
 So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level (what fusion refers to as `globalContent`) so that we can use it to power multiple features. Switch to branch `lab-11` to see this in action.
@@ -27,5 +30,7 @@ const { globalContent } = appContext;
 08. Here, you will see a drop down for "Global Content Service" - select your content-api and enter values for the website_url and published fields.
 
 09. Add the `article/header` feature to your page and you should see it populate with the headline and subheadline from the global content. Save and publish the page.
+
+<img width="500" alt="Screen Shot 2021-04-05 at 9 05 25 AM" src="https://user-images.githubusercontent.com/39777478/113576727-1874e080-95ee-11eb-9290-02faface2fd4.png">
 
 ## [Next up: Lab 11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-11)
