@@ -1,4 +1,6 @@
 # Lab 03
+This lab focuses on features. You will implement a feature and add it to a page in PageBuilder Editor.
+
 Your next task is to create a new feature. Switch to branch `lab-04` to see the completed code for the this branch's user story.
 
 Remeber, if you are continuing this training from the last user story, then keep working on your current branch USERNAME-fusion-training.
