@@ -1,11 +1,11 @@
 /*  /components/features/article/header/default.jsx  */
 
 import React from 'react';
-import { useAppContext } from 'fusion:context';
+import { useFusionContext } from 'fusion:context';
 
 const Header = () => {
   /* retrieve global content and site properties from fusion's app context */
-  const appContext = useAppContext();
+  const appContext = useFusionContext();
   const {
     globalContent,
     outputType,
