@@ -32,6 +32,9 @@ To use PropTypes, you'll need to import the library into your component
 ```
 import PropTypes from 'fusion:prop-types';
 ```
+In general, using [PropTypes](https://github.com/facebook/prop-types) allows developers to mitigate the risk of passing the wrong data types to components. It does so by validating data types as they pass through components. 
+
+With Fusion, a feature’s custom fields are also implemented using PropTypes. Fusion will look for a static property on your component named `propTypes` which is an object with a `customFields` key and `PropTypes` value. For more information about how Fusion uses PropTypes and custom fields, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/api/feature-pack/components/custom-fields.md#types). 
 
 7. Since we added a new file here, we have to restart or rebuild fusion to recognize it. You can manually restart or manually rebuild with `npx fusion rebuild`. Once fusion is back up, go into pagebuilder and open the page you had created in `lab-01`
 
