@@ -1,84 +1,42 @@
-# Welcome to Fusion!
+# Welcome to Arc Outbound Feeds!
 
-This repository contains all of the code necessary to complete each of the steps in the Arc PageBuilder Fusion training curriculum.
+This repository contains all of the code necessary to complete each of the steps in the Arc Outbound Feeds training curriculum.
+
+## Overview
+Since Arc’s inception, all feeds for Arc customers have been custom built and necessitated coordination with Arc’s Professional Services and Client Support teams to make any updates to those custom feeds. Customers have not had the ability to add or modify their feeds directly. Arc Outbound Feeds is the first product offering that will start to shift more control over feeds directly to you. More generally, Arc Outbound Feeds will include:
+
+- Self-service management and configuration of Arc Outbound Feeds
+- Arc maintenance and support of Arc Outbound Feeds along with product upgrades over time
+- Ability to create and manage your own custom feeds leveraging Arc’s development platform, PageBuilder Engine
 
 ## How to use
 
-This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
+This repo contains one branch for each of the labs in the Arc Outbound Feeds training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
 
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
-## Getting started
-
-1. Create a new directory for your project called FusionFeatureStories
-```
-mkdir FusionFeatureStories
-```
-
-2. Change into the directory:
-```
-cd FusionFeatureStories
-```
-
-3. Install the Fusion CLI
-```
-npm i @arc-fusion/cli
-```
-
-4. Initialize a new Fusion feature pack
-```
-npx fusion init
-```
-
-5. Change the origin to point to the Fusion-Training-User-Stories repo (in a real scenario, `Fusion-Training-User-Stories` would be replaced by the repo name of your new project)
-```
-git init
-git remote add origin https://github.com/wapopartners/Fusion-Training-User-Stories.git
-```
-
-6. Check out a new branch called USERNAME-fusion-training where USERNAME is your username. 
-```
-git checkout -b USERNAME-fusion-training
-```
-
-NOTE: This is the branch you will make all your changes to while going through this training.
-
-## Useful Commands 
-
-```
-npx fusion rebuild
-```
-- This forces a webpack rebuild of a running cluster. [Documentation](https://www.npmjs.com/package/@arc-fusion/cli#rebuild)
-- Use this command if enviornment variables are not picked up by rebuild or if you need to restart the webpack container.
-
 ## Documentation 
 
-An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.6)
+For an introduction to Arc Outbound Feeds, [click here](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/introducing-arc-outbound-feeds-a-new-self-service-feeds-offering/).
 
-Fusion recipes can be found [here](http://redirector.arcpublishing.com/alc/alc/arc-products/pagebuilder/fusion/2.7)
+To view Arc Outbound Feeds User Documentation, [click here](https://redirector.arcpublishing.com/alc/collection/FBXLMTI7GRETVJJ4K4UTXFNNCM).
 
 
 ## Curriculum Overview 
 
 | branch   | topic covered | 
 | :------: | :----------   |
-| [lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Running fusion & PageBuilder editor locally |
-| [lab-01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-01) | Rendering content via a default output type and customizing the page head. |
-| [lab-02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-02) | Adding a custom layout to give a page structure and semantic HTML. |
-| [lab-03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-03) | Adding a feature to a page. |
-| [lab-04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-04) | Rendering a feature server-side to improve performance. |
-| [lab-05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-05) | Customizing a feature in the PageBuilder UI based on a custom set of configuration options. |
-| [lab-06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-06) | Directly customizing a feature using inline editing in PageBuilder for a streamlined experience. |
-| [lab-07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07) | Fetching content from an API into the feature pack. |
-| [lab-08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-08) | Piping content into a feature so that it renders information from an API. |
-| [lab-09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-09) | Filtering content to only the necessary fields to reduce the payload. |
-| [lab-10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-10) | Configuring a feature to use a single global content source. |
-| [lab-11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-11) | Rendering many pieces of content via a template in the browser. |
-| [lab-12](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-12) | Grouping features together to create more complex layouts using chains. |
-| [lab-13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-13) | Using the feature pack for multiple sites within an organization |
-| [lab-14](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-14) | Configuring pages to use site-specific variables. |
-| [lab-15](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-15) | Configuring a site to render different content for different outputs such as Google AMP. |
-| [lab-16](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-16) | Controlling how a feature will render by explicitly checking the output type, preventing an output type from falling back onto default features and risking validation. |
+| [obf-lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-00) | Topic Lab 0 |
+| [obf-lab-01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-01) | Topic Lab 1 |
+| [obf-lab-02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-02) | Topic Lab 2 |
+| [obf-lab-03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-03) | Topic Lab 3 |
+| [obf-lab-04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-04) | Topic Lab 4 |
+| [obf-lab-05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-05) | Topic Lab 5 |
+| [obf-lab-06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-06) | Topic Lab 6 |
+| [obf-lab-07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-07) | Topic Lab 7 |
+| [obf-lab-08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-08) | Topic Lab 8 |
+| [obf-lab-09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-09) | Topic Lab 9 |
+| [obf-lab-10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-10) | Topic Lab 10|
 
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: OBF Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-00)
