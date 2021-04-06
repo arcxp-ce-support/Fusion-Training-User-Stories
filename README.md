@@ -1,4 +1,6 @@
 # Lab 09
+This lab focuses on filtering content for optimal page performance. To read more about content filtering in Fusion, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/content-filtering.md). 
+
 On this branch, we've created a new Card feature that can fetch content individually for each instance of the feature. This means that we can configure multiple card features per page and each one can render its own content.
 
 Now that we can render multiple instances of a feature, we want to filter the content to only use what is necessary to optimize page performance. Switch to branch `lab-10` to see the completed code for this branch's user story.
