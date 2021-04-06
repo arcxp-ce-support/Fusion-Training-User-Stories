@@ -1,4 +1,5 @@
 # Lab 07
+This lab focuses on fetching content from an API and dynamically piping content to a PageBuilder user.  For more information on fetching content, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/fetching-content.md?version=2.7).
 
 On this branch, we have updated our `/global/alert-bar` feature that we created in `exercise-01` to offer PageBuilder users the ability to edit their feature inline in the admin preview pane.
 
