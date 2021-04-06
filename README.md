@@ -84,4 +84,13 @@ Both the `linkText` (Call to Action) field and the `text` (Main Alert Text) fiel
 
 12. Save and republish as normal and load the page and confirm that the text you edited inline is displayed.
 
+Pagebuilder Editor
+
+<img width="500" alt="Screen Shot 2021-04-04 at 2 28 10 PM" src="https://user-images.githubusercontent.com/39777478/113518088-1b21f800-9552-11eb-90d2-b78316d73191.png">
+
+Published Page: http://localhost/pf/firstpage/?_website=demo
+
+<img width="500" alt="Screen Shot 2021-04-04 at 2 30 09 PM" src="https://user-images.githubusercontent.com/39777478/113518125-4ad10000-9552-11eb-972d-efdfac090103.png">
+
+
 ## [Next up: Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07)
