@@ -1,4 +1,7 @@
 ## Lab 01
+
+In this lab you will render content via a default output type, customize the head of a page, and publish that page to be viewed.
+
 As a user, I would like to be able to render content via a default output type, which allows me to customize the head of my page. Without an output type, PageBuilder can't render anything! For more details on output types, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-using-output-types.md?version=2.6).
 
 1. Open `components > output-types > default.jsx`
