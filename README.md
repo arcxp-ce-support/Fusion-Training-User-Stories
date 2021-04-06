@@ -1,4 +1,6 @@
 # Lab 10
+In this lab we will configure a feature to fetch content at the page level; this is synonymous to what we call globalContent. This content will thereafter be used to power multiples features on the same page. For a refresher on fetching content with Fusion, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/fetching-content.md?version=2.7).
+
 On this branch, we've created a GraphQL filter and applied it to the useContent call in order to minimize the payload from the content source.
 
 So far, our feature has only been able to render content from a single source provided by the content config, which provides content to the feature. In our next task, we'll learn how to fetch content at a page level (what fusion refers to as `globalContent`) so that we can use it to power multiple features. Switch to branch `lab-11` to see this in action.
