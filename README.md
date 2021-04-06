@@ -101,4 +101,7 @@ type Subheadlines {
 
 17. Click on "Global Content" and you'll see the content returned from your content source! You'll also be able to view the data you entered into the `website_url` and `published` fields
 
+<img width="500" alt="Screen Shot 2021-04-05 at 8 50 06 AM" src="https://user-images.githubusercontent.com/39777478/113575704-48bb7f80-95ec-11eb-814e-1e9de5b54d3f.png">
+
+
 ## [Next up: Lab 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-08)
