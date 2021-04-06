@@ -26,4 +26,6 @@ where `deployment` and `contextPath` are extracted from props
 
 8. After fusion rebuild, load your amp page by adding the following query at the end of your test page url `?outputType=amp` and confirm you can see your AMP page.
 
+<img width="500" alt="Screen Shot 2021-04-05 at 10 14 27 AM" src="https://user-images.githubusercontent.com/39777478/113583520-bd47eb80-95f7-11eb-88ae-d2bceefc9086.png">
+
 ## [Next up: Lab 16]( https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-16)
