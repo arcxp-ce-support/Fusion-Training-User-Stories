@@ -37,4 +37,6 @@ desktopCols: PropTypes.oneOf([
 
 8. Click on `Add Feature` again and drag in any feature into the chain to see how it renders
 
+<img width="500" alt="Screen Shot 2021-04-05 at 10 03 27 AM" src="https://user-images.githubusercontent.com/39777478/113582318-39413400-95f6-11eb-97c8-c8a01817138f.png">
+
 ## [Next up: Lab 13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-13)
