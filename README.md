@@ -1,4 +1,5 @@
 # Lab 06
+In this lab we are going use our knowledge from the previous labs to create a new feature with custom fields.  Furthermore, we are going to learn how to enable inline editing for those custom fields.
 
 Now that we have some basics down, let's create a new feature. 
 
