@@ -7,7 +7,7 @@ Building from our Color Block feature, we're going to add the ability to set the
 
 1. Open the feature we created previously at `/components/features/sample/color-block/default.jsx`.
 
-2. Add in a Custom Field that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the propTypes of your component to include custom fields like below. Don't forget to import `prop-types` in the feature.
+2. Add in a Custom Field that will allow PageBuilder editors to input a hex code. To do this, you'll need to update the `propTypes` of your component to include an object called `customFields` like below. Don't forget to import `prop-types` in the feature.
 ```
 ColorBlock.propTypes = {
   customFields: PropTypes.shape({
