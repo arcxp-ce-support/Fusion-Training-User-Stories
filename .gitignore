@@ -1,4 +1,4 @@
-**/.DS_Store
+l**/.DS_Store
 **/.env
 **/.npmrc
 **/node_modules
@@ -11,4 +11,7 @@
 /data/restore/**
 !/data/restore/.gitkeep
 
+/coverage
 /dist
+
+bundle.zip

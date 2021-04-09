@@ -1,84 +1,103 @@
-# Welcome to Fusion!
+# Setup a new Outbound Feeds repo
 
-This repository contains all of the code necessary to complete each of the steps in the Arc PageBuilder Fusion training curriculum.
+This is a fusion themes based repository and is intended to be used as the starting point for using _Arc Outboundfeeds_. It doesn't matter if a client is currently using themes or not. This repo will be used to run Outbound feeds in its own dedicated environment.
 
-## How to use
+## Setup
 
-This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
+Pre-requisites:
 
-It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
+- node / npm installed (node version > 10).
+- docker
 
-## Getting started
-
-1. Create a new directory for your project called FusionFeatureStories
-```
-mkdir FusionFeatureStories
-```
-
-2. Change into the directory:
-```
-cd FusionFeatureStories
-```
-
-3. Install the Fusion CLI
-```
-npm i @arc-fusion/cli
-```
-
-4. Initialize a new Fusion feature pack
-```
-npx fusion init
-```
-
-5. Change the origin to point to the Fusion-Training-User-Stories repo (in a real scenario, `Fusion-Training-User-Stories` would be replaced by the repo name of your new project)
-```
-git init
-git remote add origin https://github.com/wapopartners/Fusion-Training-User-Stories.git
-```
-
-6. Check out a new branch called USERNAME-fusion-training where USERNAME is your username. 
-```
-git checkout -b USERNAME-fusion-training
-```
-
-NOTE: This is the branch you will make all your changes to while going through this training.
-
-## Useful Commands 
+1. Create a template of this repo. Go to https://github.com/arc-partners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the main branch. Once the new repo has been created, clone it to your local machine.
 
 ```
-npx fusion rebuild
+git clone git@github.com:arc-partners/ORG-outboundfeeds.git
 ```
-- This forces a webpack rebuild of a running cluster. [Documentation](https://www.npmjs.com/package/@arc-fusion/cli#rebuild)
-- Use this command if enviornment variables are not picked up by rebuild or if you need to restart the webpack container.
 
-## Documentation 
+2. Create a read-only personal access token in github
 
-An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.6)
+To be able to run locally or deploy outboundfeed bundles you need to create a read-only token in [github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). This token needs to be added to your .npmrc file and will allow you to view and install outboundfeeds blocks. The .npmrc file must never be added to the repo or checked in. Please use the following format when setting up your .npmrc:
 
-Fusion recipes can be found [here](http://redirector.arcpublishing.com/alc/alc/arc-products/pagebuilder/fusion/2.7)
+```
+@wpmedia:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=<your personal access token>
+```
 
+3. Install the packages
 
-## Curriculum Overview 
+```
+npm install
+```
 
-| branch   | topic covered | 
-| :------: | :----------   |
-| [lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Running fusion & PageBuilder editor locally |
-| [lab-01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-01) | Rendering content via a default output type and customizing the page head. |
-| [lab-02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-02) | Adding a custom layout to give a page structure and semantic HTML. |
-| [lab-03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-03) | Adding a feature to a page. |
-| [lab-04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-04) | Rendering a feature server-side to improve performance. |
-| [lab-05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-05) | Customizing a feature in the PageBuilder UI based on a custom set of configuration options. |
-| [lab-06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-06) | Directly customizing a feature using inline editing in PageBuilder for a streamlined experience. |
-| [lab-07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-07) | Fetching content from an API into the feature pack. |
-| [lab-08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-08) | Piping content into a feature so that it renders information from an API. |
-| [lab-09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-09) | Filtering content to only the necessary fields to reduce the payload. |
-| [lab-10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-10) | Configuring a feature to use a single global content source. |
-| [lab-11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-11) | Rendering many pieces of content via a template in the browser. |
-| [lab-12](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-12) | Grouping features together to create more complex layouts using chains. |
-| [lab-13](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-13) | Using the feature pack for multiple sites within an organization |
-| [lab-14](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-14) | Configuring pages to use site-specific variables. |
-| [lab-15](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-15) | Configuring a site to render different content for different outputs such as Google AMP. |
-| [lab-16](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-16) | Controlling how a feature will render by explicitly checking the output type, preventing an output type from falling back onto default features and risking validation. |
+4. Create .env
 
+   Copy env.example to .env and edit the file to replace the placeholders with your correct values.
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+   - `CONTENT_BASE` - Set your org in `https://api.${ORG}.arcpublishing.com` [ALC](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md#configuring-content_base-and-arc_access_token-for-local-development) This is used by content sources to get data from your prod or sandbox environment. Replace ORG with your org name, like demo or sandbox.demo. This should point to your prod or sandbox environments, not the OBF environments.
+   - `ARC_ACCESS_TOKEN` - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/) This is used by content sources to get data from your prod or sandbox environment. This should be from your prod or sandbox environments, not the OBF environments.
+   - resizerKey - your orgs resizerKey. If you don’t have it, please contact your Technical Delivery Manager (TDM)
+   - `BLOCK_DIST_TAG` - To use production blocks, set this to 'stable', to use development blocks use 'beta'. Fusion defaults to stable if not set.
+
+   The .env file is in .gitignore and should never be checked into github.
+
+5. Update Mock websites
+
+When running the editor locally the list of websites comes from a local file instead of your site service. To have your websites used, you must update the mock file `mocks/siteservice/api/v3/website` with your websites.
+
+```
+[
+  {
+    "_id": "website1",
+    "display_name": "Website 1",
+    "is_default_website": true
+  },
+  {
+    "_id": "website2",
+    "display_name": "Website 2",
+    "is_default_website": false
+  }
+]
+```
+
+Run Fusion locally see [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/running-fusion-locally.md) for more details:
+
+```
+npx fusion start
+```
+
+Once fusion has finished starting you should be able to to get to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally.  Once you have create your templates and resolvers you can use a tool like postman to see them at `http://localhost/arc/outboundfeeds/{FEED_NAME}?outputType=xml&_website={WEBSITE}`
+
+Run tests with:
+
+```
+npm test
+```
+
+6. Once you are ready to deploy the bundle you will need to setup environment variables in the `environment/org-outboundfeeds.js` and or `environment/org-outboundfeeds-sandbox.js` files. Use the values from your local .env to set the `BLOCK_DIST_TAG` and `resizerKey`. Rename the files, replacing the clients org name with the `org` in the current names. Any values that should not be made public (resizerKey) need to be [encrypted](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md).
+
+Copy your .npmrc to .npmrc-encrypted. Using the [secrets](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md) tab in the editor encrypt your github access token using the corresponding OBF environment.
+
+```
+@wpmedia:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=%{ your encrypted personal access token }
+```
+
+Once you are ready to [deploy](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/deploying-feature-pack.md) a bundle, run the zip command. You will see some errors about missing @wpmedia packages.  But the bundle doesn't contain any npm modules so you can safely ignore those.
+
+```
+npx fusion zip
+```
+
+Upload the new bundle that was created in the dist folder using the deployer screen and promote it to Live to run your new bundle.
+
+For more information on developing outbound feeds:
+
+- [intro](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-custom-block-development/)
+- [blocks.json](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/blocksjson/)
+- [Ecjecting blocks](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/ejecting-a-block/)
+- [Block Architecture](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/feature-blocks-architecture/)
+- [Dependencies](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/dependencies/)
+- [Utilities](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-development-utilities/)
+- [Content Source](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-development-content-source/)
+- [Output Types](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-development-output-types/)

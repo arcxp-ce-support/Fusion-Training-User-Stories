@@ -1,0 +1,50 @@
+{
+  "org": "@wpmedia/",
+  "useLocal": false,
+  "blocks": [
+    "@wpmedia/feeds-source-content-api-block",
+    "@wpmedia/feeds-source-collections-block",
+    "@wpmedia/site-hierarchy-content-block",
+    "@wpmedia/mrss-feature-block",
+    "@wpmedia/rss-feature-block",
+    "@wpmedia/rss-fbia-feature-block",
+    "@wpmedia/rss-flipboard-feature-block",
+    "@wpmedia/rss-google-news-feature-block",
+    "@wpmedia/rss-msn-feature-block",
+    "@wpmedia/sitemap-news-feature-block",
+    "@wpmedia/sitemap-video-feature-block",
+    "@wpmedia/sitemap-feature-block",
+    "@wpmedia/sitemap-index-feature-block",
+    "@wpmedia/sitemap-section-index-feature-block",
+    "@wpmedia/text-output-block",
+    "@wpmedia/textfile-block"
+  ],
+  "values": {
+    "default": {
+      "siteProperties": {
+        "feedDomainURL": "http://localhost",
+        "resizerURL": "http://localhost/resizer",
+        "feedTitle": "Outbound Feeds",
+        "feedLanguage": "en"
+      }
+    },
+    "sites": {
+      "website1": {
+        "siteProperties": {
+          "feedDomainURL": "https://www.website1.com",
+          "resizerURL": "https://www.website1.com/resizer",
+          "feedTitle": "wwebsite 1",
+          "feedLanguage": "en"
+        }
+      },
+      "website2": {
+        "siteProperties": {
+          "feedDomainURL": "https://www.website2.com",
+          "resizerURL": "https://www.website2.com/resizer",
+          "feedTitle": "website 2",
+          "feedLanguage": "es"
+        }
+      }
+    }
+  }
+}
