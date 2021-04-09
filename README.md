@@ -6,45 +6,35 @@ This repository contains all of the code necessary to complete each of the steps
 
 This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
 
-It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
-
 ## Getting started
 
-1. Create a new directory for your project called FusionFeatureStories
+1. Clone this repository to your local environment
 ```
-mkdir FusionFeatureStories
+git clone https://github.com/wapopartners/Fusion-Training-User-Stories.git
 ```
 
 2. Change into the directory:
 ```
-cd FusionFeatureStories
+cd Fusion-Training-User-Stories
 ```
 
-3. Install the Fusion CLI
+3. From the master branch checkout a new branch. This is the branch you will make all your changes to while going through this training.
+```
+git checkout -b USERNAME-Fusion-Training
+```
+
+4. Install the Fusion CLI
 ```
 npm i @arc-fusion/cli
 ```
 
-4. Initialize a new Fusion feature pack
+5. Initialize a new Fusion feature pack
 ```
 npx fusion init
 ```
 
-5. Change the origin to point to the Fusion-Training-User-Stories repo (in a real scenario, `Fusion-Training-User-Stories` would be replaced by the repo name of your new project)
-```
-git init
-git remote add origin https://github.com/wapopartners/Fusion-Training-User-Stories.git
-```
-
-6. Check out a new branch called USERNAME-fusion-training where USERNAME is your username. 
-```
-git checkout -b USERNAME-fusion-training
-```
-
-NOTE: This is the branch you will make all your changes to while going through this training.
-
 ## Useful Commands 
-
+You do not need to run these right now, these are just some helpful commands and links to remember as you complete this training.
 ```
 npx fusion rebuild
 ```
@@ -53,9 +43,9 @@ npx fusion rebuild
 
 ## Documentation 
 
-An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.6)
+An intoduction to Fusion can be found [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/intro.md?version=2.7). Please read through this prior to moving to the first lab.
 
-Fusion recipes can be found [here](http://redirector.arcpublishing.com/alc/alc/arc-products/pagebuilder/fusion/2.7)
+Fusion recipes can be found [here](http://redirector.arcpublishing.com/alc/alc/arc-products/pagebuilder/fusion/2.7). This is a helpful resource for deeper explainations of fusion concepts.
 
 
 ## Curriculum Overview 
