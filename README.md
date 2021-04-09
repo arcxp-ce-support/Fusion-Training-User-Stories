@@ -40,7 +40,7 @@ Note: you may see an alert warning of an error with content sources. Disregard t
  } 
 ```
 
-Also add the file `/mocks/siteservice/api/v3/website` with the following content:
+Also add the file `/mocks/siteservice/api/v3/website` with the following content. NOTE: if you have a site set up in your organizations [Arc environment](https://redirector.arcpublishing.com/siteservice), update the `_id` and `display_name` value below with that site's values:
 
 ```
 [
