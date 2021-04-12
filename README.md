@@ -1,95 +1,52 @@
-# Setup a new Outbound Feeds repo
+# Setup Outbound Feeds
 
-This is a fusion themes based repository and is intended to be used as the starting point for using _Arc Outboundfeeds_. It doesn't matter if a client is currently using themes or not. This repo will be used to run Outbound feeds in its own dedicated environment.
+Before you proceed with this lab, ensure that you have walked through the [master branch](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/master) and [lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) of this repository.
 
-## Setup
+## blocks.json
 
-Pre-requisites:
+First, let's understand an important file in the repository - blocks.json. Navigate to the home directory and take a look at `blocks.json`. This is the main configuration file used to control which blocks are imported and to set global variables. There are two important parts of `blocks.json`: 1) the blocks array and 2) siteProperties. 
 
-- node / npm installed (node version > 10).
-- docker
+1.  Blocks Array
 
-1. Create a template of this repo. Go to https://github.com/arc-partners/outboundfeeds-skeleton and click on the green "Use this template" button to create a new client repo. Name the new repo starting with the clients name like "ORG-outboundfeeds". Only include the main branch. Once the new repo has been created, clone it to your local machine.
+The blocks array is an array of the feeds (npm packages) that are loaded by the arc-fusion/cli at run time. Initially, the blocks array will contain all of the Out Of the Box feeds. To read more about the blocks array, [click here]( https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/blocksjson/#blocks-configs).<img width="450" alt="Screen Shot 2021-04-09 at 10 01 35 AM copy" src="https://user-images.githubusercontent.com/39777478/114422114-fc3fe900-9b83-11eb-98c4-db9a4282ee50.png">
 
-```
-git clone git@github.com:arc-partners/ORG-outboundfeeds.git
-```
+2.  siteProperties
 
-2. Create a read-only personal access token in github
+Inside the key of `values` you will see `siteProperties`. A starter blocks.json file has default values that will be replaced with specific site values. The different values for siteProperties are as follows: 
 
-To be able to run locally or deploy outboundfeed bundles you need to create a read-only token in [github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token). This token needs to be added to your .npmrc file and will allow you to view and install outboundfeeds blocks. The .npmrc file must never be added to the repo or checked in. Please use the following format when setting up your .npmrc:
+-	feedDomainURL - The fully qualified url for the site. It must not end in a slash.
+-	resizerURL - The fully qualified url for the sites resizer. It must not end in a slash. Typically this is the same as the feedDomainURL with "/resizer" at the end.
+-	feedTitle - The name of your website. This will be used as the title in RSS feeds
+-	feedLanguage - The ISO-3166 two letter country code.
+-	feedDefaultQuery - Optional, this overrides the default query used in feeds-source-content-api-block which is stories with lastupdateddate from the last 2 days. The feedDefaultQuery value must be a valid json array in the format: 
+```json "[{\"term\":{\"type\":\"story\"}},{\"range\":{\"last_updated_date\":{\"gte\":\"now-2d\",\"lte\":\"now\"}}}]"```
 
+<img width="450" alt="Screen Shot 2021-04-09 at 10 03 30 AM" src="https://user-images.githubusercontent.com/39777478/114422897-ab7cc000-9b84-11eb-89f4-6c61cc953671.png">
+
+# Setup
+
+**.npmrc**
+
+1. First we need to create a .npmrc file. Add a `.npmrc` file to the home folder of your directory with the following format: ```
 ```
 @wpmedia:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:_authToken=<your personal access token>
 ```
 
-3. Install the packages
+2. Use these [Github instructions]( https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to generate a read-only token. Paste the read-only token into the .npmrc file where it says `<your personal access token>`. 
 
-```
-npm install
-```
+3. Note: The .npmrc is in .gitignore and should never be added to the repo or checked in because of major security concerns. 
 
-4. Create .env
+**.env**
 
-   Copy env.example to .env and edit the file to replace the placeholders with your correct values.
+1. Create .env
 
-   - `CONTENT_BASE` - Set your org in `https://api.${ORG}.arcpublishing.com` [ALC](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md#configuring-content_base-and-arc_access_token-for-local-development) This is used by content sources to get data from your prod or sandbox environment. Replace ORG with your org name, like demo or sandbox.demo. This should point to your prod or sandbox environments, not the OBF environments.
-   - `ARC_ACCESS_TOKEN` - your readonly developer token. [ALC](https://redirector.arcpublishing.com/alc/arc-products/developer/user-documentation/accessing-the-arc-api/) This is used by content sources to get data from your prod or sandbox environment. This should be from your prod or sandbox environments, not the OBF environments.
-   - resizerKey - your orgs resizerKey. If you don’t have it, please contact your Technical Delivery Manager (TDM)
-   - `BLOCK_DIST_TAG` - To use production blocks, set this to 'stable', to use development blocks use 'beta'. Fusion defaults to stable if not set.
+2. Copy env.example to .env and edit the file to replace the placeholders with your correct values.
 
-   The .env file is in .gitignore and should never be checked into github.
+3. The only way to access the values (CONTENT_BASE, ARC_ACCESS_TOKEN, RESIZER_KEY) is by contacting Arc/Photo Center team. Do so and then replace the placeholders with your correct values in .env.
 
-5. Update Mock websites
+4. Note: The .env file is in .gitignore and should never be checked into github due to major security concerns.
 
-When running the editor locally the list of websites comes from a local file instead of your site service. To have your websites used, you must update the mock file `mocks/siteservice/api/v3/website` with your websites.
-
-```
-[
-  {
-    "_id": "website1",
-    "display_name": "Website 1",
-    "is_default_website": true
-  },
-  {
-    "_id": "website2",
-    "display_name": "Website 2",
-    "is_default_website": false
-  }
-]
-```
-
-Run Fusion locally see [here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/running-fusion-locally.md) for more details:
-
-```
-npx fusion start
-```
-
-Once fusion has finished starting you should be able to to get to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally.  Once you have create your templates and resolvers you can use a tool like postman to see them at `http://localhost/arc/outboundfeeds/{FEED_NAME}?outputType=xml&_website={WEBSITE}`
-
-Run tests with:
-
-```
-npm test
-```
-
-6. Once you are ready to deploy the bundle you will need to setup environment variables in the `environment/org-outboundfeeds.js` and or `environment/org-outboundfeeds-sandbox.js` files. Use the values from your local .env to set the `BLOCK_DIST_TAG` and `resizerKey`. Rename the files, replacing the clients org name with the `org` in the current names. Any values that should not be made public (resizerKey) need to be [encrypted](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md).
-
-Copy your .npmrc to .npmrc-encrypted. Using the [secrets](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/using-environment-secrets.md) tab in the editor encrypt your github access token using the corresponding OBF environment.
-
-```
-@wpmedia:registry=https://npm.pkg.github.com/
-//npm.pkg.github.com/:_authToken=%{ your encrypted personal access token }
-```
-
-Once you are ready to [deploy](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/deploying-feature-pack.md) a bundle, run the zip command. You will see some errors about missing @wpmedia packages.  But the bundle doesn't contain any npm modules so you can safely ignore those.
-
-```
-npx fusion zip
-```
-
-Upload the new bundle that was created in the dist folder using the deployer screen and promote it to Live to run your new bundle.
 
 For more information on developing outbound feeds:
 
