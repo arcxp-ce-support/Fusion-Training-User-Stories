@@ -1,4 +1,4 @@
-# Setup Outbound Feeds
+# OBF Lab 00
 
 Before you proceed with this lab, ensure that you have walked through the [master branch](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/master) and [lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) of this repository.
 
