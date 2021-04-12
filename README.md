@@ -6,11 +6,11 @@ Before you proceed with this lab, ensure that you have walked through the [maste
 
 First, let's understand an important file in the repository - blocks.json. Navigate to the home directory and take a look at `blocks.json`. This is the main configuration file used to control which blocks are imported and to set global variables. There are two important parts of `blocks.json`: 1) the blocks array and 2) siteProperties. 
 
-1.  Blocks Array
+**Blocks Array**
 
 The blocks array is an array of the feeds (npm packages) that are loaded by the arc-fusion/cli at run time. Initially, the blocks array will contain all of the Out Of the Box feeds. To read more about the blocks array, [click here]( https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/blocksjson/#blocks-configs).<img width="450" alt="Screen Shot 2021-04-09 at 10 01 35 AM copy" src="https://user-images.githubusercontent.com/39777478/114422114-fc3fe900-9b83-11eb-98c4-db9a4282ee50.png">
 
-2.  siteProperties
+**siteProperties**
 
 Inside the key of `values` you will see `siteProperties`. A starter blocks.json file has default values that will be replaced with specific site values. The different values for siteProperties are as follows: 
 
@@ -27,7 +27,7 @@ Inside the key of `values` you will see `siteProperties`. A starter blocks.json 
 
 **.npmrc**
 
-1. First we need to create a .npmrc file. Add a `.npmrc` file to the home folder of your directory with the following format: ```
+1. First we need to create a .npmrc file. Add a `.npmrc` file to the home folder of your directory with the following format:
 ```
 @wpmedia:registry=https://npm.pkg.github.com/
 //npm.pkg.github.com/:_authToken=<your personal access token>
@@ -41,7 +41,7 @@ Inside the key of `values` you will see `siteProperties`. A starter blocks.json 
 
 1. Create .env
 
-2. Copy env.example to .env and edit the file to replace the placeholders with your correct values.
+2. Copy env.example to .env.
 
 3. The only way to access the values (CONTENT_BASE, ARC_ACCESS_TOKEN, RESIZER_KEY) is by contacting Arc/Photo Center team. Do so and then replace the placeholders with your correct values in .env.
 
