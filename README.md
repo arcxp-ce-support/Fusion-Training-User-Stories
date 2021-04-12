@@ -48,7 +48,7 @@ Inside the key of `values` you will see `siteProperties`. A starter blocks.json 
 
 4. Note: The .env file is in .gitignore and should never be checked into github due to major security concerns.
 
-# More Info
+# Documentation
 For more information on developing outbound feeds:
 
 - [intro](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-custom-block-development/)
