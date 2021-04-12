@@ -11,7 +11,7 @@ Since Arc’s inception, all feeds for Arc customers have been custom built and 
 
 ## How to use
 
-This repo contains one branch for each of the labs in the Arc Outbound Feeds training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
+This repo contains one branch for each of the labs in the Arc Outbound Feeds training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to obf (outbound feeds) lab 4, you can switch to obf-lab-05 branch since thats where obf lab 5 starts off.
 
 It's important to note that the code in this repo may differ from the code written on-the-spot in your training session. However, the files will contain the same information and represent a complete version of each concept.
 
@@ -20,7 +20,6 @@ It's important to note that the code in this repo may differ from the code writt
 For an introduction to Arc Outbound Feeds, [click here](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/introducing-arc-outbound-feeds-a-new-self-service-feeds-offering/).
 
 To view Arc Outbound Feeds User Documentation, [click here](https://redirector.arcpublishing.com/alc/collection/FBXLMTI7GRETVJJ4K4UTXFNNCM).
-
 
 ## Curriculum Overview 
 
