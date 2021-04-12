@@ -8,7 +8,8 @@ First, let's understand an important file in the repository - blocks.json. Navig
 
 **Blocks Array**
 
-The blocks array is an array of the feeds (npm packages) that are loaded by the arc-fusion/cli at run time. Initially, the blocks array will contain all of the Out Of the Box feeds. To read more about the blocks array, [click here]( https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/blocksjson/#blocks-configs).<img width="450" alt="Screen Shot 2021-04-09 at 10 01 35 AM copy" src="https://user-images.githubusercontent.com/39777478/114422114-fc3fe900-9b83-11eb-98c4-db9a4282ee50.png">
+The blocks array is an array of the feeds (npm packages) that are loaded by the arc-fusion/cli at run time. Initially, the blocks array will contain all of the Out Of the Box feeds. To read more about the blocks array, [click here]( https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/blocksjson/#blocks-configs).
+<img width="450" alt="Screen Shot 2021-04-09 at 10 01 35 AM copy" src="https://user-images.githubusercontent.com/39777478/114422114-fc3fe900-9b83-11eb-98c4-db9a4282ee50.png">
 
 **siteProperties**
 
@@ -47,7 +48,7 @@ Inside the key of `values` you will see `siteProperties`. A starter blocks.json 
 
 4. Note: The .env file is in .gitignore and should never be checked into github due to major security concerns.
 
-
+# More Info
 For more information on developing outbound feeds:
 
 - [intro](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-custom-block-development/)
@@ -58,3 +59,6 @@ For more information on developing outbound feeds:
 - [Utilities](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-development-utilities/)
 - [Content Source](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-development-content-source/)
 - [Output Types](https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/outbound-feeds-development-output-types/)
+
+
+## [Next up: OBF Lab 01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/obf-lab-01)
