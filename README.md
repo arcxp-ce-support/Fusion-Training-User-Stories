@@ -18,8 +18,7 @@ npx fusion start
 
 Note: In the future, once you have create your templates and resolvers you can use a tool like [postman](https://www.postman.com/) to see them at `http://localhost/arc/outboundfeeds/{FEED_NAME}?outputType=xml&_website={WEBSITE}`
 
-
-# Relevant Links
+5. TODO:	Add steps to preview a single feed to confirm it works (add screenshot here)
 
 - [Starting Fusion](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/running-fusion-locally.md)
 - [Database Dump](https://corecomponents.arcpublishing.com/pb-data/mongo/corecomponents.tar.gz)
