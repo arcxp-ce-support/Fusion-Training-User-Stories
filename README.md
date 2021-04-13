@@ -29,9 +29,13 @@ git checkout -b USERNAME-Feeds-Training
 
 1. Create .env
 
-2. Copy env.example to .env.
+2. Copy the contents of env.example into .env.
 
-3. The only way to access the values (CONTENT_BASE, ARC_ACCESS_TOKEN, RESIZER_KEY) is by contacting Arc/Photo Center team. Do so and then replace the placeholders with your correct values in .env. For BLOCK_DIST_TAG - to use production blocks, set this to 'stable', to use development blocks use 'beta'. Fusion defaults to stable if not set.
+3. Retrieve and populate the variables in your .env.
+- `CONTENT_BASE` - Set your org in `https://api.${ORG}.arcpublishing.com` [ALC](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/defining-arc-content-source.md#configuring-content_base-and-arc_access_token-for-local-development). This is used by content sources to get data from your prod or sandbox environment. Replace ORG with your org name, like demo or sandbox.demo. This should point to your prod or sandbox environments, not the OBF environments.
+- `RESIZER_KEY` - Contact Arc/Photo Center team for this value.
+- `BLOCK_DIST_TAG` - To use production blocks, set this to `stable`. To use development blocks use `beta`. Fusion defaults to stable if not set.
+- `ARC_ACCESS_TOKEN` - Go to your organization's [developer center](https://redirector.arcpublishing.com/developer/access/tokens). Click 'Create Read-Only Token', add a description such as your name, and then click 'Create'. You should then be able to copy the generated token and paste it into your .env.
 
 4. Note: The .env file is in .gitignore and should never be checked into github due to major security concerns.
 
