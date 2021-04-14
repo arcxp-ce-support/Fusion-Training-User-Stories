@@ -9,7 +9,7 @@ npx fusion start
 
 **Database Dump**
 
-2. Open [this link](https://corecomponents.arcpublishing.com/pb-data/mongo/corecomponents.tar.gz) to download the database dump. 
+2. Click [this link](https://outboundfeeds-sandbox.corecomponents.arcpublishing.com/pb-data/mongo/corecomponents_outboundfeeds_sandbox.tar.gz) to download the database dump. 
 3. Ensure that fusion is still running. Drag the downloaded tar.gz datadump into the `data/restore` folder. You should see the folder unzip and disappear automatically. Once that happens, you have your new database! 
 
 4. Now, navigate to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally. For example, this is what your local pagebuilder editor templates should look like:
