@@ -22,7 +22,7 @@ Note: In the future, once you have create your templates and resolvers you can u
 
 # Relevant Links
 - [Starting Fusion](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/running-fusion-locally.md)
-- [Database Dump](https://corecomponents.arcpublishing.com/pb-data/mongo/corecomponents.tar.gz)
+- [Database Dump](https://outboundfeeds-sandbox.corecomponents.arcpublishing.com/pb-data/mongo/corecomponents_outboundfeeds_sandbox.tar.gz)
 - [Localhost Pages](http://localhost/pagebuilder/pages)
 - [Localhost Templates](http://localhost/pagebuilder/templates)
 - [Postman](https://www.postman.com/)
