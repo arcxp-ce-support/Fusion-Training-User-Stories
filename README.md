@@ -46,6 +46,7 @@ First, let's understand an important file in the repository - blocks.json. Navig
 **Blocks Array**
 
 The blocks array is an array of the feeds (npm packages) that are loaded by the arc-fusion/cli at run time. Initially, the blocks array will contain all of the Out Of the Box feeds. To read more about the blocks array, [click here]( https://redirector.arcpublishing.com/alc/arc-products/arcio/user-docs/blocksjson/#blocks-configs).
+
 <img width="450" alt="Screen Shot 2021-04-09 at 10 01 35 AM copy" src="https://user-images.githubusercontent.com/39777478/114422114-fc3fe900-9b83-11eb-98c4-db9a4282ee50.png">
 
 **siteProperties**
