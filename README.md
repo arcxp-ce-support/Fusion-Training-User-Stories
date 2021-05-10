@@ -14,7 +14,7 @@ npx fusion start
 
 4. Now, navigate to the pagebuilder editor [pages](http://localhost/pagebuilder/pages) and [templates](http://localhost/pagebuilder/templates) to add and configure feeds locally. For example, this is what your local pagebuilder editor templates should look like:
 
-<img width="500" alt="Screen Shot 2021-04-13 at 9 18 11 AM" src="https://user-images.githubusercontent.com/39777478/114559134-68305900-9c39-11eb-9345-1e9bd6708912.png">
+TODO: add screenshot of localhost/pagebuiler/pages feeds
 
 Note: In the future, once you have create your templates and resolvers you can use a tool like [postman](https://www.postman.com/) to see them at `http://localhost/arc/outboundfeeds/{FEED_NAME}?outputType=xml&_website={WEBSITE}`
 
