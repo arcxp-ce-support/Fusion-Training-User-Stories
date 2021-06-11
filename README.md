@@ -1,18 +1,10 @@
-# The three views
-
-The first thing we're going to do is build what we call `The three views`,  they're basically 3 React components that are required for each Power-Up: 
-
-- Search: Initial view when selecting the Power-Up.
-- View: Inline view after selecting Power-Up.
-- Edit: Provides opportunity for Authors to manipulate the 3rd Party data
 
 
+# The Edit View
 
-# The Search View
+Let's write the code for `The Edit View`!: 
 
-Let's start writing the code for `The Search View`!: 
-
-1. Let's create a new component called ApesterSearch in apester-search.jsx > components/features/Apester-Composer/children/apester-search.jsx which returns an empty `div` and export it.
+1. Let's create a new component called ApesterEdit in apester-search.jsx > components/features/Apester/children/apester-search.jsx which returns an empty `div` and export it.
 
 2. Let's add the required imports 
     - import React and the useState and useEffect methods
@@ -29,7 +21,7 @@ Let's start writing the code for `The Search View`!:
     import { sendMessage, getKey } from '../../../../util/power-ups/index';
     import './apester.scss';
 
-    const ApesterSearch = () => {
+    const ApesterEdit = () => {
 
         return (
             <div>  
@@ -37,7 +29,7 @@ Let's start writing the code for `The Search View`!:
         );
     };
 
-    export default ApesterSearch;
+    export default ApesterEdit;
 
 
 3. Now instead of returning an empty div, let's return the search view, which in this case has the logo of the Power-Up, a title, a description, an input and a submit button that triggers the search. (Feel free to add more to this view).
@@ -50,7 +42,7 @@ Let's start writing the code for `The Search View`!:
     import { sendMessage, getKey } from '../../../../util/power-ups/index';
     import './apester.scss';
 
-    const ApesterSearch = () => {
+    const ApesterEdit = () => {
 
         return (
             <div className="container apester-search">
@@ -73,7 +65,7 @@ Let's start writing the code for `The Search View`!:
         );
     };
 
-    export default ApesterSearch;
+    export default ApesterEdit;
 
 
 4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
@@ -99,7 +91,7 @@ Let's start writing the code for `The Search View`!:
         import { sendMessage, getKey } from '../../../../util/power-ups/index';
         import './apester.scss';
 
-        const ApesterSearch = () => {
+        const ApesterEdit = () => {
             const [mediaID, setMediaID] = useState('12345');
 
             const handleFieldChange = (value) => {
@@ -145,7 +137,7 @@ Let's start writing the code for `The Search View`!:
             );
         };
 
-        export default ApesterSearch;
+        export default ApesterEdit;
 
 5. Last but not least, let's add some styles!
 
