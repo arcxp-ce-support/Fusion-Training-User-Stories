@@ -6,12 +6,54 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.whenAvailable = exports.sendMessage = exports.getKey = exports.parseQueryString = void 0;
-
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
 var _lodash = _interopRequireDefault(require("lodash.get"));
+
+var parseQueryString = function parseQueryString() {
+  var locationHref = (0, _lodash["default"])(window, 'location.href', null);
+
+  if (!locationHref) {
+    return null;
+  }
+
+  var pageURL = new URL(locationHref);
+  var preHash = {};
+  var postHash = {};
+  var params = pageURL.searchParams;
+  var paramsString = params.toString();
+  var embedParams = paramsString.split('?');
+  var kv = embedParams[0].split('&');
+
+  preHash = kv.reduce(function (result, item) {
+    var _item$split = item.split('='),
+        _item$split2 = (0, _slicedToArray2["default"])(_item$split, 2),
+        key = _item$split2[0],
+        value = _item$split2[1];
+
+    return Object.assign(result, (0, _defineProperty2["default"])({}, key, value));
+  }, {});
+
+  var hash = pageURL.hash;
+
+  if (hash) {
+    embedParams = hash.split('?');
+
+    if (embedParams.length > 1) {
+      kv = embedParams[1].split('&');
+      postHash = kv.reduce(function (result, item) {
+        var _item$split3 = item.split('='),
+            _item$split4 = (0, _slicedToArray2["default"])(_item$split3, 2),
+            key = _item$split4[0],
+            value = _item$split4[1];
+
+        return Object.assign(result, (0, _defineProperty2["default"])({}, key, value));
+      }, {});
+    }
+  }
+
+  return Object.assign({}, preHash, postHash);
+};
 
 exports.parseQueryString = parseQueryString;
 
@@ -35,6 +77,7 @@ var getKey = function getKey() {
 
     return accumulator;
   }, '');
+  
   return sessionKey;
 };
 
