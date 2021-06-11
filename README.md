@@ -1,6 +1,6 @@
 
 
-# The View!
+# The conditional to render each view!
 
 Let's start writing the code for `View`!: 
 
@@ -16,46 +16,34 @@ Let's start writing the code for `View`!:
 
     ```
     
-    import React, { useEffect } from 'react';
+    import React, { useEffect, useState } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
-    import './apester.scss';
+    import ApesterSearch from './children/apester-search.jsx';
+    import ApesterView from './children/apester-view.jsx';
+    import ApesterEdit from './children/apester-edit.jsx';
 
-    const ApesterView = () => {
+    const ApesterPowerUp = () => {
 
         return (
             <div></div>
         );
     };
 
-    export default ApesterView;
+    export default ApesterPowerUp;
 
 
 
 3. Now let's give that div the following attributes:
 
-    - id: a string
-    - className
-    - data-media-id = ""
-
-
     Code:
 
     ```
     
-    import React, { useEffect } from 'react';
-    import get from 'lodash.get';
-    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
-    import './apester.scss';
-
-    const ApesterView = () => {
-
-        return (
-            <div id="apester-media" className="apester-media" data-media-id=""></div>
-        );
-    };
-
-    export default ApesterView;
+    <div>
+      {actionID.includes('#SEARCH') && <ApesterSearch/>}
+      {actionID.includes('#VIEW') && <ApesterView/>}
+      {actionID.includes('#EDIT') && <ApesterEdit/>}
+    </div>
 
 
 4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
@@ -76,68 +64,47 @@ Let's start writing the code for `View`!:
 
     ```
         
-        useEffect(() => {
-            const loader = document.createElement('script');
-            loader.type = 'text/javascript';
-            loader.src = 'https://static.apester.com/js/sdk/latest/apester-sdk.js';
-            document.getElementsByTagName('head')[0].appendChild(loader);
+    const [actionID, setActionID] = useState('');
 
-            sendMessage('ready', {
-            height: document.documentElement.scrollHeight,
-            });
+    const getActionParam = () => {
+        const actionHash = get(window, 'location.hash', 'NONE');
+        setActionID(actionHash.toUpperCase());
+    };
 
-            const parameters = Object.assign({ wait: 0,}, parseQueryString());
-
-            const data = JSON.parse(decodeURIComponent(get(parameters, 'p', '{}')));
-
-            const dataEl = document.getElementById('apester-media');
-            const mediaID = get(data, 'config.mediaId', 0);
-
-            const hasSrc = get(dataEl, 'dataset', false);
-            if (hasSrc) {
-                dataEl.dataset.mediaId = mediaID;
-            }
-        }, []);
+    useEffect(() => getActionParam(), []);
 
 5. Last but not least, let's add some styles!
 
     ```
-    import React, { useEffect } from 'react';
+    import React, { useEffect, useState } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
-    import './apester.scss';
-
-    const ApesterView = () => {
-        useEffect(() => {
-            const loader = document.createElement('script');
-            loader.type = 'text/javascript';
-            loader.src = 'https://static.apester.com/js/sdk/latest/apester-sdk.js';
-            document.getElementsByTagName('head')[0].appendChild(loader);
-
-            sendMessage('ready', {
-            height: document.documentElement.scrollHeight,
-            });
-
-            const parameters = Object.assign({ wait: 0,}, parseQueryString());
-            const data = JSON.parse(decodeURIComponent(get(parameters, 'p', '{}')));
-
-            const dataEl = document.getElementById('apester-media');
-            const mediaID = get(data, 'config.mediaId', 0);
-
-            const hasSrc = get(dataEl, 'dataset', false);
-
-            if (hasSrc) {
-                dataEl.dataset.mediaId = mediaID;
-            }
-        }, []);
+    import ApesterSearch from './children/apester-search.jsx';
+    import ApesterView from './children/apester-view.jsx';
+    import ApesterEdit from './children/apester-edit.jsx';
 
 
-        return (
-            <div id="apester-media" className="apester-media" data-media-id="">&nbsp;</div>
-        );
+    const ApesterPowerUp = () => {
+    const [actionID, setActionID] = useState('');
+
+    const getActionParam = () => {
+        const actionHash = get(window, 'location.hash', 'NONE');
+        setActionID(actionHash.toUpperCase());
+        console.log('aSDKJASDLJALKSD', actionHash)
     };
 
-    export default ApesterView;
+    useEffect(() => getActionParam(), []);
+
+    return (
+        <div>
+        {actionID.includes('#SEARCH') && <ApesterSearch/>}
+        {actionID.includes('#VIEW') && <ApesterView/>}
+        {actionID.includes('#EDIT') && <ApesterEdit/>}
+        </div>
+    );
+    };
+
+    export default ApesterPowerUp;
+
 
 
 
