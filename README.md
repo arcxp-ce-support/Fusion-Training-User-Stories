@@ -1,71 +1,61 @@
 
 
-# The Edit View
+# The View!
 
-Let's write the code for `The Edit View`!: 
+Let's start writing the code for `View`!: 
 
-1. Let's create a new component called ApesterEdit in apester-search.jsx > components/features/Apester/children/apester-search.jsx which returns an empty `div` and export it.
+1. Let's create a new component called ApesterView in apester-view.jsx > components/features/Apester-Composer/children/apester-view.jsx which returns an empty `div` and export it.
 
 2. Let's add the required imports 
-    - import React and the useState and useEffect methods
+    - import React and the useEffect method
     - import get from lodash (optional). 
     - import the scss or styles file
-    - import sendMessage and getKey from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
+    - import sendMessage and parseQueryString from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
 
     Code:
 
     ```
     
-    import React, { useState, useEffect } from 'react';
+    import React, { useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, getKey } from '../../../../util/power-ups/index';
+    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
     import './apester.scss';
 
-    const ApesterEdit = () => {
+    const ApesterView = () => {
 
         return (
-            <div>  
-            </div>
+            <div></div>
         );
     };
 
-    export default ApesterEdit;
+    export default ApesterView;
 
 
-3. Now instead of returning an empty div, let's return the search view, which in this case has the logo of the Power-Up, a title, a description, an input and a submit button that triggers the search. (Feel free to add more to this view).
 
+3. Now let's give that div the following attributes:
+
+    - id: a string
+    - className
+    - data-media-id = ""
+
+
+    Code:
 
     ```
     
-    import React, { useState, useEffect } from 'react';
+    import React, { useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, getKey } from '../../../../util/power-ups/index';
+    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
     import './apester.scss';
 
-    const ApesterEdit = () => {
+    const ApesterView = () => {
 
         return (
-            <div className="container apester-search">
-                <img src='https://blumbergcapital.com/wp-content/uploads/2016/02/apester_logo_400x200_2.png'/>
-                <h2>Search Apester Embed</h2>
-                <p>Using the Media ID, search for a published Apester embed</p>
-                <label htmlFor="mediaID" className="form-label">Media ID: </label>
-                <div className='search-container'>
-                    <input
-                        type="text"
-                        className="form-control search-input"
-                        name="mediaID"
-                        id="mediaID"
-                        placeholder="12345"
-                        aria-label="Media ID">
-                    </input>
-                    <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search"></input>
-                </div>
-            </div>
+            <div id="apester-media" className="apester-media" data-media-id=""></div>
         );
     };
 
-    export default ApesterEdit;
+    export default ApesterView;
 
 
 4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
@@ -86,101 +76,69 @@ Let's write the code for `The Edit View`!:
 
     ```
         
-        import React, { useState, useEffect } from 'react';
-        import get from 'lodash.get';
-        import { sendMessage, getKey } from '../../../../util/power-ups/index';
-        import './apester.scss';
+        useEffect(() => {
+            const loader = document.createElement('script');
+            loader.type = 'text/javascript';
+            loader.src = 'https://static.apester.com/js/sdk/latest/apester-sdk.js';
+            document.getElementsByTagName('head')[0].appendChild(loader);
 
-        const ApesterEdit = () => {
-            const [mediaID, setMediaID] = useState('12345');
+            sendMessage('ready', {
+            height: document.documentElement.scrollHeight,
+            });
 
-            const handleFieldChange = (value) => {
-                setMediaID(value);
-            };
+            const parameters = Object.assign({ wait: 0,}, parseQueryString());
 
-            const handleClick = () => {
-                const ansCustomEmbed = {
-                    id: getKey(),
-                    url: get(window, 'location.href', ''),
-                    config: {
-                        mediaId: mediaID,
-                    },
-                };
-                sendMessage('data', ansCustomEmbed);
-            };
+            const data = JSON.parse(decodeURIComponent(get(parameters, 'p', '{}')));
 
-            useEffect(() => {
-                sendMessage('ready', {
-                height: document.documentElement.scrollHeight,
-                });
-            }, []);
+            const dataEl = document.getElementById('apester-media');
+            const mediaID = get(data, 'config.mediaId', 0);
 
-            return (
-                <div className="container apester-search">
-                    <img src='https://blumbergcapital.com/wp-content/uploads/2016/02/apester_logo_400x200_2.png'/>
-                    <h2>Search Apester Embed</h2>
-                    <p>Using the Media ID, search for a published Apester embed</p>
-                    <label htmlFor="mediaID" className="form-label">Media ID: </label>
-                    <div className='search-container'>
-                        <input
-                            type="text"
-                            className="form-control search-input"
-                            name="mediaID"
-                            id="mediaID"
-                            placeholder="12345"
-                            aria-label="Media ID">
-                            onChange={e => handleFieldChange(e.target.value)}
-                        </input>
-                        <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search" onClick={handleClick}></input>
-                    </div>
-                    </div>
-            );
-        };
-
-        export default ApesterEdit;
+            const hasSrc = get(dataEl, 'dataset', false);
+            if (hasSrc) {
+                dataEl.dataset.mediaId = mediaID;
+            }
+        }, []);
 
 5. Last but not least, let's add some styles!
 
-    In apester.scss add the styles for this view.
-
     ```
-    .apester-search {
-        background-color: white;
-        padding: 50px;
-        box-shadow: 0px 0px 4px #c3c2c2;
+    import React, { useEffect } from 'react';
+    import get from 'lodash.get';
+    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
+    import './apester.scss';
 
-        & img {
-            width: 30%;
-        }
+    const ApesterView = () => {
+        useEffect(() => {
+            const loader = document.createElement('script');
+            loader.type = 'text/javascript';
+            loader.src = 'https://static.apester.com/js/sdk/latest/apester-sdk.js';
+            document.getElementsByTagName('head')[0].appendChild(loader);
 
-        .search-input {
-            width: 100%;
-            border: 3px solid #00B4CC;
-            border-right: none;
-            padding: 5px;
-            height: 20px;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-        }
-        
-        .search-btn {
-            height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
-            text-align: center;
-            color: #fff;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        
-        .search-container {
-            width: 100%;
-            position: relative;
-            display: flex;
-        }
-    }
-    ```
+            sendMessage('ready', {
+            height: document.documentElement.scrollHeight,
+            });
+
+            const parameters = Object.assign({ wait: 0,}, parseQueryString());
+            const data = JSON.parse(decodeURIComponent(get(parameters, 'p', '{}')));
+
+            const dataEl = document.getElementById('apester-media');
+            const mediaID = get(data, 'config.mediaId', 0);
+
+            const hasSrc = get(dataEl, 'dataset', false);
+
+            if (hasSrc) {
+                dataEl.dataset.mediaId = mediaID;
+            }
+        }, []);
+
+
+        return (
+            <div id="apester-media" className="apester-media" data-media-id="">&nbsp;</div>
+        );
+    };
+
+    export default ApesterView;
+
 
 
 
