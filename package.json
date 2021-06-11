@@ -1,0 +1,25 @@
+{
+  "name": "fusion-training2",
+  "version": "1.0.0",
+  "description": "This repository contains all of the code necessary to complete each of the steps in the Arc PageBuilder Fusion training curriculum.",
+  "main": "index.js",
+  "scripts": {
+    "fusion": "fusion",
+    "start": "fusion start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arc-partners/Fusion-Training-User-Stories.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arc-partners/Fusion-Training-User-Stories/issues"
+  },
+  "homepage": "https://github.com/arc-partners/Fusion-Training-User-Stories#readme",
+  "devDependencies": {
+    "@arc-fusion/cli": "^2.0.2"
+  }
+}
