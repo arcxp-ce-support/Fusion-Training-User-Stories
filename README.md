@@ -1,10 +1,10 @@
-# Now the fun part!  `Building the three views`!
+# Now the fun part:  `Building the three views!`
 
 Now we are going to build `The three views`,  they're basically 3 React components that are required for each Power-Up: 
 
-- Search: Initial view when selecting the Power-Up.
+- Search: The Initial view when selecting the Power-Up.
 - View: Inline view after selecting Power-Up.
-- Edit: Provides opportunity for Authors to manipulate the 3rd Party data
+- Edit: Provides an opportunity for Authors to manipulate the 3rd Party data
 
 
 
@@ -12,21 +12,32 @@ Now we are going to build `The three views`,  they're basically 3 React componen
 
 Let's start writing the code for `The Search View:` 
 
-1. Let's create a new component called ApesterSearch in apester-search.jsx > components/features/Apester-Composer/children/apester-search.jsx which returns an empty `div` and export it.
+1. Let's create a new component called ApesterSearch in apester-search.jsx > components/features/Apester/children/apester-search.jsx which returns an empty `div` and export it.
+
+    ```
+    const ApesterSearch = () => {
+
+        return (
+            <div>  
+            </div>
+        );
+    };
+
+    export default ApesterSearch;
 
 2. Let's add the required imports 
     - import React and the useState and useEffect methods
     - import get from lodash (optional). 
     - import the scss or styles file
-    - import sendMessage and getKey from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
+    - import sendMessage and getKey from the util file 
 
-    Code:
+
 
     ```
     
     import React, { useState, useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, getKey } from '../../../../util/power-ups/index';
+    import { sendMessage, getKey } from '../../../../util/powerups/index';
     import './apester.scss';
 
     const ApesterSearch = () => {
@@ -44,11 +55,6 @@ Let's start writing the code for `The Search View:`
 
 
     ```
-    
-    import React, { useState, useEffect } from 'react';
-    import get from 'lodash.get';
-    import { sendMessage, getKey } from '../../../../util/power-ups/index';
-    import './apester.scss';
 
     const ApesterSearch = () => {
 
@@ -76,27 +82,27 @@ Let's start writing the code for `The Search View:`
     export default ApesterSearch;
 
 
-4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
+4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and its method setMediaId which we will use to reference the Apester mediaId that we want to search for.
 
-    For two of these methods we will use the util function that we imported called `sendMessage` (we will review this API in lab 04)
+    For two of these methods, we will use the util function that we imported called `sendMessage` 
 
     The `onChange` method will set the mediaId to whatever value the user inputs.
 
-    The `onClick` method will call `sendMessage` with 2 parameters: one is the string 'data' and the second one is an ansCustomEmbed object with the following attributes:
+    The `onClick` method will call `sendMessage` with 2 parameters: one is the String 'data' and the second one is an ansCustomEmbed Object with the following attributes:
 
-    - `id` which is another util function that we will build in lab 4 called getKey()
+    - `id` the value being returned from getKey(), in this case, we're expecting the hash with the name of the view: SEARCH, EDIT, or VIEW
     - `url` which refers to the window location
-    - `config` which is an object with the key 'mediaId' and the value that's set in mediaId 
+    - `config` which is an Object with the key 'mediaId' and the value that's set in mediaId 
 
-    The `useEffect` will also call `sendMessage` but with these 2 parameters: the string 'ready', an object with the atributte: height: document.documentElement.scrollHeight
+    The `useEffect` will also call `sendMessage` with these 2 parameters: the String 'ready', an Object with the atributte: height: document.documentElement.scrollHeight
 
-    Code:
+
 
     ```
         
         import React, { useState, useEffect } from 'react';
         import get from 'lodash.get';
-        import { sendMessage, getKey } from '../../../../util/power-ups/index';
+        import { sendMessage, getKey } from '../../../../util/powerups/index';
         import './apester.scss';
 
         const ApesterSearch = () => {
@@ -191,6 +197,5 @@ Let's start writing the code for `The Search View:`
     ```
 
 
-Now we can use powerup.jsx in addition to default.jsx
 
-## [Next up: Lab 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
