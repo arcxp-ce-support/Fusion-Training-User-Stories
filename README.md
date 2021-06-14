@@ -1,10 +1,13 @@
 
+Before we move on to the next step, let's create one more util function which we'll be using for the `VIEW` iFrame.
+
+&nbsp;
 
 # Parsing the query string
 
-Definition
+Once the search iFrame is presented and the user performs a search, we need to get the id of the custom embed as well as any search params. For this, we're going to write a function that returns an Object with the attributes that we're going to need to display the custom embed.
 
-
+&nbsp;
 ## Code
 
 1. In util/powerups/index.js let's create and export the function to parse the query string.
@@ -166,19 +169,6 @@ Definition
         };
 
         exports.sendMessage = sendMessage;
-
-        var whenAvailable = function whenAvailable(name, callback) {
-            var interval = 10;
-            window.setTimeout(function () {
-                if (window[name]) {
-                callback(window[name]);
-                } else {
-                whenAvailable(name, callback);
-                }
-            }, interval);
-        };
-
-        exports.whenAvailable = whenAvailable;
     
         ```
 
