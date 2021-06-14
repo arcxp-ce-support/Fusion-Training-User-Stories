@@ -1,8 +1,9 @@
 
+Now that we have our directory structure, we're going to write the code that's going to allow and handle communication between Composer and the iframes that we're going to build, this communication is achieved with the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 
 # About the postMessage API
 
-Communication between Composer and the iframes that we're going to build is achieved by using the postMessage API: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage which is a method that safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it
+`postMessage` is a method that safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it
 
 ## Main settings
 - Sent on window.parent.
@@ -13,9 +14,7 @@ Communication between Composer and the iframes that we're going to build is achi
 - Cancelling with “cancel” message
 
 
-## Writing our first util functions
-
-Let's start by writing the functions to get the key and to send the message.
+## Let's send the message!
 
 1. In util/powerups/index.js let's add the import that we're going to need.
 
@@ -38,7 +37,50 @@ Let's start by writing the functions to get the key and to send the message.
     var _lodash = _interopRequireDefault(require("lodash.get"));
     ```
 
-2. Create and export the function to get the key 
+2. Let's create and export a function called sendMessage that takes in 2 parameters: `action` which is a string and `data` which is an Object
+
+    ```
+    var sendMessage = function sendMessage(action, data) {
+
+    };
+
+    exports.sendMessage = sendMessage;
+    ```
+
+3. Now let's call the postMessage API with the payload which should have the following attributes:
+
+    -  `source:` The ANS schema requires the source to be the string `custom_embed`
+    -   `action:` String, we'll use 'ready' and 'data' for this training
+    -   `data:` Object with config values
+    -   `key:`  String. To set up the iFrame URLs in Composer Settings we will add a hash for each of the three views: #SEARCH #EDIT and #VIEW. For this `key` attribute we're going to write a function that returns the correspondent hash string
+
+
+    Code:
+
+    ```
+    var sendMessage = function sendMessage(action, data) {
+        if ((0, _lodash["default"])(window, 'parent', false)) {
+            var messagePayload = {
+                source: 'custom_embed',
+                action: action,
+                data: data,
+                key: getKey() // we'll define this next
+            };
+
+            if (action === 'ready') {
+                messagePayload.isAnsRequired = true;
+            }
+
+            window.parent.postMessage(JSON.stringify(messagePayload), '*');
+        }
+    };
+
+    exports.sendMessage = sendMessage;
+    ```
+
+    
+
+4. Now let's define getKey();
 
     ```
     var getKey = function getKey() {
@@ -69,48 +111,10 @@ Let's start by writing the functions to get the key and to send the message.
     exports.getKey = getKey;
     ```
 
-3. Create and export the function to send the message 
 
-    ```
-    var sendMessage = function sendMessage(action, data) {
-        if ((0, _lodash["default"])(window, 'parent', false)) {
-            var messagePayload = {
-                source: 'custom_embed',
-                action: action,
-                data: data,
-                key: getKey()
-            };
+    &nbsp;
 
-            if (action === 'ready') {
-                messagePayload.isAnsRequired = true;
-            }
-
-            window.parent.postMessage(JSON.stringify(messagePayload), '*');
-        }
-    };
-
-    exports.sendMessage = sendMessage;
-    ```
-
-4. Create and export the function to check if the window is ready 
-
-    ```
-    var whenAvailable = function whenAvailable(name, callback) {
-        var interval = 10;
-        window.setTimeout(function () {
-            if (window[name]) {
-                callback(window[name]);
-            } else {
-                whenAvailable(name, callback);
-            }
-        }, interval);
-    };
-
-    exports.whenAvailable = whenAvailable;
-
-    ```
-
-So far our util/powerups/index.js should look like this:
+    So far our util/powerups/index.js should look like this:
 
     ```
     "use strict";
@@ -171,22 +175,9 @@ So far our util/powerups/index.js should look like this:
     };
 
     exports.sendMessage = sendMessage;
-
-    var whenAvailable = function whenAvailable(name, callback) {
-        var interval = 10;
-        window.setTimeout(function () {
-            if (window[name]) {
-            callback(window[name]);
-            } else {
-            whenAvailable(name, callback);
-            }
-        }, interval);
-    };
-
-    exports.whenAvailable = whenAvailable;
    
     ```
 
 
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
