@@ -1,6 +1,6 @@
-# The three views
+# Now the fun part!  `Building the three views`!
 
-The first thing we're going to do is build what we call `The three views`,  they're basically 3 React components that are required for each Power-Up: 
+Now we are going to build `The three views`,  they're basically 3 React components that are required for each Power-Up: 
 
 - Search: Initial view when selecting the Power-Up.
 - View: Inline view after selecting Power-Up.
@@ -10,7 +10,7 @@ The first thing we're going to do is build what we call `The three views`,  they
 
 # The Search View
 
-Let's start writing the code for `The Search View`!: 
+Let's start writing the code for `The Search View:` 
 
 1. Let's create a new component called ApesterSearch in apester-search.jsx > components/features/Apester-Composer/children/apester-search.jsx which returns an empty `div` and export it.
 
@@ -191,5 +191,6 @@ Let's start writing the code for `The Search View`!:
     ```
 
 
+Now we can use powerup.jsx in addition to default.jsx
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
