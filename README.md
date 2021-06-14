@@ -2,9 +2,7 @@
 
 # Output-Type
 
-Definition
-
-
+&nbsp;
 ## Code
 
 1. In components/output-types/powerups.jsx
@@ -43,4 +41,4 @@ Definition
 
 
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
