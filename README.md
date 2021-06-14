@@ -1,11 +1,10 @@
 
+Now that we have our util functions, let's add the new output-type for Power-Ups, this will allow us to add custom configurations specific to Power-Ups.
 
-# Output-Type
+# Adding the new Output-Type
 
-&nbsp;
-## Code
 
-1. In components/output-types/powerups.jsx
+1. In components/output-types/powerup.jsx let's add the html
 
 
     ```
@@ -40,5 +39,6 @@
     ```
 
 
+Now we can use powerup.jsx in addition to default.jsx
 
 ## [Next up: Lab 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
