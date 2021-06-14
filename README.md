@@ -2,10 +2,10 @@
 
 # Power-Ups Training
 
-Welcome to the Power-Ups traning! 
+Welcome to the Power-Ups training! 
 
 
-To start let's review the definition of Power-Ups:
+Before we start, let's review the definition of Power-Ups:
 
 ## What are Power-Ups
 
@@ -22,27 +22,27 @@ Power-Ups are an expanded custom embed that allows Editors in Composer to intera
 
 ## About this training 
 
-This repository contains all of the code necessary to complete each of the steps in the Arc Power-Ups training curriculum.
+In this training we are going to build a Power-Up that's an Apester embed, first, we're going to build the three views that are required for each Power-Up: Search, View, and Edit, then we're going to test it locally with a Arc's testing tool, and finally, we're going to deploy our code and set up Composer to start using it. [click here](https://apester.com/) to learn more about Apester!
 
 
 ## How to use
 
-This repo contains one branch for each of the labs in the Power-Up training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to powerup-lab-05 branch since thats where lab 5 starts off.
+This repo contains one branch for each of the labs in the Power-Up training curriculum. Each branch builds off of the previously completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to the powerups-lab-05 branch since that's where lab 5 starts off.
 
 ## Prerequisites
 
 - Node version 10+
 - Fusion CLI `npm i @arc-fusion/cli`
-- VS Code - *There is configuration and documentation setup specifically for this code editor so you'll have an easier time linting and formatting your work.*
+- VS Code - *There is a configuration and documentation set up specifically for this code editor so you'll have an easier time linting and formatting your work.*
 - Docker desktop - *Update the memory allocated in the docker settings to ~8GB – without this update fusion will run very slowly and file watcher will likely break.*
 
 ## Installation and setup
 
 
-If you already cloned this repo, set up the .env file and downloaded the PB data, checkout to the branch `powerup-master` to get started. Otherwise follow these steps:
+If you already cloned this repo, set up the .env file and downloaded the PB data, checkout to the branch `powerups-lab-00` to get started. Otherwise, follow these steps:
 
 
-1.  [Clone](https://git-scm.com/docs/git-clone) this repository and checkout to the `powerup-master` branch.
+1.  [Clone](https://git-scm.com/docs/git-clone) this repository and checkout to the `powerups-master` branch.
 
 
 2. In the root directory, create a `.env` file based on the below .env example and fill in the relevant info.
@@ -76,19 +76,34 @@ If you already cloned this repo, set up the .env file and downloaded the PB data
 
 ## Useful Commands
 
-`npx fusion rebuild`
+    `npx fusion rebuild`
 
 - This forces a webpack rebuild of a running cluster. [Documentation](https://www.npmjs.com/package/@arc-fusion/cli#rebuild)
 
-- Use this command if enviornment variables are not picked up by rebuild or if you need to restart the webpack container.
+- Use this command if environment variables are not picked up by rebuild or if you need to restart the webpack container.
 
+&nbsp;
 
 ## Curriculum Overview 
 
 | branch   | topic covered | 
 | :------: | :----------   |
-| [lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Running fusion & PageBuilder editor locally |
+| [lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Directory structure|
+| [lab-01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | PostMessage API |
+| [lab-02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Parsing the query string |
+| [lab-03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Adding a new output-type |
+| [lab-04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | The three views: Search |
+| [lab-05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | The three views: Edit |
+| [lab-06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | The three views: View |
+| [lab-07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Adding the conditional rendering |
+| [lab-08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Testing Power-Ups locally |
+| [lab-9](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Deployment |
+| [lab-10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Composer settings |
+| [lab-11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Usage |
 
 
+&nbsp;
+
+# Now let's start!
 
 ## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
