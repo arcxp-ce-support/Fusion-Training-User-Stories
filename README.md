@@ -26,24 +26,24 @@ Before we add the Composer settings, create a page to host the Apester block in 
 
 4. Let's add the following values:
 
-- Custom embed name: Apester Embed
-- Display type: apester-embed
-- Search iFrame URL: https://[your-organizations-url]/pf/[page-with-apester-block]?_website=[your-website]&outputType=powerup#SEARCH
+    - Custom embed name: Apester Embed
+    - Display type: apester-embed
+    - Search iFrame URL: https://[your-organizations-url]/pf/[page-with-apester-block]?_website=[your-website]&outputType=powerup#SEARCH
 
-- View iFrame URL: https://[your-organizations-url]/pf/[page-with-apester-block]?_website=[your-website]&outputType=powerup#VIEW
+    - View iFrame URL: https://[your-organizations-url]/pf/[page-with-apester-block]?_website=[your-website]&outputType=powerup#VIEW
 
-- Edit iFrame URL: https://[your-organizations-url]/pf/[page-with-apester-block]?_website=[your-website]&outputType=powerup#EDIT
+    - Edit iFrame URL: https://[your-organizations-url]/pf/[page-with-apester-block]?_website=[your-website]&outputType=powerup#EDIT
 
-- Icon: select an icon for this Power-Up!
+    - Icon: select an icon for this Power-Up!
 
-&nbsp;
+    &nbsp;
 
-### Example:
-&nbsp;
+    ### Example:
 
-- Search iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#SEARCH
-- View iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#VIEW
-- Edit iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#EDIT
+
+    - Search iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#SEARCH
+    - View iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#VIEW
+    - Edit iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#EDIT
 
 5. Click on `Add`
 
