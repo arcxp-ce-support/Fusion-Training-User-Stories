@@ -199,4 +199,4 @@ Let's start writing the code for `The Search View:`
 
 
 
-## [Next up: Lab 05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 05](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-05)
