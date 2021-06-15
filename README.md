@@ -139,4 +139,4 @@ Now we need to create the component that will render the inline view of the cust
 
 
 
-## [Next up: Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 07](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-07)
