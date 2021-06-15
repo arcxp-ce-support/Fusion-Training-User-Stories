@@ -36,13 +36,13 @@ const ApesterSearch = () => {
             </label>
             <div className='search-container'>
                 <input
-                    type="text"
-                    className="form-control search-input"
-                    name="mediaID"
-                    id="mediaID"
-                    placeholder="12345"
-                    aria-label="Media ID">
-                    onChange={e => handleFieldChange(e.target.value)}
+                type="text"
+                className="form-control search-input"
+                name="mediaID"
+                id="mediaID"
+                placeholder="12345"
+                aria-label="Media ID"
+                onChange={e => handleFieldChange(e.target.value)}>
                 </input>
                 <input
                     type="button"
