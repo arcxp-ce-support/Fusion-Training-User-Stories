@@ -136,4 +136,4 @@ Let's start writing the code for `The Edit View:`  which looks like very similar
 
 
 
-## [Next up: Lab 06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 06](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-06)
