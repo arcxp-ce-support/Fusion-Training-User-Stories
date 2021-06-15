@@ -22,12 +22,12 @@ Power-Ups are an expanded custom embed that allows Editors in Composer to intera
 
 ## About this training 
 
-In this training we are going to build a Power-Up that's an Apester embed, first, we're going to build the three views that are required for each Power-Up: Search, View, and Edit, then we're going to test it locally with a Arc's testing tool, and finally, we're going to deploy our code and set up Composer to start using it. [click here](https://apester.com/) to learn more about Apester!
+In this training we are going to build a Power-Up that's an Apester embed, first, we're going to build the three views that are required for each Power-Up: Search, View, and Edit, then we're going to test it locally with Arc's testing tool, and finally, we're going to deploy our code and set up Composer to start using it. [click here](https://apester.com/) to learn more about Apester!
 
 
 ## How to use
 
-This repo contains one branch for each of the labs in the Power-Up training curriculum. Each branch builds off of the previously completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to the powerups-lab-05 branch since that's where lab 5 starts off.
+This repo contains one branch for each of the labs in the Power-Up training curriculum. Each branch builds off of the previously completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to the powerups-lab-05 branch since that's where lab 5 starts.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ This repo contains one branch for each of the labs in the Power-Up training curr
 ## Installation and setup
 
 
-If you already cloned this repo, set up the .env file and downloaded the PB data, checkout to the branch `powerups-lab-00` to get started. Otherwise, follow these steps:
+If you already cloned down this repo, set up the .env file, and downloaded the PB data, checkout to the branch `powerups-lab-00` to get started. Otherwise, follow these steps:
 
 
 1.  [Clone](https://git-scm.com/docs/git-clone) this repository and checkout to the `powerups-master` branch.
@@ -49,7 +49,7 @@ If you already cloned this repo, set up the .env file and downloaded the PB data
 
     To get the Auth token:
 
-    - Go to your orgs Arc homepage and switch to the sandbox environment.
+    - Go to your org's Arc homepage and switch to the sandbox environment.
     - Click on Developer Center and click "create read-only token".
     - Fill in the fields and click create. This will create your access token.
     - Copy the content at the bottom where it says "Copy the following into your PB .env file if setting up PageBuilder" and place it into your .env. It should be something like this:
