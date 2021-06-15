@@ -1,23 +1,35 @@
 
 
-# The View!
+# Last but not least: The View!
 
-Let's start writing the code for `View`!: 
+Now we need to create the component that will render the inline view of the custom embed `The View!`
 
-1. Let's create a new component called ApesterView in apester-view.jsx > components/features/Apester-Composer/children/apester-view.jsx which returns an empty `div` and export it.
+1. Let's create a new component called ApesterView in apester-view.jsx > components/features/Apester/children/apester-view.jsx which returns an empty `div` and export it.
+
+    ```
+    const ApesterView = () => {
+
+        return (
+            <div></div>
+        );
+    };
+
+    export default ApesterView;
+
+    ```
 
 2. Let's add the required imports 
     - import React and the useEffect method
     - import get from lodash (optional). 
     - import the scss or styles file
-    - import sendMessage and parseQueryString from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
+    - import sendMessage and parseQueryString from the util file
 
 
     ```
     
     import React, { useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
+    import { sendMessage, parseQueryString } from '../../../../util/powerups/index';
     import './apester.scss';
 
     const ApesterView = () => {
@@ -33,18 +45,18 @@ Let's start writing the code for `View`!:
 
 3. Now let's give that div the following attributes:
 
-    - id: a string
+    - id: String
     - className
     - data-media-id = ""
 
 
-    Code:
+
 
     ```
     
     import React, { useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
+    import { sendMessage, parseQueryString } from '../../../../util/powerups/index';
     import './apester.scss';
 
     const ApesterView = () => {
@@ -57,7 +69,7 @@ Let's start writing the code for `View`!:
     export default ApesterView;
 
 
-4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and its method setMediaId which we will use to reference the Apester mediaId that we want to search for.
+4. In a useEffect hook let's write the code to get the selected mediaId of the embed as well as some of the config values. The Apester documentation says that in order to embed Apester, a div with the data-media-id is required.
 
     ```
         
@@ -84,12 +96,12 @@ Let's start writing the code for `View`!:
             }
         }, []);
 
-5. Last but not least, let's add some styles!
+5. Remember that you can give some styles to the div! This is what our `View` component looks like:
 
     ```
     import React, { useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, parseQueryString } from '../../../../util/power-ups/index';
+    import { sendMessage, parseQueryString } from '../../../../util/powerups/index';
     import './apester.scss';
 
     const ApesterView = () => {
