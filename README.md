@@ -19,6 +19,7 @@ Now we need to create the component that will render the inline view of the cust
     ```
 
 2. Let's add the required imports 
+
     - import React and the useEffect method
     - import get from lodash (optional). 
     - import the scss or styles file
@@ -50,8 +51,6 @@ Now we need to create the component that will render the inline view of the cust
     - data-media-id = ""
 
 
-
-
     ```
     
     import React, { useEffect } from 'react';
@@ -69,32 +68,32 @@ Now we need to create the component that will render the inline view of the cust
     export default ApesterView;
 
 
-4. In a useEffect hook let's write the code to get the selected mediaId of the embed as well as some of the config values. The Apester documentation says that in order to embed Apester, a div with the data-media-id is required.
+4. In a useEffect hook let's write the code to get the selected mediaId of the embed as well as some of the config values. The Apester documentation says that to embed Apester, a div with the data-media-id is required.
 
     ```
         
-        useEffect(() => {
-            const loader = document.createElement('script');
-            loader.type = 'text/javascript';
-            loader.src = 'https://static.apester.com/js/sdk/latest/apester-sdk.js';
-            document.getElementsByTagName('head')[0].appendChild(loader);
+    useEffect(() => {
+        const loader = document.createElement('script');
+        loader.type = 'text/javascript';
+        loader.src = 'https://static.apester.com/js/sdk/latest/apester-sdk.js';
+        document.getElementsByTagName('head')[0].appendChild(loader);
 
-            sendMessage('ready', {
-            height: document.documentElement.scrollHeight,
-            });
+        sendMessage('ready', {
+        height: document.documentElement.scrollHeight,
+        });
 
-            const parameters = Object.assign({ wait: 0,}, parseQueryString());
+        const parameters = Object.assign({ wait: 0,}, parseQueryString());
 
-            const data = JSON.parse(decodeURIComponent(get(parameters, 'p', '{}')));
+        const data = JSON.parse(decodeURIComponent(get(parameters, 'p', '{}')));
 
-            const dataEl = document.getElementById('apester-media');
-            const mediaID = get(data, 'config.mediaId', 0);
+        const dataEl = document.getElementById('apester-media');
+        const mediaID = get(data, 'config.mediaId', 0);
 
-            const hasSrc = get(dataEl, 'dataset', false);
-            if (hasSrc) {
-                dataEl.dataset.mediaId = mediaID;
-            }
-        }, []);
+        const hasSrc = get(dataEl, 'dataset', false);
+        if (hasSrc) {
+            dataEl.dataset.mediaId = mediaID;
+        }
+    }, []);
 
 5. Remember that you can give some styles to the div! This is what our `View` component looks like:
 
