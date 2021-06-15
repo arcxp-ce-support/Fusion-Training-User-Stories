@@ -40,4 +40,4 @@ Now that we have our util functions, let's add the new output-type for Power-Ups
 
 Now we can use powerup.jsx in addition to default.jsx
 
-## [Next up: Lab 04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 04](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-04)
