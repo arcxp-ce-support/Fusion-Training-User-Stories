@@ -5,7 +5,7 @@ Usually in the Edit view we give the editor the opportunity to interact and edit
 
 For this training we're going to limit the 'Edit' to basically perform another search to select a different embed. 
 
-Let's start writing the code for `The Edit View:`  which looks like very similar to the Search.
+Let's write the code for `The Edit View` which is going to look very similar to the Search:
 
 1. Let's create a new component called ApesterEdit in apester-edit.jsx > components/features/Apester/children/apester-edit.jsx which returns an empty `div` and export it.
 
@@ -21,6 +21,7 @@ Let's start writing the code for `The Edit View:`  which looks like very similar
     export default ApesterEdit;
 
 2. Let's add the required imports 
+
     - import React and the useState and useEffect methods
     - import get from lodash (optional). 
     - import the scss or styles file
@@ -80,58 +81,66 @@ Let's start writing the code for `The Edit View:`  which looks like very similar
 
     ```
         
-        import React, { useState, useEffect } from 'react';
-        import get from 'lodash.get';
-        import { sendMessage, getKey } from '../../../../util/powerups/index';
-        import './apester.scss';
+    import React, {useState, useEffect} from 'react';
+    import get from 'lodash.get';
+    import {sendMessage, getKey} from '../../../../util/powerups/index';
+    import './apester.scss';
 
-        const ApesterEdit = () => {
-            const [mediaID, setMediaID] = useState('12345');
+    const ApesterEdit = () => {
+        const [mediaID,
+            setMediaID] = useState('12345');
 
-            const handleFieldChange = (value) => {
-                setMediaID(value);
+        const handleFieldChange = (value) => {
+            setMediaID(value);
+        };
+
+        const handleClick = () => {
+            const ansCustomEmbed = {
+                id: getKey(),
+                url: get(window, 'location.href', ''),
+                config: {
+                    mediaId: mediaID
+                }
             };
+            sendMessage('data', ansCustomEmbed);
+        };
 
-            const handleClick = () => {
-                const ansCustomEmbed = {
-                    id: getKey(),
-                    url: get(window, 'location.href', ''),
-                    config: {
-                        mediaId: mediaID,
-                    },
-                };
-                sendMessage('data', ansCustomEmbed);
-            };
+        useEffect(() => {
+            sendMessage('ready', {height: document.documentElement.scrollHeight});
+        }, []);
 
-            useEffect(() => {
-                sendMessage('ready', {
-                height: document.documentElement.scrollHeight,
-                });
-            }, []);
-
-            return (
-                <div className="container apester-search">
-                    <h2>Edit Apester Embed</h2>
-                    <p>Find a new Apester Embed </p>
-                    <label htmlFor="mediaID" className="form-label">Media ID: </label>
-                    <div className='search-container'>
-                        <input
+        return (
+            <div className="container apester-search">
+                <h2>Edit Apester Embed</h2>
+                <p>Find a new Apester Embed
+                </p>
+                <label htmlFor="mediaID" className="form-label">Media ID:
+                </label>
+                <div className='search-container'>
+                    <input
                         type="text"
                         className="form-control search-input"
                         name="mediaID"
                         id="mediaID"
                         placeholder="12345"
                         aria-label="Media ID"
-                        onChange={e => handleFieldChange(e.target.value)}></input>
-                        <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search"
+                        onChange={e => handleFieldChange(e.target.value)}>
+                    </input>
+                    <input
+                        type="button"
+                        id="btnSubmit"
+                        className="btn btn-primary search-btn"
+                        name="btnSubmit"
+                        value="Search"
                         onClick={handleClick}>
-                        </input>
-                    </div>
+                    </input>
                 </div>
-            );
-        };
+            </div>
+        );
+    };
 
-        export default ApesterEdit;
+    export default ApesterEdit;
+
 
 
 
