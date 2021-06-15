@@ -12,7 +12,6 @@ Let's start writing the code for `View`!:
     - import the scss or styles file
     - import sendMessage and parseQueryString from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
 
-    Code:
 
     ```
     
@@ -58,21 +57,7 @@ Let's start writing the code for `View`!:
     export default ApesterView;
 
 
-4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
-
-    For two of these methods we will use the util function that we imported called `sendMessage` (we will review this API in lab 04)
-
-    The `onChange` method will set the mediaId to whatever value the user inputs.
-
-    The `onClick` method will call `sendMessage` with 2 parameters: one is the string 'data' and the second one is an ansCustomEmbed object with the following attributes:
-
-    - `id` which is another util function that we will build in lab 4 called getKey()
-    - `url` which refers to the window location
-    - `config` which is an object with the key 'mediaId' and the value that's set in mediaId 
-
-    The `useEffect` will also call `sendMessage` but with these 2 parameters: the string 'ready', an object with the atributte: height: document.documentElement.scrollHeight
-
-    Code:
+4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and its method setMediaId which we will use to reference the Apester mediaId that we want to search for.
 
     ```
         
@@ -142,4 +127,4 @@ Let's start writing the code for `View`!:
 
 
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
