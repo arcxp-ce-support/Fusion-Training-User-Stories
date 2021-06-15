@@ -180,4 +180,4 @@ Now that we have our directory structure, we're going to write the code that's g
 
 
 
-## [Next up: Lab 02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 02](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-02)
