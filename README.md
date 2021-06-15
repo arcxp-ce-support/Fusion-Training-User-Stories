@@ -2,27 +2,25 @@
 
 # The conditional to render each view!
 
-Now we need to create the component that will render the inline view of the custom embed `The View!`
+Now that we have our three views, let's write a function that checks the URL hash and based on that renders the appropiate view.
 
-1. Let's create a new component called ApesterView in apester-view.jsx > components/features/Apester/children/apester-view.jsx which returns an empty `div` and export it.
+1. Let's create a new component called ApesterPowerUp in powerup.jsx > components/features/Apester/powerup which returns an empty `div` and export it.
 
     ```
-    const ApesterView = () => {
-
+    const ApesterPowerUp = () => {
         return (
             <div></div>
-        );
-    };
+        )
+    }
 
-    export default ApesterView;
+    export default ApesterPowerUp;
 
     ```
 
 2. Let's add the required imports 
-    - import React and the useEffect method
+    - import React, the useEffect and useState methods
     - import get from lodash (optional). 
-    - import the scss or styles file
-    - import sendMessage and parseQueryString from the util file
+    - import each of the three views
 
 
     ```
@@ -41,69 +39,64 @@ Now we need to create the component that will render the inline view of the cust
     };
 
     export default ApesterPowerUp;
+    ```
 
 
-
-3. Now let's give that div the following attributes:
-
-    Code:
+4. Now let's add a function to get the hash and let's assign the value of the hash to a variable called actionID
 
     ```
-    
-    <div>
-      {actionID.includes('#SEARCH') && <ApesterSearch/>}
-      {actionID.includes('#VIEW') && <ApesterView/>}
-      {actionID.includes('#EDIT') && <ApesterEdit/>}
-    </div>
-
-
-4. In a useEffect hook let's write the code to get the selected mediaId of the embed as well as some of the config values. The Apester documentation says that in order to embed Apester, a div with the data-media-id is required.
-
-    ```
-        
-    const [actionID, setActionID] = useState('');
+    const [ actionID, setActionID ] = useState('');
 
     const getActionParam = () => {
         const actionHash = get(window, 'location.hash', 'NONE');
         setActionID(actionHash.toUpperCase());
-    };
+    }
 
     useEffect(() => getActionParam(), []);
 
-5. Remember that you can give some styles to the div! This is what our `View` component looks like:
+5. Now we can render the appropiate component based on the actionID which is the url hash, let's add the conditional rendering!
 
     ```
+    return (
+        <div>
+            {actionID.includes('#SEARCH') && <ApesterSearch/>}
+            {actionID.includes('#VIEW') && <ApesterView/>}
+            {actionID.includes('#EDIT') && <ApesterEdit/>}
+        </div>
+    );
+
+    ```
+
+    Our powerup.jsx should look like this:
+
+    ``` 
     import React, { useEffect, useState } from 'react';
     import get from 'lodash.get';
     import ApesterSearch from './children/apester-search.jsx';
-    import ApesterView from './children/apester-view.jsx';
-    import ApesterEdit from './children/apester-edit.jsx';
-
+    import ApesterView from './children/apester-view';
+    import ApesterEdit from './children/apester-edit';
 
     const ApesterPowerUp = () => {
-    const [actionID, setActionID] = useState('');
+        const [ actionID, setActionID ] = useState('');
 
-    const getActionParam = () => {
-        const actionHash = get(window, 'location.hash', 'NONE');
-        setActionID(actionHash.toUpperCase());
-        console.log('aSDKJASDLJALKSD', actionHash)
-    };
+        const getActionParam = () => {
+            const actionHash = get(window, 'location.hash', 'NONE');
+            setActionID(actionHash.toUpperCase());
+        }
 
-    useEffect(() => getActionParam(), []);
+        useEffect(() => getActionParam(), []);
 
-    return (
-        <div>
-        {actionID.includes('#SEARCH') && <ApesterSearch/>}
-        {actionID.includes('#VIEW') && <ApesterView/>}
-        {actionID.includes('#EDIT') && <ApesterEdit/>}
-        </div>
-    );
-    };
+
+        return (
+            <div>
+                { actionID.includes('#SEARCH') && <ApesterSearch /> }
+                { actionID.includes('#VIEW') && <ApesterView /> }
+                { actionID.includes('#EDIT') && <ApesterEdit />}
+            </div>
+        )
+    }
 
     export default ApesterPowerUp;
+    ```
 
-
-
-
-
-## [Next up: Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
