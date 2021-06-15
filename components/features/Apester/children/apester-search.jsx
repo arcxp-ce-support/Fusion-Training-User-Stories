@@ -28,26 +28,30 @@ const ApesterSearch = () => {
 
     return (
         <div className="container apester-search">
+            <img
+                src='https://blumbergcapital.com/wp-content/uploads/2016/02/apester_logo_400x200_2.png'/>
             <h2>Search Apester Embed</h2>
             <p>Using the Media ID, search for a published Apester embed</p>
             <label htmlFor="mediaID" className="form-label">Media ID:
             </label>
             <div className='search-container'>
-            <input
-                type="text"
-                className="form-control search-input"
-                name="mediaID"
-                id="mediaID"
-                placeholder="12345"
-                aria-label="Media ID"
-                onChange={e => handleFieldChange(e.target.value)}></input>
-            <input
-                type="button"
-                id="btnSubmit"
-                className="btn btn-primary search-btn"
-                name="btnSubmit"
-                value="Search"
-                onClick={handleClick}></input>
+                <input
+                    type="text"
+                    className="form-control search-input"
+                    name="mediaID"
+                    id="mediaID"
+                    placeholder="12345"
+                    aria-label="Media ID"
+                    onChange={e => handleFieldChange(e.target.value)}>
+                </input>
+                <input
+                    type="button"
+                    id="btnSubmit"
+                    className="btn btn-primary search-btn"
+                    name="btnSubmit"
+                    value="Search"
+                    onClick={handleClick}>
+                </input>
             </div>
         </div>
     );
