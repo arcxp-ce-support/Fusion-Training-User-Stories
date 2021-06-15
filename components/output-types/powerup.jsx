@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default ({
   children,
@@ -11,14 +11,13 @@ export default ({
 }) =>
   <html>
     <head>
-      <title>Fusion Article</title>
+      <title>Power-Ups</title>
       <MetaTags />
       <Libs />
       <CssLinks />
       <link rel='icon' type='image/x-icon' href={deployment(`${contextPath}/resources/favicon.ico`)} />
     </head>
     <body>
-        <div>Hello!!!!!</div>
       <div id='fusion-app'>
         {children}
       </div>

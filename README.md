@@ -1,24 +1,36 @@
 
-
 # The Edit View
 
-Let's write the code for `The Edit View`!: 
+Usually in the Edit view we give the editor the opportunity to interact and edit the custom embed. Some embeds offer a lot of customization options, others don't. 
 
-1. Let's create a new component called ApesterEdit in apester-search.jsx > components/features/Apester/children/apester-search.jsx which returns an empty `div` and export it.
+For this training we're going to limit the 'Edit' to basically perform another search to select a different embed. 
+
+Let's start writing the code for `The Edit View:`  which looks like very similar to the Search.
+
+1. Let's create a new component called ApesterEdit in apester-edit.jsx > components/features/Apester/children/apester-edit.jsx which returns an empty `div` and export it.
+
+    ```
+    const ApesterEdit = () => {
+
+        return (
+            <div>  
+            </div>
+        );
+    };
+
+    export default ApesterEdit;
 
 2. Let's add the required imports 
     - import React and the useState and useEffect methods
     - import get from lodash (optional). 
     - import the scss or styles file
-    - import sendMessage and getKey from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
+    - import sendMessage and getKey from the util file 
 
-    Code:
 
-    ```
-    
+    ```  
     import React, { useState, useEffect } from 'react';
     import get from 'lodash.get';
-    import { sendMessage, getKey } from '../../../../util/power-ups/index';
+    import { sendMessage, getKey } from '../../../../util/powerups/index';
     import './apester.scss';
 
     const ApesterEdit = () => {
@@ -32,34 +44,30 @@ Let's write the code for `The Edit View`!:
     export default ApesterEdit;
 
 
-3. Now instead of returning an empty div, let's return the search view, which in this case has the logo of the Power-Up, a title, a description, an input and a submit button that triggers the search. (Feel free to add more to this view).
+3. Now instead of returning an empty div, let's return the edit view. (Feel free to add more to this view).
 
 
     ```
-    
-    import React, { useState, useEffect } from 'react';
-    import get from 'lodash.get';
-    import { sendMessage, getKey } from '../../../../util/power-ups/index';
-    import './apester.scss';
 
     const ApesterEdit = () => {
 
         return (
             <div className="container apester-search">
-                <img src='https://blumbergcapital.com/wp-content/uploads/2016/02/apester_logo_400x200_2.png'/>
-                <h2>Search Apester Embed</h2>
-                <p>Using the Media ID, search for a published Apester embed</p>
+                <h2>Edit Apester Embed</h2>
+                <p>Find a new Apester Embed </p>
                 <label htmlFor="mediaID" className="form-label">Media ID: </label>
                 <div className='search-container'>
                     <input
-                        type="text"
-                        className="form-control search-input"
-                        name="mediaID"
-                        id="mediaID"
-                        placeholder="12345"
-                        aria-label="Media ID">
+                    type="text"
+                    className="form-control search-input"
+                    name="mediaID"
+                    id="mediaID"
+                    placeholder="12345"
+                    aria-label="Media ID"
+                    onChange={e => handleFieldChange(e.target.value)}></input>
+                    <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search"
+                    onClick={handleClick}>
                     </input>
-                    <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search"></input>
                 </div>
             </div>
         );
@@ -68,27 +76,13 @@ Let's write the code for `The Edit View`!:
     export default ApesterEdit;
 
 
-4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
-
-    For two of these methods we will use the util function that we imported called `sendMessage` (we will review this API in lab 04)
-
-    The `onChange` method will set the mediaId to whatever value the user inputs.
-
-    The `onClick` method will call `sendMessage` with 2 parameters: one is the string 'data' and the second one is an ansCustomEmbed object with the following attributes:
-
-    - `id` which is another util function that we will build in lab 4 called getKey()
-    - `url` which refers to the window location
-    - `config` which is an object with the key 'mediaId' and the value that's set in mediaId 
-
-    The `useEffect` will also call `sendMessage` but with these 2 parameters: the string 'ready', an object with the atributte: height: document.documentElement.scrollHeight
-
-    Code:
+4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and its method setMediaId which we will use to reference the Apester mediaId that we want to search for.
 
     ```
         
         import React, { useState, useEffect } from 'react';
         import get from 'lodash.get';
-        import { sendMessage, getKey } from '../../../../util/power-ups/index';
+        import { sendMessage, getKey } from '../../../../util/powerups/index';
         import './apester.scss';
 
         const ApesterEdit = () => {
@@ -117,71 +111,29 @@ Let's write the code for `The Edit View`!:
 
             return (
                 <div className="container apester-search">
-                    <img src='https://blumbergcapital.com/wp-content/uploads/2016/02/apester_logo_400x200_2.png'/>
-                    <h2>Search Apester Embed</h2>
-                    <p>Using the Media ID, search for a published Apester embed</p>
+                    <h2>Edit Apester Embed</h2>
+                    <p>Find a new Apester Embed </p>
                     <label htmlFor="mediaID" className="form-label">Media ID: </label>
                     <div className='search-container'>
                         <input
-                            type="text"
-                            className="form-control search-input"
-                            name="mediaID"
-                            id="mediaID"
-                            placeholder="12345"
-                            aria-label="Media ID">
-                            onChange={e => handleFieldChange(e.target.value)}
+                        type="text"
+                        className="form-control search-input"
+                        name="mediaID"
+                        id="mediaID"
+                        placeholder="12345"
+                        aria-label="Media ID"
+                        onChange={e => handleFieldChange(e.target.value)}></input>
+                        <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search"
+                        onClick={handleClick}>
                         </input>
-                        <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search" onClick={handleClick}></input>
                     </div>
-                    </div>
+                </div>
             );
         };
 
         export default ApesterEdit;
 
-5. Last but not least, let's add some styles!
-
-    In apester.scss add the styles for this view.
-
-    ```
-    .apester-search {
-        background-color: white;
-        padding: 50px;
-        box-shadow: 0px 0px 4px #c3c2c2;
-
-        & img {
-            width: 30%;
-        }
-
-        .search-input {
-            width: 100%;
-            border: 3px solid #00B4CC;
-            border-right: none;
-            padding: 5px;
-            height: 20px;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-        }
-        
-        .search-btn {
-            height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
-            text-align: center;
-            color: #fff;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        
-        .search-container {
-            width: 100%;
-            position: relative;
-            display: flex;
-        }
-    }
-    ```
 
 
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
