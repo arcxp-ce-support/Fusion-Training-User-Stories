@@ -1,5 +1,5 @@
 
-Now that we have our directory structure, we're going to write the code that's going to allow and handle communication between Composer and the iframes that we're going to build, this communication is achieved with the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
+Now that we have our directory structure, we're going to write the code that's going to allow the communication between Composer and the iFrames that we're going to build, this communication is achieved with the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 
 # About the postMessage API
 
@@ -37,7 +37,7 @@ Now that we have our directory structure, we're going to write the code that's g
     var _lodash = _interopRequireDefault(require("lodash.get"));
     ```
 
-2. Let's create and export a function called sendMessage that takes in 2 parameters: `action` which is a string and `data` which is an Object
+2. Let's create and export a function called sendMessage that takes in 2 parameters: `action` which is a String and `data` which is an Object
 
     ```
     var sendMessage = function sendMessage(action, data) {
@@ -49,13 +49,13 @@ Now that we have our directory structure, we're going to write the code that's g
 
 3. Now let's call the postMessage API with the payload which should have the following attributes:
 
-    -  `source:` The ANS schema requires the source to be the string `custom_embed`
+    -  `source:` The ANS schema requires the source to be the String `custom_embed`
     -   `action:` String, we'll use 'ready' and 'data' for this training
     -   `data:` Object with config values
-    -   `key:`  String. To set up the iFrame URLs in Composer Settings we will add a hash for each of the three views: #SEARCH #EDIT and #VIEW. For this `key` attribute we're going to write a function that returns the correspondent hash string
+    -   `key:`  String. To set up the iFrame URLs in Composer Settings we will add a URL hash for each of the three views: #SEARCH #EDIT and #VIEW. For this `key` attribute we're going to write a function that returns the correspondent URL hash String
 
 
-    Code:
+
 
     ```
     var sendMessage = function sendMessage(action, data) {
@@ -80,7 +80,7 @@ Now that we have our directory structure, we're going to write the code that's g
 
     
 
-4. Now let's define getKey();
+4. Now let's define getKey()
 
     ```
     var getKey = function getKey() {
@@ -115,6 +115,8 @@ Now that we have our directory structure, we're going to write the code that's g
     &nbsp;
 
     So far our util/powerups/index.js should look like this:
+
+    &nbsp;
 
     ```
     "use strict";
