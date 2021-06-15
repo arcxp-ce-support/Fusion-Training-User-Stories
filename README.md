@@ -88,22 +88,22 @@ If you already cloned this repo, set up the .env file and downloaded the PB data
 
 | branch   | topic covered | 
 | :------: | :----------   |
-| [lab-00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Directory structure|
-| [lab-01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | PostMessage API |
-| [lab-02](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Parsing the query string |
-| [lab-03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Adding a new output-type |
-| [lab-04](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | The three views: Search |
-| [lab-05](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | The three views: Edit |
-| [lab-06](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | The three views: View |
-| [lab-07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Adding the conditional rendering |
-| [lab-08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Testing Power-Ups locally |
-| [lab-9](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Deployment |
-| [lab-10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Composer settings |
-| [lab-11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00) | Usage |
+| [lab-00](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-00) | Directory structure|
+| [lab-01](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-01) | PostMessage API |
+| [lab-02](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-02) | Parsing the query string |
+| [lab-03](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-03) | Adding a new output-type |
+| [lab-04](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-04) | The three views: Search |
+| [lab-05](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-05) | The three views: Edit |
+| [lab-06](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-06) | The three views: View |
+| [lab-07](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-07) | Adding the conditional rendering |
+| [lab-08](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-08) | Testing Power-Ups locally |
+| [lab-9](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-09) | Deployment |
+| [lab-10](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-10) | Composer settings |
+| [lab-11](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-11) | Usage |
 
 
 &nbsp;
 
 # Now let's start!
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 00](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-00)
