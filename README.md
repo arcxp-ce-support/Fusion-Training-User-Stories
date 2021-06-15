@@ -58,4 +58,4 @@ If you don't have an Apester mediaId use this one for testing: `5dbe8444923548b3
 &nbsp;
 
 
-## [Next up: Lab 09](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 09](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-09)
