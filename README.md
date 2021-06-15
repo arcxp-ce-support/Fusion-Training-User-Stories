@@ -99,4 +99,4 @@ Now that we have our three views, let's write a function that checks the URL has
     export default ApesterPowerUp;
     ```
 
-## [Next up: Lab 08](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 08](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-08)
