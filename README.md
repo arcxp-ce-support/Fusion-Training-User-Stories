@@ -1,6 +1,6 @@
 # Deployment
 
-Now that we tested our implementation it's time to deploy our code! Since we don't have an instance of Composer running locally, we need to use Composer in the sandbox or development environment.
+Now that we tested our implementation, it's time to deploy our code! Since we don't have an instance of Composer running locally, we need to use Composer in the Sandbox or Development environment.
 
 # Deploy your code!
 
@@ -18,10 +18,10 @@ Before we deploy, choose the environment that you are going to use (Sandbox or D
 8. Click on `upload`
 9. Once it's done, click on the three dots (small menu) on the right side of the bundle card and click on `deploy`
 10. Once it's done click again on the three dots menu and click on promote, you'll see a confirmation pop-up, click `promote`
-11. Now our bundle should have the tag `Live!`
+11. Now our bundle is `Live!`
 
 
- 
+ &nbsp;
 
 
 ## [Next up: Lab 10](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-10)
