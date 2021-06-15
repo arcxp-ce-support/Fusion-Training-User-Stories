@@ -28,7 +28,6 @@ Now that we have our util functions, let's add the new output-type for Power-Ups
         <link rel='icon' type='image/x-icon' href={deployment(`${contextPath}/resources/favicon.ico`)} />
         </head>
         <body>
-            <div>Hello!!!!!</div>
             <div id='fusion-app'>
                 {children}
             </div>
