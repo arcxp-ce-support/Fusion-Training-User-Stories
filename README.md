@@ -1,5 +1,3 @@
-
-
 # Add the Composer settings
 
 Before we add the Composer settings, create a page to host the Apester block in the environment where you deployed your code:
