@@ -24,4 +24,4 @@ Before we deploy, choose the environment that you are going to use (Sandbox or D
  
 
 
-## [Next up: Lab 10](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 10](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-10)
