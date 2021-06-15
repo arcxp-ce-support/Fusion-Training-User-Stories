@@ -7,19 +7,19 @@ Now it's time to test our implementation using [Arc's testing tool for custom em
 ## Using the testing tool:
 1.  Run Fusion locally
 
-2. Go to `Page Builder` locally and create a new page called Powerup with the uri powerup
+2. Go to `Page Builder` locally and create a new page called Powerup with the URI powerup
 
-3. Click on curate on the left menu
+3. Click on `curate on` the left menu
 
 4. Click on `Add new feature`
 
-5. Select `Apester Powerup` (If you don't see this feature, re start fusion)
+5. Select `Apester Powerup` (If you don't see this feature, restart fusion)
 
 6. On the top menu change the output-type to powerup
 
 7. On the left menu click on the globe icon and click on `Share and Publish`
 
-## Go to the testing tool:
+## Open the testing tool:
 
 https://customembed.ellipsis.aws.arc.pub/#
 
@@ -29,11 +29,11 @@ https://customembed.ellipsis.aws.arc.pub/#
 
 2. You should see a settings panel where we're going to define the Search, View, and Edit URLs and the Host Load Timeout Msec
 
-3. When testing the Power-Ups locally the URL should look like this:
+3. When testing the Power-Ups locally the URL for each view, should look like this:
 
     http://localhost/[name-of-the-page]?_website=[your-website-id]&outputType=powerup#[hash]
 
-    Note: the website id should be a valid one, you can go to your organization's dashboard and go to the Sandbox env, under delivery click on `Sites`, there you'll find the list of websites that your organization has.
+    Note: the website id should be a valid one, you can go to your organization's dashboard and go to the Sandbox env, under `delivery` click on `Sites`, there you'll find the list of websites that your organization has.
 
 &nbsp;
 
