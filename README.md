@@ -1,10 +1,10 @@
 
 Now that we have our util functions, let's add the new output-type for Power-Ups, this will allow us to add custom configurations specific to Power-Ups.
 
-# Adding the new Output-Type
+# Adding a new Output-Type
 
 
-1. In components/output-types/powerup.jsx let's add the html
+1. In components/output-types/powerup.jsx let's add the following code:
 
 
     ```
