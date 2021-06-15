@@ -39,4 +39,4 @@ So far our directory structure should look like this:
 Since we added these new directories, we need to restart the app for Fusion to pick up the new changes.
 
 
-## [Next up: Lab 01](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 01](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-01)
