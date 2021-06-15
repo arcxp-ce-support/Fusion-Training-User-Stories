@@ -1,16 +1,15 @@
-# Now the fun part:  `Building the three views!`
+# Now the fun part: the three views!
 
-Now we are going to build `The three views`,  they're basically 3 React components that are required for each Power-Up: 
+Now we are going to build `the three views`,  they're basically 3 React components that are required for each Power-Up: 
 
 - Search: The Initial view when selecting the Power-Up.
 - View: Inline view after selecting Power-Up.
 - Edit: Provides an opportunity for Authors to manipulate the 3rd Party data
 
 
-
 # The Search View
 
-Let's start writing the code for `The Search View:` 
+Let's write the code for `The Search View:` 
 
 1. Let's create a new component called ApesterSearch in apester-search.jsx > components/features/Apester/children/apester-search.jsx which returns an empty `div` and export it.
 
@@ -26,11 +25,11 @@ Let's start writing the code for `The Search View:`
     export default ApesterSearch;
 
 2. Let's add the required imports 
+
     - import React and the useState and useEffect methods
     - import get from lodash (optional). 
     - import the scss or styles file
     - import sendMessage and getKey from the util file 
-
 
 
     ```
@@ -51,7 +50,7 @@ Let's start writing the code for `The Search View:`
     export default ApesterSearch;
 
 
-3. Now instead of returning an empty div, let's return the search view, which in this case has the logo of the Power-Up, a title, a description, an input and a submit button that triggers the search. (Feel free to add more to this view).
+3. Now instead of returning an empty div, let's return the search view, which in this case has the logo of the Power-Up, a title, a description, an input, and a submit button that triggers the search. (Feel free to add more to this view).
 
 
     ```
@@ -83,19 +82,19 @@ Let's start writing the code for `The Search View:`
     export default ApesterSearch;
 
 
-4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and its method setMediaId which we will use to reference the Apester mediaId that we want to search for.
+4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
 
-    For two of these methods, we will use the util function that we imported called `sendMessage` 
+    - For two of these methods, we will use the util function that we imported called `sendMessage` 
 
-    The `onChange` method will set the mediaId to whatever value the user inputs.
+    - The `onChange` method will set the mediaId to whatever value the user inputs.
 
-    The `onClick` method will call `sendMessage` with 2 parameters: one is the String 'data' and the second one is an ansCustomEmbed Object with the following attributes:
+    - The `onClick` method will call `sendMessage` with 2 parameters: one is the String 'data' and the second one is an ansCustomEmbed Object with the following attributes:
 
-    - `id` the value being returned from getKey(), in this case, we're expecting the hash with the name of the view: SEARCH, EDIT, or VIEW
-    - `url` which refers to the window location
-    - `config` which is an Object with the key 'mediaId' and the value that's set in mediaId 
+        - `id` the value being returned from getKey(), in this case, we're expecting the hash with the name of the view: SEARCH, EDIT, or VIEW
+        - `url` which refers to the window location
+        - `config` which is an Object with the key 'mediaId' and the value that's set in mediaId 
 
-    The `useEffect` will also call `sendMessage` with these 2 parameters: the String 'ready', an Object with the atributte: height: document.documentElement.scrollHeight
+    - The `useEffect` will also call `sendMessage` with these 2 parameters: the String 'ready', an Object with the atributte: height: document.documentElement.scrollHeight
 
 
 
@@ -154,9 +153,7 @@ Let's start writing the code for `The Search View:`
 
         export default ApesterSearch;
 
-5. Last but not least, let's add some styles!
-
-    In apester.scss add the styles for this view.
+5. Last but not least, let's add some styles! In apester.scss add the styles for this view.
 
     ```
     .apester-search {
