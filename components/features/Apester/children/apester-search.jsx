@@ -41,8 +41,8 @@ const ApesterSearch = () => {
                     name="mediaID"
                     id="mediaID"
                     placeholder="12345"
-                    aria-label="Media ID">
-                    onChange={e => handleFieldChange(e.target.value)}
+                    aria-label="Media ID"
+                    onChange={e => handleFieldChange(e.target.value)}>
                 </input>
                 <input
                     type="button"
