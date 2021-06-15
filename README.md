@@ -2,17 +2,22 @@
 
 # Directory Structure
 
-To start let's define our directory structure.
+To start let's define our directory structure:
 
-- Under ~/components/features create a new folder called `Apester`
+- Under /components/features create a new folder called `Apester`
 
 - Inside `Apester` add a file called powerup.jsx
 
-- Inside `Apester` also add a new folder called `children` and add 4 files to this folder: apester-view.jsx, apester-edit.jsx apester-search.jsx and apester.scss 
+- Inside `Apester` also add a new folder called `children` and add 4 files to this folder: 
+
+    - apester-view.jsx
+    - apester-edit.jsx
+    - apester-search.jsx
+    - apester.scss 
 
 - Under components/output-types create a new file called powerup.jsx
 
-- Create a folder at the root level for all the util functions: util/powerups/index.js
+- Finally, create a folder at the root level for all the util functions: util/powerups/index.js
  
 So far our directory structure should look like this:
 
