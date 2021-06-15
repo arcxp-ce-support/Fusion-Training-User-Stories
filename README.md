@@ -57,4 +57,4 @@ Before we add the Composer settings, create a page to host the Apester block in 
 
 10. Once you select it, you can click on `Edit` to see the EDIT view!
 
-## [Next up: Lab 11](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 11](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-11)
