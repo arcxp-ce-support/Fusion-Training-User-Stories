@@ -2,17 +2,28 @@
 
 # The conditional to render each view!
 
-Let's start writing the code for `View`!: 
+Now we need to create the component that will render the inline view of the custom embed `The View!`
 
-1. Let's create a new component called ApesterView in apester-view.jsx > components/features/Apester-Composer/children/apester-view.jsx which returns an empty `div` and export it.
+1. Let's create a new component called ApesterView in apester-view.jsx > components/features/Apester/children/apester-view.jsx which returns an empty `div` and export it.
+
+    ```
+    const ApesterView = () => {
+
+        return (
+            <div></div>
+        );
+    };
+
+    export default ApesterView;
+
+    ```
 
 2. Let's add the required imports 
     - import React and the useEffect method
     - import get from lodash (optional). 
     - import the scss or styles file
-    - import sendMessage and parseQueryString from the util file (These are placeholders, we haven't created these two methods yet, we will create them in Lab 04 )
+    - import sendMessage and parseQueryString from the util file
 
-    Code:
 
     ```
     
@@ -46,21 +57,7 @@ Let's start writing the code for `View`!:
     </div>
 
 
-4. Now let's add the methods `onChange` on the input, `onClick` on the submit button, a `useEffect` and let's create a hook called mediaId and it's method setMediaId which we will use to reference the Apester mediaId that we want to search for.
-
-    For two of these methods we will use the util function that we imported called `sendMessage` (we will review this API in lab 04)
-
-    The `onChange` method will set the mediaId to whatever value the user inputs.
-
-    The `onClick` method will call `sendMessage` with 2 parameters: one is the string 'data' and the second one is an ansCustomEmbed object with the following attributes:
-
-    - `id` which is another util function that we will build in lab 4 called getKey()
-    - `url` which refers to the window location
-    - `config` which is an object with the key 'mediaId' and the value that's set in mediaId 
-
-    The `useEffect` will also call `sendMessage` but with these 2 parameters: the string 'ready', an object with the atributte: height: document.documentElement.scrollHeight
-
-    Code:
+4. In a useEffect hook let's write the code to get the selected mediaId of the embed as well as some of the config values. The Apester documentation says that in order to embed Apester, a div with the data-media-id is required.
 
     ```
         
@@ -73,7 +70,7 @@ Let's start writing the code for `View`!:
 
     useEffect(() => getActionParam(), []);
 
-5. Last but not least, let's add some styles!
+5. Remember that you can give some styles to the div! This is what our `View` component looks like:
 
     ```
     import React, { useEffect, useState } from 'react';
@@ -109,4 +106,4 @@ Let's start writing the code for `View`!:
 
 
 
-## [Next up: Lab 00](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 07](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
