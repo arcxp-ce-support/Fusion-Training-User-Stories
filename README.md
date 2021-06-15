@@ -174,4 +174,4 @@ Once the search iFrame is presented and the user performs a search, we need to g
 
 
 
-## [Next up: Lab 03](https://github.com/wapopartners/Fusion-Training-User-Stories/tree/lab-00)
+## [Next up: Lab 03](https://github.com/arc-partners/Fusion-Training-User-Stories/tree/powerups-lab-03)
