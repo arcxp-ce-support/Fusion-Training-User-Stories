@@ -71,7 +71,8 @@ Let's start writing the code for `The Search View:`
                         name="mediaID"
                         id="mediaID"
                         placeholder="12345"
-                        aria-label="Media ID">
+                        aria-label="Media ID"
+                        onChange={e => handleFieldChange(e.target.value)}>
                     </input>
                     <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search"></input>
                 </div>
@@ -142,8 +143,8 @@ Let's start writing the code for `The Search View:`
                             name="mediaID"
                             id="mediaID"
                             placeholder="12345"
-                            aria-label="Media ID">
-                            onChange={e => handleFieldChange(e.target.value)}
+                            aria-label="Media ID"
+                            onChange={e => handleFieldChange(e.target.value)}>
                         </input>
                         <input type="button" id="btnSubmit" className="btn btn-primary search-btn" name="btnSubmit" value="Search" onClick={handleClick}></input>
                     </div>
