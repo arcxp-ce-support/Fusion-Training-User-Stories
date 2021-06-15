@@ -2,7 +2,7 @@
 
 # The conditional to render each view!
 
-Now that we have our three views, let's write a function that checks the URL hash and based on that renders the appropiate view.
+Now that we have our three views, let's write a function that checks the URL hash and based on that renders the appropriate view.
 
 1. Let's create a new component called ApesterPowerUp in powerup.jsx > components/features/Apester/powerup which returns an empty `div` and export it.
 
@@ -17,7 +17,7 @@ Now that we have our three views, let's write a function that checks the URL has
 
     ```
 
-2. Let's add the required imports 
+2. Add the required imports 
     - import React, the useEffect and useState methods
     - import get from lodash (optional). 
     - import each of the three views
@@ -54,7 +54,7 @@ Now that we have our three views, let's write a function that checks the URL has
 
     useEffect(() => getActionParam(), []);
 
-5. Now we can render the appropiate component based on the actionID which is the url hash, let's add the conditional rendering!
+5. Now we can render the appropriate component based on the actionID which is the URL hash, let's add the conditional rendering!
 
     ```
     return (
