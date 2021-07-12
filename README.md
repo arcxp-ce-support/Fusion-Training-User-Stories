@@ -4,12 +4,13 @@
 
 Welcome to the Power-Ups training! 
 
-
-Before we start, let's review the definition of Power-Ups:
+Before we start, let's review the definition of Power-Ups and the most common use cases.
 
 ## What are Power-Ups
 
 Power-Ups are an expanded custom embed that allows Editors in Composer to interact with Third Party Content providers and/or create unique content not supported by existing Composer features.
+
+#####  Note: We encourage organizations to use the embed HTML functionality that's available in Composer by default. Add Power-Ups only if necessary.
 
 ## Common Use Cases:
 
@@ -20,12 +21,24 @@ Power-Ups are an expanded custom embed that allows Editors in Composer to intera
 - External Video
 - Quiz
 
+
+## Example: 
+Power-Up in Composer
+
+![Alt text](./assets/powerup1.png "Power-Up")
+
+![Alt text](./assets/powerup2.png "Power-Up")
+
+&nbsp;
+
 ## About this training 
 
-In this training we are going to build a Power-Up that's an Apester embed, first, we're going to build the three views that are required for each Power-Up: Search, View, and Edit, then we're going to test it locally with Arc's testing tool, and finally, we're going to deploy our code and set up Composer to start using it. [click here](https://apester.com/) to learn more about Apester!
+In this training, we are going to build a Power-Up for an [Apester Embed](https://apester.com/). For this example, even though editors can embed the HTML using the OOTB button to embed HTML in Composer, we want to give them the option to interact more with the content, that way without leaving Composer they'll be able to search and edit the embed.
+
+In these labs we're going to build the three views that are required for each Power-Up: Search, View, and Edit, we're going to test it locally with Arc's testing tool, and finally, we're going to deploy our code and set up Composer to start using it. [click here](https://apester.com/) to learn more about Apester!
 
 
-## How to use
+## About the labs
 
 This repo contains one branch for each of the labs in the Power-Up training curriculum. Each branch builds off of the previously completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to the powerups-lab-05 branch since that's where lab 5 starts.
 
