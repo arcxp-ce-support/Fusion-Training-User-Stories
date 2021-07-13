@@ -18,7 +18,9 @@ Before we deploy, choose the environment that you are going to use (Sandbox or D
 ![Alt text](./assets/deploy-1.png "Deployment")
 
 7. Once you click on the `Upload bundle` button, add the name of the bundle and select the zip file of the project (step 1)
+
 ![Alt text](./assets/deploy-2.png "Deployment")
+
 8. Click on `upload`
 9. Once it's done, click on the three dots (small menu) on the right side of the bundle card and click on `deploy`
 10. Once it's done click again on the three dots menu and click on promote, you'll see a confirmation pop-up, click `promote`
