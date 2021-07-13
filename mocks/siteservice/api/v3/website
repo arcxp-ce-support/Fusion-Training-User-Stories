@@ -1,7 +1,7 @@
 [
     {
-        "_id": "demo",
-        "display_name": "Demo",
+        "_id": "YOUR_WEBSITE_ID",
+        "display_name": "YOUR_WEBSITE",
         "is_default_website": true
     }
 ]

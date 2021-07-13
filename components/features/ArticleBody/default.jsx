@@ -7,7 +7,6 @@ const ArticleBody = () => {
     const { globalContent: item = {} } = useFusionContext();
 
     const parseElement = (element) => {
-        console.log(element)
         const { _id: key = index, type, content } = element;
 
         switch (type) {
