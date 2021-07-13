@@ -18,7 +18,6 @@ Before we add the Composer settings, create a page to host the Apester block in 
 
 &nbsp;
 ## Now let's add the Composer Settings!
-&nbsp;
 
 1. Go to your organization's dashboard and make sure you're in the same environment where you deployed your code (Sandbox or Development)
 
@@ -40,9 +39,7 @@ Before we add the Composer settings, create a page to host the Apester block in 
 
     - Icon: select an icon for this Power-Up!
 
-    &nbsp;
-
-    ### Example:
+        ## Example:
 
 
     - Search iFrame URL: https://sandbox.arcthemestraining.arcpublishing.com/pf/apester?_website=the-daily-news&outputType=powerup#SEARCH
