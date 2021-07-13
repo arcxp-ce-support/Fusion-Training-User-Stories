@@ -1,4 +1,4 @@
-# The Testing Tool!
+# Using Arc's Testing Tool
 
 Congrats! Now we have all the code needed for the Apester Power-Up!!
 
@@ -13,11 +13,14 @@ Now it's time to test our implementation using [Arc's testing tool for custom em
 
 4. Click on `Add new feature`
 
-5. Select `Apester Powerup` (If you don't see this feature, restart fusion)
+5. Select `Apester Powerup` (If you don't see this feature, make sure this block is in the right `feature folder`, check for errors, and restart fusion)
 
 6. On the top menu change the output-type to powerup
 
 7. On the left menu click on the globe icon and click on `Share and Publish`
+
+![Alt text](./assets/pb-newpage.png "PB set up")
+
 
 ## Open the testing tool:
 
@@ -29,11 +32,14 @@ https://customembed.ellipsis.aws.arc.pub/#
 
 2. You should see a settings panel where we're going to define the Search, View, and Edit URLs and the Host Load Timeout Msec
 
-3. When testing the Power-Ups locally the URL for each view, should look like this:
+3. When testing the Power-Ups locally the URL for each view, should be:
 
     http://localhost/[name-of-the-page]?_website=[your-website-id]&outputType=powerup#[hash]
 
     Note: the website id should be a valid one, you can go to your organization's dashboard and go to the Sandbox env, under `delivery` click on `Sites`, there you'll find the list of websites that your organization has.
+
+
+![Alt text](./assets/testing-tool.png "Testing tool")
 
 &nbsp;
 
@@ -51,9 +57,17 @@ http://localhost/powerup?_website=demo&outputType=powerup#EDIT
 Host Load Timeout Msec
 6000
 
-Now refresh the page, should see the SEARCH iFrame!
+Now refresh the page, you should see the SEARCH iFrame!
+
+![Alt text](./assets/search-view.png "Search")
 
 If you don't have an Apester mediaId use this one for testing: `5dbe8444923548b36a17547b` - Add it to the search input, click on `Search` and you should see the `VIEW!`
+
+![Alt text](./assets/view.png "View")
+
+Now click on the `edit button` at the top of the page, you should see the `EDIT VIEW`
+
+![Alt text](./assets/edit-view.png "View")
 
 &nbsp;
 
