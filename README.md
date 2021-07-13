@@ -1,6 +1,6 @@
 
 
-# The conditional to render each view!
+# Add the conditional to render each view
 
 Now that we have our three views, let's write a function that checks the URL hash and based on that renders the appropriate view.
 
@@ -54,7 +54,7 @@ Now that we have our three views, let's write a function that checks the URL has
 
     useEffect(() => getActionParam(), []);
 
-5. Now we can render the appropriate component based on the actionID which is the URL hash, let's add the conditional rendering!
+5. Now we can render the appropriate component based on the actionID which is the URL hash, let's add the conditional!
 
     ```
     return (
