@@ -14,11 +14,17 @@ Before we deploy, choose the environment that you are going to use (Sandbox or D
 4. In the top menu on Page Builder, click on `Developer tools` & click on `Deployer`
 5. Take a note of the bundle that's currently deployed so we can deploy it back once we're done testing
 6. Find the button that says `Upload bundle`. That's how we do manual deployments
+
+![Alt text](./assets/deploy-1.png "Deployment")
+
 7. Once you click on the `Upload bundle` button, add the name of the bundle and select the zip file of the project (step 1)
+![Alt text](./assets/deploy-2.png "Deployment")
 8. Click on `upload`
 9. Once it's done, click on the three dots (small menu) on the right side of the bundle card and click on `deploy`
 10. Once it's done click again on the three dots menu and click on promote, you'll see a confirmation pop-up, click `promote`
 11. Now our bundle is `Live!`
+
+![Alt text](./assets/deploy-3.png "Deployment")
 
 
  &nbsp;
