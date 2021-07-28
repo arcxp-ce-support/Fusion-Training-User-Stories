@@ -9,6 +9,7 @@ This repository contains all of the code necessary to complete each of the steps
 - VS Code - *There is a configuration and documentation set up specifically for this code editor so you'll have an easier time linting and formatting your work.*
 - Docker desktop - *Update the memory allocated in the docker settings to ~8GB – without this update fusion will run very slowly and file watcher will likely break.*
 
+
 ## How to use
 
 This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
@@ -30,14 +31,14 @@ cd Fusion-Training-User-Stories
 git checkout -b USERNAME-Fusion-Training
 ```
 
-4. Install the npm dependencies 
+4. Install the Fusion CLI
 ```
-npm i
+npm i @arc-fusion/cli
 ```
 
-5. Start Fusion!
+5. Initialize a new Fusion feature pack
 ```
-npx fusion start
+npx fusion init
 ```
 
 ## Useful Commands 
