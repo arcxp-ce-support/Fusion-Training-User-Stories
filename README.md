@@ -2,6 +2,14 @@
 
 This repository contains all of the code necessary to complete each of the steps in the Arc PageBuilder Fusion training curriculum.
 
+## Prerequisites
+
+- Node version 10+
+- Fusion CLI `npm i @arc-fusion/cli`
+- VS Code - *There is a configuration and documentation set up specifically for this code editor so you'll have an easier time linting and formatting your work.*
+- Docker desktop - *Update the memory allocated in the docker settings to ~8GB – without this update fusion will run very slowly and file watcher will likely break.*
+
+
 ## How to use
 
 This repo contains one branch for each of the labs in the Fusion training curriculum. Each branch builds off of the previous completed lab so you can check your solutions as you go. For example, to see the solution to lab 4, you can switch to lab-05 branch since thats where lab 5 starts off.
@@ -28,7 +36,7 @@ git checkout -b USERNAME-Fusion-Training
 npm i @arc-fusion/cli
 ```
 
-5. Initialize a new Fusion feature pack
+5. Initialize a new [Fusion feature pack](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/examining-feature-pack.md?version=2.7)
 ```
 npx fusion init
 ```
