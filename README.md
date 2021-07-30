@@ -5,7 +5,7 @@ In this lab you will render content via a default output type. An output type al
 Without an output type, PageBuilder can't render anything! For more details on output types, [click here](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/creating-using-output-types.md?version=2.7).
 
 1. Open `components > output-types > default.jsx`. You will see a basic HTML skeleton has already been set up. Here you can inject any scripts or other tags into the page.
-2. Add Bootstrap inside of the `<head>` tag
+2. Load Bootstrap from a CDN as a stylesheet inside of the `<head>` tag
     ```
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     ```
