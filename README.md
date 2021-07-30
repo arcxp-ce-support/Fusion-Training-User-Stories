@@ -36,7 +36,7 @@ git checkout -b USERNAME-Fusion-Training
 npm i @arc-fusion/cli
 ```
 
-5. Initialize a new Fusion feature pack
+5. Initialize a new [Fusion feature pack](https://redirector.arcpublishing.com/alc/arc-products/pagebuilder/fusion/documentation/recipes/examining-feature-pack.md?version=2.7)
 ```
 npx fusion init
 ```
