@@ -28,11 +28,22 @@ const ArticleBody = () => {
                 const subType = get(element, 'subtype', '');
           
                 switch (subType) {
-                  case 'apester-embed': {
-                    return (
-                      <ApesterArticleBody key={key} mediaId={get(element, 'embed.config.mediaId', '')}/>
-                    );
-                  }
+                    case 'apester-embed': {
+                        return (
+                        <ApesterArticleBody key={key} mediaId={get(element, 'embed.config.mediaId', '')}/>
+                        );
+                    }
+                    case 'Highlights Power-Up': {
+                        const highlights = element?.embed?.config?.highlights;
+                        return (
+                            <div className='highlights-box'>
+                                <h1>Story Highlights!</h1>
+                                { highlights.length ? highlights.map((highlight, index ) => {
+                                    return <p key={index}>- {highlight}</p> 
+                                }) : null }
+                            </div>
+                        )
+                    }
                   default:
                     return null;
                 }
